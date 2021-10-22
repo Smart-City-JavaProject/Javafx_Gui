@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transportation">
+   <children>
+<Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="134.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Bus">
+         <graphic>
+            <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/bus-icon-vector-21156725.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="211.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="Flight">
+         <graphic>
+            <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/images%20(4).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+       <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="61.0" text="Select What You Wanted To Search" />
+       <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="319.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Train">
+         <graphic>
+            <ImageView fx:id="but1im2" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/download%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      </children>
+</Pane>
