@@ -43,11 +43,11 @@ public class SchoolInfo {
     public static void initialize() {
         String name =School.getName(); 
         System.out.println("Here We Go "+name);
-        String lines[] = name.split("\\r?\\n");
+        String lines[] = name.split("\n");
         String sector = JavaPostgreSql.get_String();
-        String lines1[] = sector.split("\\r?\\n");
+        String lines1[] = sector.split("\n");
         String location = JavaPostgreSql.get_loc();
-        String lines2[] = location.split("\\r?\\n");
+        String lines2[] = location.split("\n");
         try {
             Stage stage = new Stage();
             stage.setTitle("Smart City");
