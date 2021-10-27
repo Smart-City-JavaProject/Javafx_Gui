@@ -26,20 +26,7 @@ public class second implements Initializable  {
     private Label testlabel;
 
     private void init() {
-        String name="";
-        try {
-            FileReader reader = new FileReader("MyFile.txt");
-            int character;
- 
-            while ((character = reader.read()) != -1) {
-                System.out.print((char) character);
-                name+=(char) character;
-            }
-            reader.close();
- 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String name = nextcon.get_name();
         testlabel.setText("Welcome To The Navi Mumbai "+name);
     }
     

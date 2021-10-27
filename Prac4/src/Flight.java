@@ -3,7 +3,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
 
 public class Flight{
     ObservableList <String> my_list = FXCollections.observableArrayList("Kharghar","Nerul","Panvel");
@@ -17,8 +16,6 @@ public class Flight{
     private Button submitbtn;
     @FXML
     public void initialize() {
-        // ChoiceBox cb = new ChoiceBox();
-        // cb.getItems().addAll("item1", "item2", "item3");
         choiceboc.setValue("Kharghar");
         choiceboc.setItems(my_list);
         choiceboc1.setValue("Nerul");

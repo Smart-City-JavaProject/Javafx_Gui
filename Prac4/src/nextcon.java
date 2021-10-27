@@ -1,6 +1,4 @@
-import java.io.FileWriter;
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,16 +19,16 @@ public class nextcon {
 
     @FXML
     private Label labeltext;
-
+    static String name= " ";
+    public void set_name(String n) {
+        name=n;
+    }
+    public static String get_name() {
+        return name;
+    }
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
-        try {
-            FileWriter writer = new FileWriter("MyFile.txt");
-            writer.write(inputbox.getText());
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        set_name(inputbox.getText());
         Stage arg0 = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("Second.fxml"));
         Scene sc = new Scene(root);
