@@ -46,5 +46,31 @@ public class JavaPostgreSql {
         }
         return count;
     }
+    public static String getcollege(String b_name,String location) {
+        String SQL = "SELECT e_name,sector,e_address "
+                + "FROM education "
+                + "WHERE e_stream = ?"+"AND e_locality = ?";
+        String count="";
+        String count1="";
+        String count2="";
+        try (Connection conn = connect_db();
+        PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, b_name);
+            pstmt.setString(2, location);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count+=rs.getString("e_name")+"\n";
+                count1+=rs.getString("sector")+"\n";
+                count2+=rs.getString("e_address")+"\n";
+                System.out.println(rs.getString("e_name") + "\t");
+    
+            }
+            set_string(count1);
+            set_loc(count2);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
 
 }
