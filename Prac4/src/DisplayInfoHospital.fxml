@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoHospital">
+   <children>
+      <Label layoutX="233.0" layoutY="53.0" text="Name" />
+      <Label layoutX="233.0" layoutY="90.0" text="Sector" />
+      <Label layoutX="233.0" layoutY="125.0" text="Location" />
+      <Label layoutX="233.0" layoutY="225.0" text="Near Place" />
+      <Label fx:id="location_label" layoutX="300.0" layoutY="125.0" text="Label" />
+      <Label fx:id="Nearplaces_label" layoutX="300.0" layoutY="225.0" text="Label" />
+      <Label fx:id="sector_label" layoutX="300.0" layoutY="90.0" text="Label" />
+      <Label fx:id="name_label" layoutX="300.0" layoutY="53.0" text="Label" />
+      <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/images%20(1).png" />
+         </image></ImageView>
+      <Label layoutX="235.0" layoutY="192.0" text="Contact" />
+      <Label fx:id="contact_id" layoutX="300.0" layoutY="192.0" text="Label" />
+   </children>
+</Pane>

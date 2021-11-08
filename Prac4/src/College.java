@@ -27,7 +27,7 @@ public class College{
     void onSubmitbtnClick(ActionEvent event) throws IOException {
         System.out.println(inputbox.getText());
         System.out.println(choiceboc.getValue());
-        String name_sc = JavaPostgreSql.getcollege(choiceboc.getValue().toString(),inputbox.getText().toString());
+        String name_sc = JavaPostgreSql.getschools(choiceboc.getValue().toString(),inputbox.getText().toString());
         School.setItem(name_sc);
         System.out.println(name_sc);
         SchoolInfo.initialize();

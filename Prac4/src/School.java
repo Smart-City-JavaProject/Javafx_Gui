@@ -35,7 +35,7 @@ public class School{
     void onSubmitbtnClick(ActionEvent event) throws IOException {
         System.out.println(inputbox.getText());
         System.out.println(choiceboc.getValue());
-        String name_sc = JavaPostgreSql.getActorCount(choiceboc.getValue().toString(),inputbox.getText().toString());
+        String name_sc = JavaPostgreSql.getcolleges(choiceboc.getValue().toString(),inputbox.getText().toString());
         setItem(name_sc);
         System.out.println(name_sc);
         my_label.setText(name_sc); 

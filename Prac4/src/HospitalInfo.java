@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class SchoolInfo {
+public class HospitalInfo {
     static String sector= "";
     public static void set_string(String s){
         sector= s;
@@ -30,10 +30,17 @@ public class SchoolInfo {
     public static String get_name(){
         return name;
     }
+    static String contact= "";
+    public static void set_contact(String s){
+        contact= s;
+    }
+    public static String get_contact(){
+        return contact;
+    }
     static void onSubmitbtnClick() throws IOException {
         Stage arg0 = new Stage();
         Class currentClass = new Object() { }.getClass().getEnclosingClass();
-        Parent root = FXMLLoader.load(currentClass.getResource("DisplayInfoSchool.fxml"));
+        Parent root = FXMLLoader.load(currentClass.getResource("DisplayInfoHospital.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
@@ -41,13 +48,15 @@ public class SchoolInfo {
         
     }
     public static void initialize() {
-        String name =School.getName(); 
+        String name =Hospital.getName(); 
         System.out.println("Here We Go "+name);
         String lines[] = name.split("\n");
         String sector = JavaPostgreSql.get_String();
         String lines1[] = sector.split("\n");
         String location = JavaPostgreSql.get_loc();
         String lines2[] = location.split("\n");
+        String contact = JavaPostgreSql.get_mobile_no();
+        String contact1[] = contact.split("\n");
         try {
             Stage stage = new Stage();
             stage.setTitle("Smart City");
@@ -65,6 +74,7 @@ public class SchoolInfo {
                     set_string(lines1[t1]);
                     set_loc(lines2[t1]);
                     set_name(lines[t1]);
+                    set_contact(contact1[t1]);
                     System.out.println("--->> "+get_name());
                     System.out.println("--->> "+get_loc());
                     System.out.println("--->> "+get_String());

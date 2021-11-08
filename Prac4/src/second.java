@@ -50,8 +50,25 @@ public class second implements Initializable  {
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
-        arg0.show();
-        
+        arg0.show(); 
+    }
+    @FXML
+    void onSubmitbtnClick3(ActionEvent event) throws IOException {
+        Stage arg0 = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Hospital.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show(); 
+    }
+    @FXML
+    void onSubmitbtnClick4(ActionEvent event) throws IOException {
+        Stage arg0 = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Police.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show(); 
     }
 
 }
