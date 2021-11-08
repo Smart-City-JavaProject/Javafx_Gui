@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
@@ -10,10 +11,13 @@
       <Label layoutX="233.0" layoutY="90.0" text="Sector" />
       <Label layoutX="233.0" layoutY="125.0" text="Location" />
       <Label layoutX="233.0" layoutY="180.0" text="Near Place" />
-      <Label fx:id="location_label" layoutX="300.0" layoutY="125.0" text="Label"/>
+      <Label fx:id="location_label" layoutX="300.0" layoutY="125.0" text="Label" />
       <Label fx:id="Nearplaces_label" layoutX="300.0" layoutY="180.0" text="Label" />
       <Label fx:id="sector_label" layoutX="300.0" layoutY="90.0" text="Label" />
       <Label fx:id="name_label" layoutX="300.0" layoutY="53.0" text="Label" />
-      <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/school-icon-png-14043.png" />
+         </image></ImageView>
    </children>
 </Pane>

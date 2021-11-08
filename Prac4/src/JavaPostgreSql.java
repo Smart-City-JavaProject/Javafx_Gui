@@ -9,11 +9,32 @@ public class JavaPostgreSql {
     static String sector= "";
     static String location= "";
     static String mobile_no= "";
+    static String ratings= "";
+    static String roomtype= "";
+    static String cost= "";
     public static void set_string(String s){
         sector= s;
     }
     public static String get_String(){
         return sector;
+    }
+    public static void set_ratings(String s){
+        ratings= s;
+    }
+    public static String get_ratings(){
+        return ratings;
+    }
+    public static void set_cost(String s){
+        cost= s;
+    }
+    public static String get_cost(){
+        return cost;
+    }
+    public static void set_roomtype(String s){
+        roomtype= s;
+    }
+    public static String get_roomtype(){
+        return roomtype;
     }
     public static void set_loc(String l){
         location= l;
@@ -123,6 +144,42 @@ public class JavaPostgreSql {
             set_string(count1);
             set_loc(count2);
             mobile_no(count3);
+        }
+    catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+        return count;
+    }
+    public static String getaccomendation(String city_name,String type) throws SQLException{
+        String SQL = "SELECT * FROM accomodation WHERE acc_locality = ? AND acc_type = ?";
+        String count="";
+        String count1="";
+        String count2="";
+        String count3="";
+        String count4="";
+        String count5="";
+        String count6="";
+        try(Connection conn = connect_db();
+        PreparedStatement pstmt = conn.prepareStatement(SQL)){
+            pstmt.setString(1, city_name);
+            pstmt.setString(2, type);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()) {
+                count+= rs.getString("acc_name")+"\n";
+                count1 += rs.getString("acc_sector")+"\n";
+                count2 += rs.getString("acc_address")+"\n";
+                count3 += rs.getString("acc_cno")+"\n";
+                count4 += rs.getString("acc_rating")+"\n";
+                count5 += rs.getString("acc_roomtype")+"\n";
+                count6 += rs.getString("acc_cost")+"\n";
+            }
+            System.out.println("--->>> "+count);
+            set_string(count1);
+            set_loc(count2);
+            mobile_no(count3);
+            set_ratings(count4);
+            set_cost(count6);
+            set_roomtype(count5);
         }
     catch (SQLException ex) {
         System.out.println(ex.getMessage());

@@ -27,7 +27,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut111" contentDisplay="BOTTOM" layoutX="300.0" layoutY="102.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Hospitals">
+      <Button fx:id="obut111" contentDisplay="BOTTOM" layoutX="300.0" layoutY="102.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Hospitals" onAction="#onSubmitbtnClick3" >
          <graphic>
             <ImageView fx:id="but1im11" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -45,7 +45,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="172.0" layoutY="249.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Polic Station">
+      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="172.0" layoutY="249.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Polic Station" onAction="#onSubmitbtnClick4" >
          <graphic>
             <ImageView fx:id="but1im13" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -54,7 +54,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut114" contentDisplay="BOTTOM" layoutX="300.0" layoutY="249.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Accomodation">
+      <Button fx:id="obut114" contentDisplay="BOTTOM" layoutX="300.0" layoutY="249.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Accomodation" onAction="#onSubmitbtnClick5">
          <graphic>
             <ImageView fx:id="but1im14" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>

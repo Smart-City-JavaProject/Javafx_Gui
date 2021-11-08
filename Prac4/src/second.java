@@ -70,5 +70,14 @@ public class second implements Initializable  {
         arg0.setTitle("Smart City");
         arg0.show(); 
     }
+    @FXML
+    void onSubmitbtnClick5(ActionEvent event) throws IOException {
+        Stage arg0 = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Accomendation.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show(); 
+    }
 
 }
