@@ -23,6 +23,11 @@ public class second implements Initializable {
     private Button obut1;
 
     @FXML
+    private ImageView but1im12;
+
+    @FXML
+    private ImageView but1im13;
+    @FXML
     private Label testlabel;
 
     private void init() {

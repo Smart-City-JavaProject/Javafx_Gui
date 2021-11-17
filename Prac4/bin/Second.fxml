@@ -9,7 +9,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="second">
    <children>
       <Label fx:id="testlabel" layoutX="215.0" layoutY="56.0" text="Label" />
-      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="37.0" layoutY="102.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" onAction="#onSubmitbtnClick" text="Education">
+      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="37.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Education">
          <graphic>
             <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -27,11 +27,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut111" contentDisplay="BOTTOM" layoutX="300.0" layoutY="102.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Hospitals" onAction="#onSubmitbtnClick3" >
+      <Button fx:id="obut111" contentDisplay="BOTTOM" layoutX="300.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Hospitals">
          <graphic>
             <ImageView fx:id="but1im11" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/images%20(1).png" />
+                  <Image url="@../Images/images__1_-removebg-preview.png" />
                </image>
             </ImageView>
          </graphic>
@@ -40,25 +40,43 @@
          <graphic>
             <ImageView fx:id="but1im12" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/images%20(2).png" />
+                  <Image url="@../Images/images__2_-removebg-preview.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="172.0" layoutY="249.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Polic Station" onAction="#onSubmitbtnClick4" >
+      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="172.0" layoutY="249.0" mnemonicParsing="false" onAction="#onSubmitbtnClick4" prefHeight="98.0" prefWidth="104.0" text="Polic Station">
          <graphic>
             <ImageView fx:id="but1im13" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/police-station-icon-on-white-background-vector-27191500.jpg" />
+                  <Image url="@../Images/police-station-icon-on-white-background-vector-27191500-removebg-preview.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut114" contentDisplay="BOTTOM" layoutX="300.0" layoutY="249.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Accomodation" onAction="#onSubmitbtnClick5">
+      <Button fx:id="obut114" contentDisplay="BOTTOM" layoutX="300.0" layoutY="249.0" mnemonicParsing="false" onAction="#onSubmitbtnClick5" prefHeight="98.0" prefWidth="104.0" text="Accomodation">
          <graphic>
             <ImageView fx:id="but1im14" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/41621-200.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="37.0" layoutY="249.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Banks">
+         <graphic>
+            <ImageView fx:id="but1im2" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/images3-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="obut13" contentDisplay="BOTTOM" layoutX="426.0" layoutY="249.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="restaurants">
+         <graphic>
+            <ImageView fx:id="but1im3" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/istockphoto-1029059560-1024x1024-removebg-preview.png" />
                </image>
             </ImageView>
          </graphic>
