@@ -10,7 +10,7 @@ public class App extends Application {
 
     public void set_stage(Stage arg1) {
         arg0 = arg1;
-        arg0.getIcons().add(new Image("t1.jpg"));
+        arg0.getIcons().add(new Image("file:Images/t1.jpg"));
 
     }
 
