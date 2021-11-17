@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class second implements Initializable  {
+public class second implements Initializable {
 
     @FXML
     private ImageView but1im;
@@ -26,58 +26,74 @@ public class second implements Initializable  {
 
     private void init() {
         String name = nextcon.get_name();
-        testlabel.setText("Welcome To The Navi Mumbai "+name);
+        set_stage(new Stage());
+        testlabel.setText("Welcome To The Navi Mumbai " + name);
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        init();  
+        init();
     }
+
+    public static Stage arg0;
+
+    public void set_stage(Stage arg1) {
+        arg0 = arg1;
+    }
+
+    public static Stage get_stage() {
+        return arg0;
+    }
+
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
+        Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("Education.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
         arg0.show();
-        
+
     }
+
     @FXML
     void onSubmitbtnClick1(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
+        Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("Transportation.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
-        arg0.show(); 
+        arg0.show();
     }
+
     @FXML
     void onSubmitbtnClick3(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
+        Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("Hospital.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
-        arg0.show(); 
+        arg0.show();
     }
+
     @FXML
     void onSubmitbtnClick4(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
+        Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("Police.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
-        arg0.show(); 
+        arg0.show();
     }
+
     @FXML
     void onSubmitbtnClick5(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
+        Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("Accomendation.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
-        arg0.show(); 
+        arg0.show();
     }
 
 }

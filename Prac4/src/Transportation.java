@@ -32,9 +32,10 @@ public class Transportation {
 
     @FXML
     private Button obut12;
+    static Stage arg0 = second.get_stage();
+
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("Bus.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
@@ -44,15 +45,15 @@ public class Transportation {
 
     @FXML
     void onSubmitbtnClick1(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("Flight.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
-        arg0.show();    }
+        arg0.show();
+    }
+
     @FXML
     void onSubmitbtnClick3(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("Train.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);

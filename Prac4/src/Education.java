@@ -26,26 +26,27 @@ public class Education {
 
     @FXML
     private Button obut11;
+    Stage arg0 = second.get_stage();
 
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
+
         Parent root = FXMLLoader.load(getClass().getResource("School.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
         arg0.show();
-        
+
     }
+
     @FXML
     void onSubmitbtnClick1(ActionEvent event) throws IOException {
-        Stage arg0 = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("College.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");
         arg0.show();
-        
+
     }
 
 }

@@ -7,9 +7,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class School{
-    ObservableList <String> my_list = FXCollections.observableArrayList("ICSE","CBSE","State Board");
+public class School {
+    ObservableList<String> my_list = FXCollections.observableArrayList("ICSE", "CBSE", "State Board");
     @FXML
     private ChoiceBox<String> choiceboc;
     @FXML
@@ -18,28 +19,41 @@ public class School{
     private Label my_label;
     @FXML
     private Button submitbtn;
+
     @FXML
     public void initialize() {
         choiceboc.setValue("State Board");
         choiceboc.setItems(my_list);
-        
+
     }
-    static String name_it=" ";
+
+    static String name_it = " ";
+
     public static void setItem(String item) {
         name_it = item;
     }
+
     public static String getName() {
         return name_it;
     }
+
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
         System.out.println(inputbox.getText());
         System.out.println(choiceboc.getValue());
-        String name_sc = JavaPostgreSql.getcolleges(choiceboc.getValue().toString(),inputbox.getText().toString());
+        String name_sc = JavaPostgreSql.getcolleges(choiceboc.getValue().toString(), inputbox.getText().toString());
         setItem(name_sc);
         System.out.println(name_sc);
-        my_label.setText(name_sc); 
-        SchoolInfo.initialize();
+        my_label.setText(name_sc);
+        String name = School.getName();
+        System.out.println("Here We Go " + name);
+        String lines[] = name.split("\n");
+        System.out.println("--->>> " + lines.length);
+        if (lines.length > 1) {
+            SchoolInfo.initialize();
+        } else {
+            my_label.setText("Enter Correct Spelling");
+        }
     }
 
 }
