@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -9,6 +10,8 @@ public class App extends Application {
 
     public void set_stage(Stage arg1) {
         arg0 = arg1;
+        arg0.getIcons().add(new Image("t1.jpg"));
+
     }
 
     public static Stage get_stage() {

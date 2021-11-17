@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -39,6 +40,8 @@ public class second implements Initializable {
 
     public void set_stage(Stage arg1) {
         arg0 = arg1;
+        arg0.getIcons().add(new Image("t1.jpg"));
+
     }
 
     public static Stage get_stage() {
@@ -88,6 +91,7 @@ public class second implements Initializable {
 
     @FXML
     void onSubmitbtnClick5(ActionEvent event) throws IOException {
+        System.out.println("--->>>");
         Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("Accomendation.fxml"));
         Scene sc = new Scene(root);
