@@ -55,7 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut13" contentDisplay="BOTTOM" layoutX="448.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="restaurants">
+      <Button fx:id="obut13" contentDisplay="BOTTOM" layoutX="448.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick7" prefHeight="98.0" prefWidth="104.0" text="restaurants">
          <graphic>
             <ImageView fx:id="but1im3" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>

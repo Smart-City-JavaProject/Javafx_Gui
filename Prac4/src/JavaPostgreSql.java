@@ -223,6 +223,37 @@ public class JavaPostgreSql {
         return count;
     }
 
+    public static String getrestaurents(String city_name) throws SQLException {
+        String SQL = "SELECT * FROM restaurant WHERE res_locality = ?";
+        String count = "";
+        String count1 = "";
+        String count2 = "";
+        String count3 = "";
+        String count4 = "";
+        String count5 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, city_name);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("res_name") + "\n";
+                count1 += rs.getString("sector") + "\n";
+                count2 += rs.getString("res_address") + "\n";
+                count3 += rs.getString("res_cno") + "\n";
+                count4 += rs.getString("res_rating") + "\n";
+                count5 += rs.getString("res_type") + "\n";
+            }
+            System.out.println("--->>> " + count);
+            set_string(count1);
+            set_loc(count2);
+            mobile_no(count3);
+            set_ratings(count4);
+            set_roomtype(count5);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
     public static String getnamebanks() {
         String SQL = "SELECT DISTINCT b_name FROM banks ";
         String count = "";
