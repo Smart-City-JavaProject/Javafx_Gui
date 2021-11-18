@@ -87,6 +87,34 @@ public class JavaPostgreSql {
         return count;
     }
 
+    public static String getbanks(String location, String name) {
+        String SQL = "SELECT * FROM banks WHERE b_locality = ?" + "AND b_name = ?";
+        String count = "";
+        String count1 = "";
+        String count2 = "";
+        String count3 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, location);
+            pstmt.setString(2, name);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                System.out.println(rs.toString());
+                count += rs.getString("b_name") + "\n";
+                count1 += rs.getString("sector") + "\n";
+                count2 += rs.getString("b_address") + "\n";
+                count3 += rs.getString("b_cno") + "\n";
+                System.out.println(rs.getString("b_name") + "\t");
+
+            }
+            set_string(count1);
+            set_loc(count2);
+            mobile_no(count3);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
     public static String getschools(String b_name, String location) {
         String SQL = "SELECT e_name,sector,e_address " + "FROM education " + "WHERE e_stream = ?"
                 + "AND e_locality = ?";
@@ -189,6 +217,20 @@ public class JavaPostgreSql {
             set_ratings(count4);
             set_cost(count6);
             set_roomtype(count5);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
+    public static String getnamebanks() {
+        String SQL = "SELECT DISTINCT b_name FROM banks ";
+        String count = "";
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count += rs.getString("b_name") + "\n";
+            }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }

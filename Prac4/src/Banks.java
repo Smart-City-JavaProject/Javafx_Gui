@@ -1,4 +1,5 @@
 import java.io.IOException;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,8 +9,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class School {
-    ObservableList<String> my_list = FXCollections.observableArrayList("ICSE", "CBSE", "State Board");
+public class Banks {
+
+    ObservableList<String> my_list = FXCollections.observableArrayList(JavaPostgreSql.getnamebanks().split("\n"));
     @FXML
     private ChoiceBox<String> choiceboc;
     @FXML
@@ -21,7 +23,7 @@ public class School {
 
     @FXML
     public void initialize() {
-        choiceboc.setValue("State Board");
+        choiceboc.setValue("Union Bank Of India");
         choiceboc.setItems(my_list);
 
     }
@@ -40,19 +42,11 @@ public class School {
     void onSubmitbtnClick(ActionEvent event) throws IOException {
         System.out.println(inputbox.getText());
         System.out.println(choiceboc.getValue());
-        String name_sc = JavaPostgreSql.getcolleges(choiceboc.getValue().toString(), inputbox.getText().toString());
-        setItem(name_sc);
-        System.out.println(name_sc);
-        my_label.setText(name_sc);
-        String name = School.getName();
-        System.out.println("Here We Go " + name);
-        String lines[] = name.split("\n");
-        System.out.println("--->>> " + lines.length);
-        if (lines.length > 1) {
-            SchoolInfo.initialize();
-        } else {
-            my_label.setText("Enter Correct Spelling");
-        }
+        String name_sc = JavaPostgreSql.getbanks(inputbox.getText().toString(), choiceboc.getValue().toString());
+        Hospital.setItem(name_sc);
+        System.out.println("--->. " + name_sc);
+        HospitalInfo.initialize();
+
     }
 
 }

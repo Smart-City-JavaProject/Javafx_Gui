@@ -1,8 +1,5 @@
-import java.io.File;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class DisplayInfoHospital {
@@ -24,6 +21,7 @@ public class DisplayInfoHospital {
 
     @FXML
     private Label sector_label;
+
     @FXML
     public void initialize() {
         String sector = HospitalInfo.get_String();

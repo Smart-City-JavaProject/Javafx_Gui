@@ -1,7 +1,5 @@
-import java.io.File;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class DisplayInfoSchool {
@@ -16,10 +14,11 @@ public class DisplayInfoSchool {
     private Label location_label;
 
     @FXML
-    private  Label name_label;
+    private Label name_label;
 
     @FXML
     private Label sector_label;
+
     @FXML
     public void initialize() {
         String sector = SchoolInfo.get_String();
