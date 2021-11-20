@@ -127,4 +127,15 @@ public class second implements Initializable {
         arg0.show();
     }
 
+    @FXML
+    void onSubmitbtnClick2(ActionEvent event) throws IOException {
+        System.out.println("--->>>");
+        Stage arg0 = get_stage();
+        Parent root = FXMLLoader.load(getClass().getResource("cinema_mall.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show();
+    }
+
 }
