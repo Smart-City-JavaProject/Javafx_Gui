@@ -12,7 +12,7 @@
          <image>
             <Image url="@../Images/41621-200.png" />
          </image></ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cf8a8a" height="372.0" layoutX="221.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+      <Rectangle fx:id="mpg4" arcHeight="5.0" arcWidth="5.0" fill="#cf8a8a" height="372.0" layoutX="221.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
       <Label layoutX="232.0" layoutY="53.0" text="Name" />
       <Label layoutX="231.0" layoutY="90.0" text="Sector" />
       <Label fx:id="sector_label" layoutX="303.0" layoutY="90.0" text="Label" />
