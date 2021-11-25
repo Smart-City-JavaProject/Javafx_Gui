@@ -15,12 +15,12 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #050051;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Police">
    <children>
       <Label fx:id="my_label" layoutX="389.0" layoutY="192.0" />
-      <ImageView fitHeight="411.0" fitWidth="820.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pol_gr3" fitHeight="411.0" fitWidth="820.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Downloads/flipped.png" />
          </image>
       </ImageView>
-      <Circle fill="#2087e7" layoutX="300.0" layoutY="192.0" radius="133.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="pol_gr2" fill="#2087e7" layoutX="300.0" layoutY="192.0" radius="133.0" stroke="BLACK" strokeType="INSIDE" />
       <TextField fx:id="city_name" layoutX="226.0" layoutY="137.0" promptText="Enter the City Name">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
@@ -41,7 +41,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fitHeight="276.0" fitWidth="149.0" layoutX="345.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pol_gr1" fitHeight="276.0" fitWidth="149.0" layoutX="345.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Downloads/clipart-boy-police-officer-5/clipart-boy-police-officer-5-transparent.png" />
          </image>
