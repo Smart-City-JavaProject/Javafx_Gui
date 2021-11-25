@@ -78,7 +78,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="submitbtn3" layoutX="274.0" layoutY="198.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
+      <Button fx:id="submitbtn3" layoutX="273.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
             <Lighting>
                <bumpInput>
@@ -89,6 +89,9 @@
                </light>
             </Lighting>
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </Pane>

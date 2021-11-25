@@ -39,7 +39,7 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </TextField>
-      <Button fx:id="submitbtn" layoutX="273.0" layoutY="258.0" mnemonicParsing="false" style="-fx-background-color: #fbff00;" text="Submit">
+      <Button fx:id="submitbtn" layoutX="273.0" layoutY="253.0" mnemonicParsing="false" style="-fx-background-color: #fbff00;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
