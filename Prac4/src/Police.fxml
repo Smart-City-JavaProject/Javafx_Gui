@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Police">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #050051;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Police">
    <children>
-      <TextField fx:id="city_name" layoutX="226.0" layoutY="113.0" promptText="Enter the City Name" />
-      <Button fx:id="my_btn" layoutX="278.0" layoutY="229.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" text="Enter" />
-      <Label fx:id="my_label" layoutX="389.0" layoutY="192.0"  />
+      <Label fx:id="my_label" layoutX="389.0" layoutY="192.0" />
+      <ImageView fitHeight="411.0" fitWidth="820.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/flipped.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#2087e7" layoutX="300.0" layoutY="192.0" radius="133.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="city_name" layoutX="226.0" layoutY="137.0" promptText="Enter the City Name">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TextField>
+      <Button fx:id="my_btn" layoutX="278.0" layoutY="263.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff00;" text="Enter" textFill="#050051">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="276.0" fitWidth="149.0" layoutX="345.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/clipart-boy-police-officer-5/clipart-boy-police-officer-5-transparent.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
