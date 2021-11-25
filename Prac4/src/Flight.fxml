@@ -1,20 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4d0224;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight">
    <children>
-      <Button fx:id="submitbtn" layoutX="264.0" layoutY="234.0" mnemonicParsing="false" text="Submit" />
-      <ChoiceBox fx:id="choiceboc" layoutX="307.0" layoutY="129.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="choiceboc1" layoutX="123.0" layoutY="129.0" prefWidth="150.0" />
-      <Label layoutX="170.0" layoutY="71.0" text="From" />
-      <Label layoutX="368.0" layoutY="71.0" text="To" />
-      <DatePicker layoutX="126.0" layoutY="179.0" prefHeight="25.0" prefWidth="150.0" />
-      <TextField layoutX="308.0" layoutY="179.0" promptText="Enter The Time" />
+      <Rectangle fx:id="shape_rect_fl" arcHeight="5.0" arcWidth="5.0" fill="#c17d9d" height="244.0" layoutX="85.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="431.0" />
+      <Label layoutX="185.0" layoutY="99.0" text="From" />
+      <Label layoutX="396.0" layoutY="99.0" text="To" />
+      <ChoiceBox fx:id="choiceboc1" layoutX="124.0" layoutY="139.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </ChoiceBox>
+      <ChoiceBox fx:id="choiceboc" layoutX="328.0" layoutY="139.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </ChoiceBox>
+      <DatePicker layoutX="124.0" layoutY="189.0" prefHeight="25.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </DatePicker>
+      <TextField layoutX="328.0" layoutY="189.0" promptText="Enter The Time">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TextField>
+      <Button fx:id="submitbtn" layoutX="274.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: #fbff00;" text="Submit">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="line3" fitHeight="166.0" fitWidth="165.0" layoutX="218.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+         <image>
+            <Image url="@../../../../Downloads/line.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fl_loc1" fitHeight="49.0" fitWidth="54.0" layoutX="174.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/placeholder.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fl_loc" fitHeight="49.0" fitWidth="54.0" layoutX="378.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/location%20(1).png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
