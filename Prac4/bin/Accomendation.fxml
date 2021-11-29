@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accomendation">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #860000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accomendation">
    <children>
-      <ChoiceBox fx:id="my_choice_box" layoutX="351.0" layoutY="117.0" prefWidth="150.0" />
-      <TextField fx:id="my_input" layoutX="125.0" layoutY="117.0" promptText="Enter The City name" />
-      <Button fx:id="my_btn" layoutX="285.0" layoutY="245.0" mnemonicParsing="false" text="Enter" onAction="#onSubmitbtnClick"  />
+      <ImageView fx:id="mpg1" fitHeight="400.0" fitWidth="400.0" layoutX="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/anyrgb.com.png" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="my_choice_box" layoutX="339.0" layoutY="138.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor></ChoiceBox>
+      <Button fx:id="my_btn" layoutX="293.0" layoutY="228.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #00ddff;" text="Enter">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fx:id="mpg2" fitHeight="400.0" fitWidth="400.0" layoutX="-141.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+         <image>
+            <Image url="@../Images/anyrgb.com.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="my_input" layoutX="144.0" layoutY="138.0" promptText="Enter the City name">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></TextField>
    </children>
 </Pane>

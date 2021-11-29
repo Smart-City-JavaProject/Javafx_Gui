@@ -16,18 +16,18 @@
    <children>
       <ImageView fx:id="rest_gr3" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
-            <Image url="@../../../../Downloads/anyrgb.com%20(1).png" />
+            <Image url="@../Images/anyrgb.com%20(1).png" />
          </image>
       </ImageView>
       <ImageView fx:id="rest_gr1" fitHeight="400.0" fitWidth="400.0" layoutX="200.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
          <image>
-            <Image url="@../../../../Downloads/anyrgb.com%20(1).png" />
+            <Image url="@../Images/anyrgb.com%20(1).png" />
          </image>
       </ImageView>
       <Rectangle fx:id="rest_gr4" arcHeight="5.0" arcWidth="5.0" fill="#f49494" height="200.0" layoutX="135.0" layoutY="100.0" stroke="#f49494" strokeType="INSIDE" width="331.0" />
       <ImageView fx:id="rest_gr2" fitHeight="245.0" fitWidth="606.0" layoutX="-39.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/waiter_PNG43.png" />
+            <Image url="@../Images/waiter_PNG43.png" />
          </image>
       </ImageView>
       <TextField fx:id="input_btn" layoutX="238.0" layoutY="188.0" prefHeight="25.0" prefWidth="137.0" promptText="Enter the Location">

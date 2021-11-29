@@ -56,17 +56,17 @@
       </ChoiceBox>
       <ImageView fx:id="line2" fitHeight="188.0" fitWidth="190.0" layoutX="206.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
          <image>
-            <Image url="@../../../../Downloads/line.png" />
+            <Image url="@../Images/line.png" />
          </image>
       </ImageView>
       <ImageView fx:id="loc_gr" fitHeight="54.0" fitWidth="54.0" layoutX="157.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/location%20(1).png" />
+            <Image url="@../Images/location%20(1).png" />
          </image>
       </ImageView>
       <ImageView fx:id="loc_gr1" fitHeight="54.0" fitWidth="43.0" layoutX="395.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/location%20(2).png" />
+            <Image url="@../Images/location%20(2).png" />
          </image>
       </ImageView>
    </children>

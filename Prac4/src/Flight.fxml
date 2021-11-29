@@ -56,17 +56,17 @@
       </Button>
       <ImageView fx:id="line3" fitHeight="166.0" fitWidth="165.0" layoutX="218.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
          <image>
-            <Image url="@../../../../Downloads/line.png" />
+            <Image url="@../Images/line.png" />
          </image>
       </ImageView>
       <ImageView fx:id="fl_loc1" fitHeight="49.0" fitWidth="54.0" layoutX="175.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/placeholder.png" />
+            <Image url="@../Images/placeholder.png" />
          </image>
       </ImageView>
       <ImageView fx:id="fl_loc" fitHeight="49.0" fitWidth="54.0" layoutX="378.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/location%20(1).png" />
+            <Image url="@../Images/location%20(1).png" />
          </image>
       </ImageView>
    </children>

@@ -18,12 +18,12 @@
       <Label fx:id="my_label" layoutX="247.0" layoutY="269.0" />
       <ImageView fx:id="mpgr1" fitHeight="400.0" fitWidth="634.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/PIXNIO-1952962-3810x2540.jpg" />
+            <Image url="@../Images/PIXNIO-1952962-3810x2540.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="mpgr" fitHeight="400.0" fitWidth="475.0" layoutX="200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/anyrgb.com%20(4).png" />
+            <Image url="@../Images/anyrgb.com%20(4).png" />
          </image>
       </ImageView>
       <TextField fx:id="inputbox" layoutX="135.0" layoutY="104.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter The Name Of Place">

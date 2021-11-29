@@ -6,32 +6,37 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transportation">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00313e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transportation">
    <children>
-<Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="134.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Bus">
+      <ImageView fx:id="mpgr4" fitHeight="433.0" fitWidth="546.0" layoutX="89.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/anyrgb.com%20(2).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="47.0" prefHeight="31.0" prefWidth="614.0" text="Select what you wanted to Search" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="144.0" layoutY="109.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Bus">
          <graphic>
             <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/bus-icon-vector-21156725.jpg" />
+                  <Image url="@../Images/bus.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="211.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="Flight">
-         <graphic>
-            <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/images%20(4).png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-       <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="61.0" text="Select What You Wanted To Search" />
-       <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="319.0" layoutY="124.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Train">
+      <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="352.0" layoutY="109.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Train">
          <graphic>
             <ImageView fx:id="but1im2" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Images/download%20(1).png" />
+                  <Image url="@../Images/rail.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="248.0" layoutY="256.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="Flight">
+         <graphic>
+            <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/commercial-plane.png" />
                </image>
             </ImageView>
          </graphic>

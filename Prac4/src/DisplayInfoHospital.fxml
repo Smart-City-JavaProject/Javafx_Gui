@@ -19,7 +19,7 @@
       <Label fx:id="name_label" layoutX="296.0" layoutY="63.0" text="Label" />
       <ImageView fx:id="imag_v" fitHeight="323.0" fitWidth="179.0" layoutX="15.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/hospital-buildings.png" />
+            <Image url="@../Images/hospital-buildings.png" />
          </image>
       </ImageView>
       <Label layoutX="212.0" layoutY="211.0" prefHeight="17.0" prefWidth="56.0" text="Contact" />

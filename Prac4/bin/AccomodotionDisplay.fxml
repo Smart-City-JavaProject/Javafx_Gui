@@ -4,28 +4,30 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccomodotionDisplay">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #860000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccomodotionDisplay">
    <children>
-      <Label layoutX="233.0" layoutY="53.0" text="Name" />
-      <Label layoutX="233.0" layoutY="90.0" text="Sector" />
-      <Label layoutX="233.0" layoutY="125.0" text="Location" />
-      <Label layoutX="231.0" layoutY="317.0" text="Near Place" />
-      <Label fx:id="location_label" layoutX="300.0" layoutY="125.0" text="Label" />
-      <Label fx:id="Nearplaces_label" layoutX="298.0" layoutY="317.0" text="Label" />
-      <Label fx:id="sector_label" layoutX="300.0" layoutY="90.0" text="Label" />
-      <Label fx:id="name_label" layoutX="300.0" layoutY="53.0" text="Label" />
       <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/41621-200.png" />
          </image></ImageView>
-      <Label layoutX="230.0" layoutY="192.0" text="Contact" />
-      <Label fx:id="contact_id" layoutX="300.0" layoutY="192.0" text="Label" />
-      <Label layoutX="236.0" layoutY="226.0" text="Rent" />
-      <Label fx:id="my_rent" layoutX="300.0" layoutY="226.0" text="Label" />
-      <Label layoutX="230.0" layoutY="258.0" text="Room Type" />
+      <Rectangle fx:id="mpg4" arcHeight="5.0" arcWidth="5.0" fill="#cf8a8a" height="372.0" layoutX="221.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+      <Label layoutX="232.0" layoutY="53.0" text="Name" />
+      <Label layoutX="231.0" layoutY="90.0" text="Sector" />
+      <Label fx:id="sector_label" layoutX="303.0" layoutY="90.0" text="Label" />
+      <Label layoutX="227.0" layoutY="125.0" text="Location" />
+      <Label fx:id="location_label" layoutX="303.0" layoutY="125.0" text="Label" />
+      <Label layoutX="229.0" layoutY="192.0" text="Contact" />
+      <Label fx:id="contact_id" layoutX="303.0" layoutY="191.0" text="Label" />
+      <Label layoutX="238.0" layoutY="226.0" text="Rent" />
+      <Label fx:id="my_rent" layoutX="303.0" layoutY="226.0" text="Label" />
       <Label fx:id="my_rtype" layoutX="303.0" layoutY="258.0" text="Label" />
-      <Label layoutX="232.0" layoutY="293.0" text="Rating" />
-      <Label fx:id="my_rate" layoutX="296.0" layoutY="293.0" text="Label" />
+      <Label layoutX="232.0" layoutY="258.0" text="Room Type" />
+      <Label layoutX="241.0" layoutY="293.0" text="Rating" />
+      <Label fx:id="my_rate" layoutX="303.0" layoutY="293.0" text="Label" />
+      <Label layoutX="235.0" layoutY="327.0" text="Near Place" />
+      <Label fx:id="Nearplaces_label" layoutX="303.0" layoutY="327.0" text="Label" />
+      <Label fx:id="name_label" layoutX="303.0" layoutY="53.0" text="Label" />
    </children>
 </Pane>

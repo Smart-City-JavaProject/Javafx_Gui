@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="College">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4e0202;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="College">
    <children>
-      <TextField fx:id="inputbox" layoutX="125.0" layoutY="104.0" promptText="Enter The Name Of the Place" />
-      <Button fx:id="submitbtn" layoutX="274.0" layoutY="233.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" text="Submit" />
-      <ChoiceBox fx:id="choiceboc" layoutX="301.0" layoutY="104.0" prefWidth="150.0" />
       <Label fx:id="my_label" layoutX="356.0" layoutY="191.0" />
+      <ImageView fx:id="col_gr1" fitHeight="400.0" fitWidth="410.0" layoutX="-159.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../Images/anyrgb.com%20(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="col_gr3" fitHeight="270.0" fitWidth="504.0" layoutX="92.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/board.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="submitbtn" layoutX="339.0" layoutY="168.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #e5ff00;" text="Submit">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ChoiceBox fx:id="choiceboc" layoutX="128.0" layoutY="143.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ChoiceBox>
+      <TextField fx:id="inputbox" layoutX="129.0" layoutY="77.0" promptText="Enter the Name of Place">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <ImageView fx:id="col_gr2" fitHeight="292.0" fitWidth="253.0" layoutX="372.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/2043940.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

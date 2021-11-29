@@ -46,7 +46,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut112" contentDisplay="BOTTOM" layoutX="448.0" layoutY="102.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="104.0" text="Public Places">
+      <Button fx:id="obut112" contentDisplay="BOTTOM" layoutX="448.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick2" prefHeight="98.0" prefWidth="104.0" text="Public Places">
          <graphic>
             <ImageView fx:id="but1im12" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>

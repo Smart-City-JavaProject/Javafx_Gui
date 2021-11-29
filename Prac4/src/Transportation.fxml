@@ -10,7 +10,7 @@
    <children>
       <ImageView fx:id="mpgr4" fitHeight="433.0" fitWidth="546.0" layoutX="89.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/anyrgb.com%20(2).png" />
+            <Image url="@../Images/anyrgb.com%20(2).png" />
          </image>
       </ImageView>
       <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="47.0" prefHeight="31.0" prefWidth="614.0" text="Select what you wanted to Search" textAlignment="CENTER" textFill="WHITE" />
@@ -18,7 +18,7 @@
          <graphic>
             <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/bus.png" />
+                  <Image url="@../Images/bus.png" />
                </image>
             </ImageView>
          </graphic>
@@ -27,7 +27,7 @@
          <graphic>
             <ImageView fx:id="but1im2" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/rail.png" />
+                  <Image url="@../Images/rail.png" />
                </image>
             </ImageView>
          </graphic>
@@ -36,7 +36,7 @@
          <graphic>
             <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/commercial-plane.png" />
+                  <Image url="@../Images/commercial-plane.png" />
                </image>
             </ImageView>
          </graphic>
