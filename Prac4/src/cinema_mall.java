@@ -31,7 +31,11 @@ public class cinema_mall {
 
     @FXML
     void onSubmitbtnClick2(ActionEvent event) throws IOException {
-        System.out.println('l');
+        Parent root = FXMLLoader.load(getClass().getResource("Cinema.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show();
 
     }
 

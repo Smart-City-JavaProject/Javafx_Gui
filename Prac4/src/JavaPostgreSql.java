@@ -113,6 +113,35 @@ public class JavaPostgreSql {
         return count;
     }
 
+    public static String getcinema(String locality) {
+        String SQL = "SELECT * FROM cinema WHERE cin_locality = ?";
+        String count = "";
+        String count1 = "";
+        String count2 = "";
+        String count3 = "";
+        String count4 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, locality);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("cin_name") + "\n";
+                count1 += rs.getString("sector") + "\n";
+                count2 += rs.getString("cin_address") + "\n";
+                count3 += rs.getString("cin_web") + "\n";
+                count4 += rs.getString("cin_cno") + "\n";
+                System.out.println(rs.getString("cin_name") + "\t");
+
+            }
+            set_string(count1);
+            set_loc(count2);
+            set_ratings(count3);
+            set_roomtype(count4);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
     public static String getbanks(String location, String name) {
         String SQL = "SELECT * FROM banks WHERE b_locality = ?" + "AND b_name = ?";
         String count = "";
