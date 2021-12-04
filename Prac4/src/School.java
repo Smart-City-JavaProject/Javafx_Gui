@@ -49,6 +49,7 @@ public class School {
         String lines[] = name.split("\n");
         System.out.println("--->>> " + lines.length);
         if (lines.length > 1) {
+            System.out.println('p');
             SchoolInfo.initialize();
         } else {
             my_label.setText("Enter Correct Spelling");

@@ -64,7 +64,7 @@ public class JavaPostgreSql {
     }
 
     public static String getcolleges(String b_name, String location) {
-        String SQL = "SELECT e_name,sector,e_address " + "FROM education " + "WHERE e_board = ?" + "AND e_locality = ?";
+        String SQL = "SELECT * FROM education WHERE e_board = ? AND e_locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -81,6 +81,32 @@ public class JavaPostgreSql {
             }
             set_string(count1);
             set_loc(count2);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
+    public static String getmalls(String locality) {
+        String SQL = "SELECT * FROM mall WHERE m_locality = ?";
+        String count = "";
+        String count1 = "";
+        String count2 = "";
+        String count3 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, locality);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("m_name") + "\n";
+                count1 += rs.getString("sector") + "\n";
+                count2 += rs.getString("m_address") + "\n";
+                count3 += rs.getString("m_time") + "\n";
+                System.out.println(rs.getString("m_name") + "\t");
+
+            }
+            set_string(count1);
+            set_loc(count2);
+            set_ratings(count3);
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }

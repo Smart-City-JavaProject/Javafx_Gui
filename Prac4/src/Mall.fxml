@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mall">
+   <children>
+      <Button fx:id="submit_btn" layoutX="274.0" layoutY="223.0" mnemonicParsing="false" onAction="#GetMallsBtn" text="Enter" />
+      <TextField fx:id="input_text" layoutX="226.0" layoutY="123.0" promptText="Location" />
+   </children>
+</Pane>
