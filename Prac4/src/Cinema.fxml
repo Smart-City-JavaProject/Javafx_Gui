@@ -16,7 +16,7 @@
    <children>
       <ImageView fx:id="seats" fitHeight="607.0" fitWidth="634.0" layoutX="-4.0" layoutY="-154.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/theater-transparent-20.png" />
+            <Image url="@../Images/theater-transparent-20.png" />
          </image>
       </ImageView>
       <Rectangle fx:id="screen" arcHeight="5.0" arcWidth="5.0" fill="#b2cde7" height="202.0" layoutX="83.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="434.0">
@@ -53,7 +53,7 @@
       </Button>
       <ImageView fx:id="hitman" fitHeight="150.0" fitWidth="200.0" layoutX="317.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/hitman-clipart-hitman-clipart-985.png" />
+            <Image url="@../Images/hitman-clipart-hitman-clipart-985.png" />
          </image>
       </ImageView>
    </children>

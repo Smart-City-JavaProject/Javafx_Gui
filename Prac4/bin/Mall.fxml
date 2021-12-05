@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Ellipse?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mall">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mall">
    <children>
-      <Button fx:id="submit_btn" layoutX="274.0" layoutY="223.0" mnemonicParsing="false" onAction="#GetMallsBtn" text="Enter" />
-      <TextField fx:id="input_text" layoutX="226.0" layoutY="123.0" promptText="Location" />
+      <ImageView fx:id="mall_img2" fitHeight="434.0" fitWidth="569.0" layoutX="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/anyrgb.com%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mall_img1" fitHeight="434.0" fitWidth="553.0" layoutX="-33.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/flipped.png" />
+         </image>
+      </ImageView>
+      <Ellipse fx:id="mall_img5" fill="#feff00" layoutX="300.0" layoutY="180.0" radiusX="144.0" radiusY="116.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="mall_img4" fill="#feff00" layoutX="300.0" layoutY="180.0" radiusX="136.0" radiusY="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Ellipse>
+      <Button fx:id="submit_btn" layoutX="278.0" layoutY="241.0" mnemonicParsing="false" onAction="#GetMallsBtn" style="-fx-background-color: #00ff15;" text="Enter">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="mall_img3" fitHeight="321.0" fitWidth="149.0" layoutX="139.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/teacher-png-46696.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="input_text" alignment="CENTER" layoutX="226.0" layoutY="113.0" promptText="Location">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
    </children>
 </Pane>

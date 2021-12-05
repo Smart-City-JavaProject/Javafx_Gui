@@ -15,12 +15,12 @@
    <children>
       <ImageView fx:id="mall_img2" fitHeight="434.0" fitWidth="569.0" layoutX="76.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/anyrgb.com%20(2).png" />
+            <Image url="@../Images/anyrgb.com%20(2).png" />
          </image>
       </ImageView>
       <ImageView fx:id="mall_img1" fitHeight="434.0" fitWidth="553.0" layoutX="-33.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/flipped.png" />
+            <Image url="@../Images/flipped.png" />
          </image>
       </ImageView>
       <Ellipse fx:id="mall_img5" fill="#feff00" layoutX="300.0" layoutY="180.0" radiusX="144.0" radiusY="116.0" stroke="BLACK" strokeType="INSIDE" />
@@ -53,7 +53,7 @@
       </Button>
       <ImageView fx:id="mall_img3" fitHeight="321.0" fitWidth="149.0" layoutX="139.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/teacher-png-46696.jpg" />
+            <Image url="@../Images/teacher-png-46696.jpg" />
          </image>
       </ImageView>
       <TextField fx:id="input_text" alignment="CENTER" layoutX="226.0" layoutY="113.0" promptText="Location">
