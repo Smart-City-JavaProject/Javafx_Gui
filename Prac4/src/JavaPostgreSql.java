@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class JavaPostgreSql {
     public static Connection connect_db() throws SQLException {
-        String url = "jdbc:postgresql://localhost:5433/JavaFx_Db";
+        String url = "jdbc:postgresql://localhost:5433/JavaFx_Main_Db";
         String user = "postgres";
         String password = "test123";
         return DriverManager.getConnection(url, user, password);
