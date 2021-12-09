@@ -271,6 +271,26 @@ public class JavaPostgreSql {
         return count;
     }
 
+    public static String getTrains(String From, String To) throws SQLException {
+        String SQL = "SELECT * FROM train WHERE tr_dep = ? AND tr_arr=?";
+        String count = "";
+        String count1 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, From);
+            pstmt.setString(2, To);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("tr_tno") + "\n";
+                count1 += rs.getString("tr_deptime") + "\n";
+            }
+            set_string(count1);
+            System.out.println("---> c1 " + count1);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
     public static String getaccomendation(String city_name, String type) throws SQLException {
         String SQL = "SELECT * FROM accomodation WHERE acc_locality = ? AND acc_type = ?";
         String count = "";
@@ -358,6 +378,20 @@ public class JavaPostgreSql {
             ResultSet rs = pstmt.executeQuery(SQL);
             while (rs.next()) {
                 count += rs.getString("fl_arr") + "\n";
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
+    public static String getnametrain() {
+        String SQL = "SELECT DISTINCT tr_arr  FROM train";
+        String count = "";
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count += rs.getString("tr_arr") + "\n";
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
