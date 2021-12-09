@@ -9,3 +9,5 @@ SELECT *
 FROM train
 ALTER TABLE education
 ADD COLUMN sector VARCHAR(20) DEFAULT '15';
+SELECT DISTINCT fl_arr
+FROM flight;
