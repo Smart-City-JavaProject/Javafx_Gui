@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class JavaPostgreSql {
     public static Connection connect_db() throws SQLException {
-        String url = "jdbc:postgresql://localhost:5433/gui_prac2";
+        String url = "jdbc:postgresql://localhost:5433/JavaFx_Db";
         String user = "postgres";
         String password = "test123";
         return DriverManager.getConnection(url, user, password);
@@ -243,6 +243,34 @@ public class JavaPostgreSql {
         return count;
     }
 
+    public static String getFlight(String From, String To) throws SQLException {
+        String SQL = "SELECT * FROM flight WHERE fl_dep = ? AND fl_arr=?";
+        String count = "";
+        String count1 = "";
+        String count2 = "";
+        String count3 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, From);
+            pstmt.setString(2, To);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("fl_airline") + "\n";
+                count1 += rs.getString("fl_no") + "\n";
+                count2 += rs.getString("fl_deptime") + "\n";
+                count3 += rs.getString("fl_arrtime") + "\n";
+            }
+            set_string(count1);
+            set_loc(count2);
+            mobile_no(count3);
+            System.out.println("---> c1 " + count1);
+            System.out.println("---> c2 " + count2);
+            System.out.println("---> c3 " + count3);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
     public static String getaccomendation(String city_name, String type) throws SQLException {
         String SQL = "SELECT * FROM accomodation WHERE acc_locality = ? AND acc_type = ?";
         String count = "";
@@ -316,6 +344,20 @@ public class JavaPostgreSql {
             ResultSet rs = pstmt.executeQuery(SQL);
             while (rs.next()) {
                 count += rs.getString("b_name") + "\n";
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
+    public static String getnameflight() {
+        String SQL = "SELECT DISTINCT fl_arr  FROM flight";
+        String count = "";
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count += rs.getString("fl_arr") + "\n";
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());

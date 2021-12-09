@@ -1,26 +1,51 @@
+import java.sql.SQLException;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.stage.Stage;
 
-public class Flight{
-    ObservableList <String> my_list = FXCollections.observableArrayList("Kharghar","Nerul","Panvel");
-    ObservableList <String> my_list1 = FXCollections.observableArrayList("Nerul","Panvel","Kharghar");
+public class Flight {
+    ObservableList<String> my_list = FXCollections.observableArrayList(JavaPostgreSql.getnameflight().split("\n"));
+    ObservableList<String> my_list1 = FXCollections.observableArrayList("Mumbai");
     @FXML
-    private ChoiceBox<String> choiceboc;
+    private ChoiceBox<String> tobox;
 
     @FXML
-    private ChoiceBox<String> choiceboc1;
+    private ChoiceBox<String> frombox;
     @FXML
     private Button submitbtn;
+    public static Stage arg0 = second.get_stage();
+
     @FXML
     public void initialize() {
-        choiceboc.setValue("Kharghar");
-        choiceboc.setItems(my_list);
-        choiceboc1.setValue("Nerul");
-        choiceboc1.setItems(my_list1);
+        tobox.setValue(my_list.get(0).toString());
+        tobox.setItems(my_list);
+        frombox.setValue("Mumbai");
+        frombox.setItems(my_list1);
+    }
 
+    static String name = "";
+
+    public static void set_name(String name_val) {
+        name = name_val;
+    }
+
+    public static String getName() {
+        return name;
+    }
+
+    @FXML
+    void FlightSubmit(ActionEvent event) throws SQLException {
+        String from = frombox.getValue();
+        String to = tobox.getValue();
+        String name = JavaPostgreSql.getFlight(from, to);
+        System.out.println(name);
+        set_name(name);
+        FlightInfo.initialize();
     }
 
 }
