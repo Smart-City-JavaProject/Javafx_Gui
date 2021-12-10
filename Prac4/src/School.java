@@ -36,10 +36,21 @@ public class School {
         return name_it;
     }
 
+    static String location_it = " ";
+
+    public static void setlocation(String item) {
+        location_it = item;
+    }
+
+    public static String getlocation() {
+        return location_it;
+    }
+
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
         System.out.println(inputbox.getText());
         System.out.println(choiceboc.getValue());
+        setlocation(inputbox.getText());
         String name_sc = JavaPostgreSql.getcolleges(choiceboc.getValue().toString(), inputbox.getText().toString());
         setItem(name_sc);
         System.out.println(name_sc);

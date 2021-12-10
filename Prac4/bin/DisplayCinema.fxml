@@ -10,18 +10,20 @@
    <children>
       <ImageView fx:id="imag_v" fitHeight="162.0" fitWidth="165.0" layoutX="22.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/cinema%20(1).png" />
+            <Image url="@../Images/cinema%20(1).png" />
          </image></ImageView>
-      <Rectangle fx:id="d_s_img" arcHeight="5.0" arcWidth="5.0" fill="#9e75ae" height="331.0" layoutX="209.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="384.0" />
-      <Label layoutX="227.0" layoutY="72.0" text="Name" />
-      <Label layoutX="226.0" layoutY="135.0" text="Sector" />
-      <Label layoutX="225.0" layoutY="192.0" prefHeight="17.0" prefWidth="50.0" text="Location" />
-      <Label layoutX="223.0" layoutY="258.0" prefHeight="17.0" prefWidth="63.0" text="Website" />
-      <Label fx:id="location_label" layoutX="300.0" layoutY="192.0" text="Label" />
-      <Label fx:id="timinig_label" layoutX="300.0" layoutY="258.0" text="Label" />
-      <Label fx:id="sector_label" layoutX="300.0" layoutY="135.0" text="Label" />
-      <Label fx:id="name_label" layoutX="300.0" layoutY="72.0" text="Label" />
-      <Label layoutX="223.0" layoutY="298.0" prefHeight="17.0" prefWidth="63.0" text="Contact" />
-      <Label fx:id="Contact" layoutX="300.0" layoutY="298.0" text="Label" />
+      <Rectangle fx:id="d_s_img" arcHeight="5.0" arcWidth="5.0" fill="#9e75ae" height="356.0" layoutX="209.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="384.0" />
+      <Label layoutX="226.0" layoutY="51.0" text="Name" />
+      <Label layoutX="223.0" layoutY="96.0" text="Sector" />
+      <Label layoutX="222.0" layoutY="139.0" prefHeight="17.0" prefWidth="50.0" text="Location" />
+      <Label layoutX="220.0" layoutY="190.0" prefHeight="17.0" prefWidth="63.0" text="Website" />
+      <Label fx:id="location_label" layoutX="297.0" layoutY="139.0" text="Label" />
+      <Label fx:id="timinig_label" layoutX="297.0" layoutY="190.0" text="Label" />
+      <Label fx:id="sector_label" layoutX="297.0" layoutY="96.0" text="Label" />
+      <Label fx:id="name_label" layoutX="299.0" layoutY="51.0" text="Label" />
+      <Label layoutX="220.0" layoutY="230.0" prefHeight="17.0" prefWidth="63.0" text="Contact" />
+      <Label fx:id="Contact" layoutX="297.0" layoutY="230.0" text="Label" />
+      <Label layoutX="222.0" layoutY="266.0" text="Near Place" />
+      <Label fx:id="Nearplaces_label" layoutX="295.0" layoutY="266.0" text="Label" />
    </children>
 </Pane>

@@ -29,6 +29,17 @@ public class DisplayInfoSchool {
         location_label.setText(location);
         location_label.setWrapText(true);
         location_label.setPrefWidth(300);
+        try {
+            String near = JavaPostgreSql.get_near_place("education", sector.trim(), School.getlocation());
+            if (near.length() > 0) {
+                Nearplaces_label.setText(near);
+            } else {
+                Nearplaces_label.setText("No Near Places");
+            }
+        } catch (Exception e) {
+            Nearplaces_label.setText("No Near Places");
+            System.out.println(e);
+        }
 
         // File file = new File("Images/school-icon-png-14043.png");
         // Image image = new Image(file.toURI().toString());

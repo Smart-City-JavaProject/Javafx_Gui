@@ -25,13 +25,24 @@ public class Police {
         return name_it;
     }
 
+    static String name_location = " ";
+
+    public static void setlocation(String item) {
+        name_location = item;
+    }
+
+    public static String getlocation() {
+        return name_location;
+    }
+
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws SQLException {
         String city = city_name.getText();
         System.out.println(city);
         String po = JavaPostgreSql.getpolice(city);
         System.out.println(po);
-        Hospital.setItem(po);
+        setlocation(city);
+        setItem(po);
         // setItem(po);
         System.out.println(po);
         // HospitalInfo.initialize();
@@ -40,7 +51,7 @@ public class Police {
         String lines[] = name.split("\n");
         System.out.println("--->>> " + lines.length);
         if (lines.length >= 1) {
-            HospitalInfo.initialize();
+            PoliceInfo.initialize();
         } else {
             my_label.setText("Enter Correct Spelling");
         }

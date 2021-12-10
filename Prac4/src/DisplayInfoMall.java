@@ -6,6 +6,8 @@ import javafx.scene.shape.Rectangle;
 public class DisplayInfoMall {
 
     @FXML
+    private Label Nearplaces_label;
+    @FXML
     private Rectangle d_s_img;
 
     @FXML
@@ -37,6 +39,16 @@ public class DisplayInfoMall {
             location_label.setText(location);
             location_label.setWrapText(true);
             location_label.setPrefWidth(300);
+            try {
+                String near = JavaPostgreSql.get_near_place("mall", sector.trim(), Mall.getlocation());
+                if (near.length() > 0) {
+                    Nearplaces_label.setText(near);
+                } else {
+                    Nearplaces_label.setText("No Near Places");
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         } catch (Exception e) {
             System.out.println("--->>> " + e);
         }

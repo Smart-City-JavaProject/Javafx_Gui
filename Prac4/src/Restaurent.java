@@ -13,12 +13,32 @@ public class Restaurent {
 
     @FXML
     private Button sub_btn;
+    public static String name = "";
+
+    public void set_name(String names) {
+        name = names;
+    }
+
+    public static String get_name() {
+        return name;
+    }
+
+    public static String location = "";
+
+    public void set_location(String names) {
+        location = names;
+    }
+
+    public static String get_location() {
+        return location;
+    }
 
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException, SQLException {
         System.out.println(input_btn.getText());
         String name_sc = JavaPostgreSql.getrestaurents(input_btn.getText().toString());
-        Accomendation.setItem(name_sc);
+        set_name(name_sc);
+        set_location(input_btn.getText().toString());
         System.out.println("--->. " + name_sc);
         RestaurentInfo.initialize();
 

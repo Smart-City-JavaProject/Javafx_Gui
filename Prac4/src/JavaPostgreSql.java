@@ -1,8 +1,9 @@
 import java.sql.*;
+import java.util.ArrayList;
 
 public class JavaPostgreSql {
     public static Connection connect_db() throws SQLException {
-        String url = "jdbc:postgresql://localhost:5433/JavaFx_Main_Db";
+        String url = "jdbc:postgresql://localhost:5433/JavaFx_2";
         String user = "postgres";
         String password = "test123";
         return DriverManager.getConnection(url, user, password);
@@ -63,8 +64,18 @@ public class JavaPostgreSql {
         return mobile_no;
     }
 
+    public static ArrayList<String> name_table;
+
+    public static void set_table_name(ArrayList<String> s) {
+        name_table = s;
+    }
+
+    public static ArrayList<String> get_table_name() {
+        return name_table;
+    }
+
     public static String getcolleges(String b_name, String location) {
-        String SQL = "SELECT * FROM education WHERE e_board = ? AND e_locality = ?";
+        String SQL = "SELECT * FROM education WHERE board = ? AND locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -73,10 +84,10 @@ public class JavaPostgreSql {
             pstmt.setString(2, location);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("e_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("e_address") + "\n";
-                System.out.println(rs.getString("e_name") + "\t");
+                count2 += rs.getString("address") + "\n";
+                System.out.println(rs.getString("name") + "\t");
 
             }
             set_string(count1);
@@ -88,7 +99,7 @@ public class JavaPostgreSql {
     }
 
     public static String getmalls(String locality) {
-        String SQL = "SELECT * FROM mall WHERE m_locality = ?";
+        String SQL = "SELECT * FROM mall WHERE locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -97,11 +108,11 @@ public class JavaPostgreSql {
             pstmt.setString(1, locality);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("m_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("m_address") + "\n";
-                count3 += rs.getString("m_time") + "\n";
-                System.out.println(rs.getString("m_name") + "\t");
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("time") + "\n";
+                System.out.println(rs.getString("name") + "\t");
 
             }
             set_string(count1);
@@ -114,7 +125,7 @@ public class JavaPostgreSql {
     }
 
     public static String getcinema(String locality) {
-        String SQL = "SELECT * FROM cinema WHERE cin_locality = ?";
+        String SQL = "SELECT * FROM cinema WHERE locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -124,12 +135,12 @@ public class JavaPostgreSql {
             pstmt.setString(1, locality);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("cin_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("cin_address") + "\n";
-                count3 += rs.getString("cin_web") + "\n";
-                count4 += rs.getString("cin_cno") + "\n";
-                System.out.println(rs.getString("cin_name") + "\t");
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("web") + "\n";
+                count4 += rs.getString("cno") + "\n";
+                System.out.println(rs.getString("name") + "\t");
 
             }
             set_string(count1);
@@ -143,7 +154,7 @@ public class JavaPostgreSql {
     }
 
     public static String getbanks(String location, String name) {
-        String SQL = "SELECT * FROM banks WHERE b_locality = ?" + "AND b_name = ?";
+        String SQL = "SELECT * FROM banks WHERE locality = ?" + "AND name = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -154,11 +165,11 @@ public class JavaPostgreSql {
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.toString());
-                count += rs.getString("b_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("b_address") + "\n";
-                count3 += rs.getString("b_cno") + "\n";
-                System.out.println(rs.getString("b_name") + "\t");
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("cno") + "\n";
+                System.out.println(rs.getString("name") + "\t");
 
             }
             set_string(count1);
@@ -171,8 +182,8 @@ public class JavaPostgreSql {
     }
 
     public static String getschools(String b_name, String location) {
-        String SQL = "SELECT e_name,sector,e_address " + "FROM education " + "WHERE e_stream = ?"
-                + "AND e_locality = ?";
+        String SQL = "SELECT name,sector,address " + "FROM education " + "WHERE stream = ?"
+                + "AND locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -181,10 +192,10 @@ public class JavaPostgreSql {
             pstmt.setString(2, location);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("e_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("e_address") + "\n";
-                System.out.println(rs.getString("e_name") + "\t");
+                count2 += rs.getString("address") + "\n";
+                System.out.println(rs.getString("name") + "\t");
 
             }
             set_string(count1);
@@ -196,7 +207,7 @@ public class JavaPostgreSql {
     }
 
     public static String gethospitals(String city_name) throws SQLException {
-        String SQL = "SELECT h_name,h_cno,h_address,sector FROM hospital WHERE h_locality = ?";
+        String SQL = "SELECT name,cno,address,sector FROM hospital WHERE locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -205,10 +216,10 @@ public class JavaPostgreSql {
             pstmt.setString(1, city_name);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("h_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("h_address") + "\n";
-                count3 += rs.getString("h_cno") + "\n";
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("cno") + "\n";
             }
             set_string(count1);
             set_loc(count2);
@@ -220,7 +231,7 @@ public class JavaPostgreSql {
     }
 
     public static String getpolice(String city_name) throws SQLException {
-        String SQL = "SELECT ps_locality,ps_cno,ps_address,sector FROM police_station WHERE ps_locality LIKE ?";
+        String SQL = "SELECT locality,cno,address,sector FROM police_station WHERE locality LIKE ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -229,10 +240,10 @@ public class JavaPostgreSql {
             pstmt.setString(1, city_name + "%");
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("ps_locality") + "\n";
+                count += rs.getString("locality") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("ps_address") + "\n";
-                count3 += rs.getString("ps_cno") + "\n";
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("cno") + "\n";
             }
             set_string(count1);
             set_loc(count2);
@@ -311,7 +322,7 @@ public class JavaPostgreSql {
     }
 
     public static String getaccomendation(String city_name, String type) throws SQLException {
-        String SQL = "SELECT * FROM accomodation WHERE acc_locality = ? AND acc_type = ?";
+        String SQL = "SELECT * FROM accomodation WHERE locality = ? AND type = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -324,13 +335,13 @@ public class JavaPostgreSql {
             pstmt.setString(2, type);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("acc_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("acc_address") + "\n";
-                count3 += rs.getString("acc_cno") + "\n";
-                count4 += rs.getString("acc_rating") + "\n";
-                count5 += rs.getString("acc_roomtype") + "\n";
-                count6 += rs.getString("acc_cost") + "\n";
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("cno") + "\n";
+                count4 += rs.getString("rating") + "\n";
+                count5 += rs.getString("roomtype") + "\n";
+                count6 += rs.getString("cost") + "\n";
             }
             System.out.println("--->>> " + count);
             set_string(count1);
@@ -346,7 +357,7 @@ public class JavaPostgreSql {
     }
 
     public static String getrestaurents(String city_name) throws SQLException {
-        String SQL = "SELECT * FROM restaurant WHERE res_locality = ?";
+        String SQL = "SELECT * FROM restaurant WHERE locality = ?";
         String count = "";
         String count1 = "";
         String count2 = "";
@@ -357,12 +368,12 @@ public class JavaPostgreSql {
             pstmt.setString(1, city_name);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                count += rs.getString("res_name") + "\n";
+                count += rs.getString("name") + "\n";
                 count1 += rs.getString("sector") + "\n";
-                count2 += rs.getString("res_address") + "\n";
-                count3 += rs.getString("res_cno") + "\n";
-                count4 += rs.getString("res_rating") + "\n";
-                count5 += rs.getString("res_type") + "\n";
+                count2 += rs.getString("address") + "\n";
+                count3 += rs.getString("cno") + "\n";
+                count4 += rs.getString("rating") + "\n";
+                count5 += rs.getString("type") + "\n";
             }
             System.out.println("--->>> " + count);
             set_string(count1);
@@ -377,12 +388,12 @@ public class JavaPostgreSql {
     }
 
     public static String getnamebanks() {
-        String SQL = "SELECT DISTINCT b_name FROM banks ";
+        String SQL = "SELECT DISTINCT name FROM banks ";
         String count = "";
         try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
             ResultSet rs = pstmt.executeQuery(SQL);
             while (rs.next()) {
-                count += rs.getString("b_name") + "\n";
+                count += rs.getString("name") + "\n";
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -430,6 +441,62 @@ public class JavaPostgreSql {
             System.out.println(ex.getMessage());
         }
         return count;
+    }
+
+    public static void getTablename() {
+        String SQL = "SELECT table_name FROM information_schema.columns WHERE column_name = 'sector'";
+
+        ArrayList<String> count = new ArrayList<String>();
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count.add(rs.getString("table_name"));
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        set_table_name(count);
+    }
+
+    public static String search(String name, String sector, String locality) {
+        String SQL = "SELECT * FROM " + name + " WHERE ( sector = ? OR sector = ? OR sector = ? ) AND locality = ? ";
+        String count2 = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, Integer.toString(Integer.parseInt(sector) + 1));
+            pstmt.setString(2, Integer.toString(Integer.parseInt(sector) - 1));
+            pstmt.setString(3, sector);
+            pstmt.setString(4, locality);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count2 += rs.getString("name") + "\n";
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count2;
+    }
+
+    public static String get_near_place(String name, String sector, String locality) {
+        ArrayList<String> count = new ArrayList<String>();
+        getTablename();
+        count = get_table_name();
+        String res = "";
+        for (String action : count) {
+            try {
+
+                if (!action.equals(name)) {
+                    res += search(action, sector, locality);
+                    System.out.println("action " + action + "Locality: " + locality + " Sector: " + sector);
+                } else {
+                    continue;
+                }
+            } catch (Exception e) {
+                System.out.println("--->> " + e.getMessage());
+                continue;
+            }
+        }
+        System.out.println("--->>> " + res);
+        return res;
     }
 
 }

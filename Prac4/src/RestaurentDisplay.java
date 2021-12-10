@@ -46,5 +46,15 @@ public class RestaurentDisplay {
         location_label.setPrefWidth(300);
         my_rtype.setWrapText(true);
         my_rtype.setPrefWidth(300);
+        try {
+            String near = JavaPostgreSql.get_near_place("restaurant", sector.trim(), Restaurent.get_location().trim());
+            if (near.length() > 0) {
+                Nearplaces_label.setText(near);
+            } else {
+                Nearplaces_label.setText("No Near Places");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }

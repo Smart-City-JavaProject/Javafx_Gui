@@ -38,14 +38,27 @@ public class Banks {
         return name_it;
     }
 
+    static String name_location = " ";
+
+    public static void setlocation(String item) {
+        name_location = item;
+    }
+
+    public static String getlocation() {
+        return name_location;
+    }
+
     @FXML
     void onSubmitbtnClick(ActionEvent event) throws IOException {
         System.out.println(inputbox.getText());
         System.out.println(choiceboc.getValue());
+        String Location = inputbox.getText();
+        setlocation(Location);
+        System.out.println("Location " + Location);
         String name_sc = JavaPostgreSql.getbanks(inputbox.getText().toString(), choiceboc.getValue().toString());
-        Hospital.setItem(name_sc);
+        setItem(name_sc);
         System.out.println("--->. " + name_sc);
-        HospitalInfo.initialize();
+        BanksInfo.initialize();
 
     }
 

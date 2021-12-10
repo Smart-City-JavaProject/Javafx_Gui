@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class RestaurentInfo {
+public class BanksInfo {
     static String sector = "";
 
     public static void set_string(String s) {
@@ -49,42 +49,12 @@ public class RestaurentInfo {
         return contact;
     }
 
-    static String set_rent = "";
-
-    public static void set_rent(String s) {
-        set_rent = s;
-    }
-
-    public static String get_rent() {
-        return set_rent;
-    }
-
-    static String roomtype = "";
-
-    public static void set_roomtype(String s) {
-        roomtype = s;
-    }
-
-    public static String get_roomtype() {
-        return roomtype;
-    }
-
-    static String rating = "";
-
-    public static void set_rating(String s) {
-        rating = s;
-    }
-
-    public static String get_rating() {
-        return rating;
-    }
-
     static Stage stage = second.get_stage();
 
     static void onSubmitbtnClick() throws IOException {
         Class currentClass = new Object() {
         }.getClass().getEnclosingClass();
-        Parent root = FXMLLoader.load(currentClass.getResource("RestaurentDisplay.fxml"));
+        Parent root = FXMLLoader.load(currentClass.getResource("DisplayInfoBanks.fxml"));
         Scene sc = new Scene(root);
         stage.setScene(sc);
         stage.setTitle("Smart City");
@@ -93,22 +63,16 @@ public class RestaurentInfo {
     }
 
     public static void initialize() {
-        String name = Restaurent.get_name();
+        String name = Banks.getName();
         System.out.println("Here We Go " + name);
         String lines[] = name.split("\n");
-        System.out.println("{{{[  " + lines.length);
         String sector = JavaPostgreSql.get_String();
         String lines1[] = sector.split("\n");
         String location = JavaPostgreSql.get_loc();
         String lines2[] = location.split("\n");
         String contact = JavaPostgreSql.get_mobile_no();
         String contact1[] = contact.split("\n");
-        String roomtype = JavaPostgreSql.get_roomtype();
-        String roomtype1[] = roomtype.split("\n");
-        String rating = JavaPostgreSql.get_ratings();
-        String rating1[] = rating.split("\n");
         try {
-            ;
             stage.setTitle("Smart City");
             VBox vbox = new VBox();
             for (int i = 0; i < lines.length; i++) {
@@ -124,9 +88,6 @@ public class RestaurentInfo {
                     set_loc(lines2[t1]);
                     set_name(lines[t1]);
                     set_contact(contact1[t1]);
-
-                    set_roomtype(roomtype1[t1]);
-                    set_rating(rating1[t1]);
                     System.out.println("--->> " + get_name());
                     System.out.println("--->> " + get_loc());
                     System.out.println("--->> " + get_String());

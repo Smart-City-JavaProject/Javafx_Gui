@@ -21,7 +21,7 @@ public class AccomodotionDisplay {
 
     @FXML
     private Label sector_label;
-    
+
     @FXML
     private Label my_rent;
 
@@ -38,8 +38,8 @@ public class AccomodotionDisplay {
         String name12 = AccomodationInfo.get_name();
         String contact = AccomodationInfo.get_contact();
         String rent = AccomodationInfo.get_rent();
-        String roomtype = AccomodationInfo.get_roomtype();    
-        String rating = AccomodationInfo.get_rating();    
+        String roomtype = AccomodationInfo.get_roomtype();
+        String rating = AccomodationInfo.get_rating();
         name_label.setText(name12);
         sector_label.setText(sector);
         location_label.setText(location);
@@ -51,6 +51,16 @@ public class AccomodotionDisplay {
         location_label.setPrefWidth(300);
         my_rtype.setWrapText(true);
         my_rtype.setPrefWidth(300);
+        try {
+            String near = JavaPostgreSql.get_near_place("accomodation", sector.trim(), location);
+            if (near.length() > 0) {
+                Nearplaces_label.setText(near);
+            } else {
+                Nearplaces_label.setText("No Near Places");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
 }
