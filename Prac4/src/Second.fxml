@@ -16,7 +16,7 @@
       </ImageView>
       <Label fx:id="testlabel" alignment="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="600.0" text="Label" textAlignment="CENTER" textFill="#2fff00">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="41.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Education">
@@ -73,7 +73,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="182.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick4" prefHeight="98.0" prefWidth="104.0" text="Polic Station">
+      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="182.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick4" prefHeight="98.0" prefWidth="104.0" text="Police Station">
          <graphic>
             <ImageView fx:id="but1im13" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
