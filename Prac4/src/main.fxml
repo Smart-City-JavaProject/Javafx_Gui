@@ -23,9 +23,9 @@
             <Image url="@../Images/138668.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="labeltext" layoutX="206.0" layoutY="36.0" text="Welcome To the Navi Mumbai" textFill="#00c3ff">
+      <Label fx:id="labeltext" layoutX="129.0" layoutY="34.0" text="Welcome To the Navi Mumbai" textFill="#00c3ff">
          <font>
-            <Font size="14.0" />
+            <Font size="27.0" />
          </font>
          <effect>
             <Glow level="1.0">
