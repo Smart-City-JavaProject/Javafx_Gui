@@ -12,22 +12,22 @@
          <image>
             <Image url="@../Images/41621-200.png" />
          </image></ImageView>
-      <Rectangle fx:id="mpg4" arcHeight="5.0" arcWidth="5.0" fill="#cf8a8a" height="372.0" layoutX="221.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
-      <Label layoutX="232.0" layoutY="53.0" text="Name" />
-      <Label layoutX="231.0" layoutY="90.0" text="Sector" />
-      <Label fx:id="sector_label" layoutX="303.0" layoutY="90.0" text="Label" />
-      <Label layoutX="227.0" layoutY="125.0" text="Location" />
-      <Label fx:id="location_label" layoutX="303.0" layoutY="125.0" text="Label" />
-      <Label layoutX="229.0" layoutY="192.0" text="Contact" />
-      <Label fx:id="contact_id" layoutX="303.0" layoutY="191.0" text="Label" />
-      <Label layoutX="238.0" layoutY="226.0" text="Rent" />
-      <Label fx:id="my_rent" layoutX="303.0" layoutY="226.0" text="Label" />
-      <Label fx:id="my_rtype" layoutX="303.0" layoutY="258.0" text="Label" />
-      <Label layoutX="232.0" layoutY="258.0" text="Room Type" />
-      <Label layoutX="241.0" layoutY="293.0" text="Rating" />
-      <Label fx:id="my_rate" layoutX="303.0" layoutY="293.0" text="Label" />
-      <Label layoutX="235.0" layoutY="327.0" text="Near Place" />
-      <Label fx:id="Nearplaces_label" layoutX="303.0" layoutY="327.0" text="Label" />
-      <Label fx:id="name_label" layoutX="303.0" layoutY="53.0" text="Label" />
+      <Rectangle fx:id="mpg4" arcHeight="5.0" arcWidth="5.0" fill="#cf8a8a" height="377.0" layoutX="221.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+      <Label layoutX="239.0" layoutY="29.0" text="Name" />
+      <Label layoutX="239.0" layoutY="66.0" text="Sector" />
+      <Label fx:id="sector_label" layoutX="310.0" layoutY="66.0" text="Label" />
+      <Label layoutX="239.0" layoutY="101.0" text="Location" />
+      <Label fx:id="location_label" layoutX="310.0" layoutY="101.0" text="Label" />
+      <Label layoutX="239.0" layoutY="167.0" text="Contact" />
+      <Label fx:id="contact_id" layoutX="310.0" layoutY="167.0" text="Label" />
+      <Label layoutX="239.0" layoutY="202.0" text="Rent" />
+      <Label fx:id="my_rent" layoutX="310.0" layoutY="202.0" text="Label" />
+      <Label fx:id="my_rtype" layoutX="310.0" layoutY="234.0" text="Label" />
+      <Label layoutX="239.0" layoutY="234.0" text="Room Type" />
+      <Label layoutX="239.0" layoutY="269.0" text="Rating" />
+      <Label fx:id="my_rate" layoutX="310.0" layoutY="269.0" text="Label" />
+      <Label layoutX="239.0" layoutY="303.0" text="Near Place" />
+      <Label fx:id="Nearplaces_label" layoutX="310.0" layoutY="303.0" text="Label" />
+      <Label fx:id="name_label" layoutX="310.0" layoutY="29.0" text="Label" />
    </children>
 </Pane>

@@ -52,7 +52,8 @@ public class AccomodotionDisplay {
         my_rtype.setWrapText(true);
         my_rtype.setPrefWidth(300);
         try {
-            String near = JavaPostgreSql.get_near_place("accomodation", sector.trim(), location);
+            String near = JavaPostgreSql.get_near_place("accomodation", sector.trim(),
+                    Accomendation.getlocation().trim());
             if (near.length() > 0) {
                 Nearplaces_label.setText(near);
             } else {
