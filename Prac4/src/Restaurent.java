@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Restaurent {
@@ -11,6 +12,8 @@ public class Restaurent {
     @FXML
     private TextField input_btn;
 
+    @FXML
+    private Label my_label;
     @FXML
     private Button sub_btn;
     public static String name = "";
@@ -40,7 +43,12 @@ public class Restaurent {
         set_name(name_sc);
         set_location(input_btn.getText().toString());
         System.out.println("--->. " + name_sc);
-        RestaurentInfo.initialize();
+        if (name_sc.trim().length() > 1) {
+            RestaurentInfo.initialize();
+
+        } else {
+            my_label.setText("Enter Correct Spelling");
+        }
 
     }
 }

@@ -4,13 +4,15 @@ import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Hospital {
 
     @FXML
     private TextField my_input;
-
+    @FXML
+    private Label my_label;
     @FXML
     private Button submit_btn;
     static String name_it = " ";
@@ -42,15 +44,12 @@ public class Hospital {
         System.out.println(JavaPostgreSql.get_String());
         System.out.println(JavaPostgreSql.get_loc());
         System.out.println("locccc --->>" + JavaPostgreSql.get_mobile_no());
-        // System.out.println(choiceboc.getValue());
-        // String name_sc =
-        // JavaPostgreSql.getActorCount(choiceboc.getValue().toString(),inputbox.getText().toString());
-        // setItem(name_sc);
-        // System.out.println(name_sc);
-        // my_label.setText(name_sc);
-        // SchoolInfo.initialize();
-        setItem(ho);
-        System.out.println(ho);
-        HospitalInfo.initialize();
+        if (ho.trim().length() > 1) {
+            setItem(ho);
+            System.out.println(ho);
+            HospitalInfo.initialize();
+        } else {
+            my_label.setText("Enter Correct Spelling");
+        }
     }
 }

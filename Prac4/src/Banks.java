@@ -55,9 +55,13 @@ public class Banks {
         setlocation(Location);
         System.out.println("Location " + Location);
         String name_sc = JavaPostgreSql.getbanks(inputbox.getText().toString(), choiceboc.getValue().toString());
-        setItem(name_sc);
         System.out.println("--->. " + name_sc);
-        BanksInfo.initialize();
+        if (name_sc.trim().length() > 1) {
+            setItem(name_sc);
+            BanksInfo.initialize();
+        } else {
+            my_label.setText("Enter Correct Spelling");
+        }
 
     }
 

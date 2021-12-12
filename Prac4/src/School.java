@@ -58,8 +58,8 @@ public class School {
         String name = School.getName();
         System.out.println("Here We Go " + name);
         String lines[] = name.split("\n");
-        System.out.println("--->>> " + lines.length);
-        if (lines.length > 1) {
+        System.out.println("--->>> " + lines.length + " ---->>> " + name.trim().length());
+        if (name.trim().length() > 1) {
             System.out.println('p');
             SchoolInfo.initialize();
         } else {

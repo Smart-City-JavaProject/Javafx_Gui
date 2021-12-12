@@ -1,6 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Mall {
@@ -8,6 +9,8 @@ public class Mall {
     @FXML
     private TextField input_text;
 
+    @FXML
+    private Label my_label;
     @FXML
     private Button submit_btn;
     static String name_it = " ";
@@ -36,8 +39,12 @@ public class Mall {
         setlocation(Location);
         String name = JavaPostgreSql.getmalls(Location);
         setItem(name);
-        MallInfo.initialize();
-        System.out.println(name);
+        if (name.trim().length() > 1) {
+            MallInfo.initialize();
+            System.out.println(name);
+        } else {
+            my_label.setText("Enter Correct Spelling");
+        }
     }
 
 }

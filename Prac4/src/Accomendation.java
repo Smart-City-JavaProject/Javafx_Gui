@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Accomendation {
@@ -15,7 +16,8 @@ public class Accomendation {
 
     @FXML
     private ChoiceBox<String> my_choice_box;
-
+    @FXML
+    private Label my_label;
     @FXML
     private TextField my_input;
 
@@ -52,8 +54,13 @@ public class Accomendation {
         setlocation(i_box);
         String acc = JavaPostgreSql.getaccomendation(i_box, c_box);
         setItem(acc);
+        if (acc.trim().length() > 1) {
+            AccomodationInfo.initialize();
+
+        } else {
+            my_label.setText("Enter Correct Spelling");
+        }
         System.out.println(acc);
-        AccomodationInfo.initialize();
     }
 
 }

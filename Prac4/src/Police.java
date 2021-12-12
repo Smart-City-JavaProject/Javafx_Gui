@@ -50,8 +50,9 @@ public class Police {
         System.out.println("Here We Go " + name);
         String lines[] = name.split("\n");
         System.out.println("--->>> " + lines.length);
-        if (lines.length >= 1) {
+        if (po.trim().length() > 1) {
             PoliceInfo.initialize();
+
         } else {
             my_label.setText("Enter Correct Spelling");
         }

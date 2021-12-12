@@ -14,7 +14,6 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #050051;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Police">
    <children>
-      <Label fx:id="my_label" layoutX="389.0" layoutY="192.0" />
       <ImageView fx:id="pol_gr3" fitHeight="411.0" fitWidth="820.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/flipped.png" />
@@ -46,5 +45,6 @@
             <Image url="@../Images/clipart-boy-police-officer-5-transparent.png" />
          </image>
       </ImageView>
+      <Label fx:id="my_label" layoutX="286.0" layoutY="197.0" />
    </children>
 </Pane>
