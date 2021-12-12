@@ -1,11 +1,20 @@
 import java.io.IOException;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class RestaurentInfo {
@@ -107,15 +116,36 @@ public class RestaurentInfo {
         String roomtype1[] = roomtype.split("\n");
         String rating = JavaPostgreSql.get_ratings();
         String rating1[] = rating.split("\n");
+        TableView<Restaurent_Infos> table = new TableView<Restaurent_Infos>();
+        final ObservableList<Restaurent_Infos> data = FXCollections.observableArrayList();
+        final Label label = new Label("Search Results");
+        label.setFont(new Font("Arial", 20));
+        table.setEditable(true);
+
+        TableColumn firstNameCol = new TableColumn("Name");
+        firstNameCol.setMinWidth(300);
+        firstNameCol.setCellValueFactory(
+                new PropertyValueFactory<Restaurent_Infos, Label>("firstName"));
+
+        TableColumn lastNameCol = new TableColumn("Sector");
+        lastNameCol.setMinWidth(100);
+        lastNameCol.setCellValueFactory(
+                new PropertyValueFactory<Restaurent_Infos, Label>("lastName"));
+
+        TableColumn emailCol = new TableColumn("More Info");
+        emailCol.setMinWidth(200);
+        emailCol.setCellValueFactory(
+                new PropertyValueFactory<Restaurent_Infos, Button>("email"));
         try {
             ;
             stage.setTitle("Smart City");
             VBox vbox = new VBox();
             for (int i = 0; i < lines.length; i++) {
                 HBox hbox = new HBox();
-                Label label = new Label(lines[i]);
+                Label labels = new Label(lines[i]);
                 Label label12 = new Label(lines1[i]);
                 Button bt = new Button("Show Info");
+                data.add(new Restaurent_Infos(labels, label12, bt));
 
                 final int t1 = i;
                 bt.setOnAction(value -> {
@@ -136,13 +166,20 @@ public class RestaurentInfo {
                         e.printStackTrace();
                     }
                 });
-                hbox.getChildren().add(label);
-                hbox.getChildren().add(label12);
-                hbox.getChildren().add(bt);
-                hbox.setSpacing(20);
-                vbox.getChildren().add(hbox);
             }
-            Scene scene = new Scene(vbox, 600, 400);
+            Scene scene = new Scene(new Group());
+            table.setItems(data);
+            table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+
+            final VBox vbox1 = new VBox();
+            vbox1.setSpacing(5);
+            vbox1.setPadding(new Insets(10, 0, 0, 10));
+            vbox1.getChildren().addAll(label, table);
+            try {
+                ((Group) scene.getRoot()).getChildren().addAll(vbox1);
+            } catch (Exception e) {
+                System.out.println("-->> " + e.getMessage());
+            }
             stage.setScene(scene);
             stage.show();
         }
@@ -152,5 +189,42 @@ public class RestaurentInfo {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public static class Restaurent_Infos {
+
+        private Label firstName;
+        private Label lastName;
+        private Button email;
+
+        private Restaurent_Infos(Label fName, Label lName, Button email) {
+            this.firstName = fName;
+            this.lastName = lName;
+            this.email = email;
+        }
+
+        public Label getFirstName() {
+            return firstName;
+        }
+
+        public void setFirstName(Label fName) {
+            this.firstName = fName;
+        }
+
+        public Label getLastName() {
+            return lastName;
+        }
+
+        public void setLastName(Label fName) {
+            lastName = fName;
+        }
+
+        public Button getEmail() {
+            return email;
+        }
+
+        public void setEmail(Button fName) {
+            email = fName;
+        }
     }
 }
