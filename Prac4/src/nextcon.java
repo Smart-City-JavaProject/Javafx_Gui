@@ -19,6 +19,9 @@ public class nextcon {
     private TextField inputbox;
 
     @FXML
+    private Button admin;
+
+    @FXML
     private Pane mypane;
     @FXML
     private Label labeltext;
@@ -42,6 +45,16 @@ public class nextcon {
         arg0.setTitle("Smart City");
         arg0.show();
 
+    }
+
+    @FXML
+    void adminbtn(ActionEvent event) throws IOException {
+        Stage arg0 = App.get_stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Signin.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show();
     }
 
 }

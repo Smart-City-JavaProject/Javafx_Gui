@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin">
+   <children>
+      <TextField fx:id="username" layoutX="238.0" layoutY="78.0" />
+      <Label layoutX="115.0" layoutY="82.0" text="Username" />
+      <TextField fx:id="password" layoutX="238.0" layoutY="118.0" />
+      <Label layoutX="115.0" layoutY="122.0" text="Password" />
+      <TextField fx:id="email" layoutX="238.0" layoutY="162.0" />
+      <Label layoutX="115.0" layoutY="166.0" text="Email" />
+      <TextField fx:id="admincred" layoutX="238.0" layoutY="200.0" />
+      <Label layoutX="115.0" layoutY="204.0" text="Admin Credentials " />
+      <Button fx:id="siginbtn" layoutX="212.0" layoutY="280.0" mnemonicParsing="false" onAction="#siginclick" text="Sign In" />
+      <Button fx:id="signupbtn" layoutX="335.0" layoutY="280.0" mnemonicParsing="false" onAction="#signupclick" text="Sign Up" />
+      <Button fx:id="backbtn" layoutX="103.0" layoutY="280.0" mnemonicParsing="false" onAction="#backbtnclick" text="Back" />
+   </children>
+</Pane>

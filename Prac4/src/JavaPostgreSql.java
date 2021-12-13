@@ -499,4 +499,56 @@ public class JavaPostgreSql {
         return res;
     }
 
+    public static Boolean check_admin_credentials(String admin_cred) {
+        String SQL = "SELECT * FROM users WHERE admin_cred = ?";
+        String count = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, admin_cred);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("admin_cred") + "\n";
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        if (count.toString().length() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void create_user(String username, String password, String email, String admin_cred) {
+        String SQL = "INSERT INTO users (username, password, email, admin_cred) VALUES (?, ?, ?, ?)";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            pstmt.setString(3, email);
+            pstmt.setString(4, admin_cred);
+            pstmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static Boolean user_check(String username, String password) {
+        String SQL = "SELECT * FROM users WHERE username = ? AND password = ?";
+        String count = "";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                count += rs.getString("username") + "\n";
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        if (count.toString().length() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
