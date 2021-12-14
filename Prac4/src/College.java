@@ -3,10 +3,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 public class College {
     ObservableList<String> my_list = FXCollections.observableArrayList("Engineering", "Medical", "Commerce");
@@ -41,7 +43,10 @@ public class College {
         if (lines.length > 1) {
             SchoolInfo.initialize();
         } else {
-            my_label.setText("Enter Correct Spelling");
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Not Able to find the college");
+            alert.showAndWait();
         }
         // SchoolInfo.initialize();
     }

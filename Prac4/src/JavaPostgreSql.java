@@ -546,19 +546,19 @@ public class JavaPostgreSql {
     public static Boolean user_check(String username, String password) {
         String SQL = "SELECT * FROM users WHERE username = ? AND password = ?";
         String count = "";
+        System.out.println("username: " + username + " password: " + password);
         try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
             pstmt.setString(1, username);
             pstmt.setString(2, password);
             ResultSet rs = pstmt.executeQuery();
-            while (rs.next()) {
-                count += rs.getString("username") + "\n";
+            System.out.println(pstmt);
+            if (rs.next()) {
+                return true;
+            } else {
+                return false;
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-        }
-        if (count.toString().length() > 0) {
-            return true;
-        } else {
             return false;
         }
     }

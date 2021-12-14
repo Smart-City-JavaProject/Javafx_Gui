@@ -44,7 +44,8 @@ public class DisplayInfoCinema {
             location_label.setWrapText(true);
             location_label.setPrefWidth(300);
             try {
-                String near = JavaPostgreSql.get_near_place("mall", sector.trim(), location);
+                String near = JavaPostgreSql.get_near_place("cinema", sector.trim(), Cinema.getlocation());
+                System.out.println("location --->" + Cinema.getlocation());
                 if (near.length() > 0) {
                     Nearplaces_label.setText(near);
                 } else {

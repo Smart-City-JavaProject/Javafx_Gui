@@ -5,8 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class Signup {
@@ -46,7 +48,11 @@ public class Signup {
             arg0.setTitle("Smart City");
             arg0.show();
         } else {
-            System.out.println("Wrong credentials");
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Wrong Credentials");
+            alert.setContentText("Username or Password is Wrong");
+            alert.showAndWait();
         }
     }
 
