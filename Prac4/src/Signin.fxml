@@ -1,23 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1d3357;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin">
    <children>
-      <TextField fx:id="username" layoutX="238.0" layoutY="78.0" />
-      <Label layoutX="115.0" layoutY="82.0" text="Username" />
-      <TextField fx:id="password" layoutX="238.0" layoutY="118.0" />
-      <Label layoutX="115.0" layoutY="122.0" text="Password" />
-      <TextField fx:id="email" layoutX="238.0" layoutY="162.0" />
-      <Label layoutX="115.0" layoutY="166.0" text="Email" />
-      <TextField fx:id="admincred" layoutX="238.0" layoutY="200.0" />
-      <Label layoutX="115.0" layoutY="204.0" text="Admin Credentials " />
-      <Button fx:id="siginbtn" layoutX="212.0" layoutY="280.0" mnemonicParsing="false" onAction="#siginclick" text="Sign In" />
-      <Button fx:id="signupbtn" layoutX="335.0" layoutY="280.0" mnemonicParsing="false" onAction="#signupclick" text="Sign Up" />
-      <Button fx:id="backbtn" layoutX="103.0" layoutY="280.0" mnemonicParsing="false" onAction="#backbtnclick" text="Back" />
+      <ImageView fx:id="signin_img1" fitHeight="417.0" fitWidth="622.0" layoutX="-9.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/AI-world-forum-background-cropped-1920x1000.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="signin_2" arcHeight="5.0" arcWidth="5.0" fill="#6db3cf" height="269.0" layoutX="11.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="323.0" />
+      <TextField fx:id="username" layoutX="147.0" layoutY="93.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="24.0" layoutY="97.0" text="Username" />
+      <TextField fx:id="password" layoutX="147.0" layoutY="133.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="24.0" layoutY="137.0" text="Password" />
+      <TextField fx:id="email" layoutX="147.0" layoutY="177.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="24.0" layoutY="181.0" text="Email" />
+      <TextField fx:id="admincred" layoutX="147.0" layoutY="215.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="24.0" layoutY="219.0" text="Admin Credentials " />
+      <Button fx:id="siginbtn" layoutX="120.0" layoutY="295.0" mnemonicParsing="false" onAction="#siginclick" style="-fx-background-color: #beff00;" text="Sign In">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="signupbtn" layoutX="225.0" layoutY="295.0" mnemonicParsing="false" onAction="#signupclick" style="-fx-background-color: #00ff00;" text="Sign Up">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="backbtn" layoutX="28.0" layoutY="295.0" mnemonicParsing="false" onAction="#backbtnclick" style="-fx-background-color: #ff0000;" text="Back" textFill="WHITE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="signin_img" fitHeight="310.0" fitWidth="303.0" layoutX="297.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Telux-Security.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
