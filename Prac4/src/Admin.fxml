@@ -37,7 +37,7 @@
             </Blend>
          </effect>
       </Ellipse>
-      <ChoiceBox fx:id="choice" layoutX="225.0" layoutY="59.0" prefWidth="150.0">
+      <ChoiceBox fx:id="choice" layoutX="225.0" layoutY="53.0" prefWidth="150.0">
          <effect>
             <Lighting>
                <bumpInput>
