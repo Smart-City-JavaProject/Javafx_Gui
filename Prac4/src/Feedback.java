@@ -47,8 +47,8 @@ public class Feedback implements Initializable {
 
     @FXML
     void refreshbtnclick(ActionEvent event) {
-        Image image = new Image("https://avatars.dicebear.com/api/avataaars/" + num + ".png");
         num = Math.random() + " ";
+        Image image = new Image("https://avatars.dicebear.com/api/avataaars/" + num + ".png");
         img_view.setImage(image);
     }
 
