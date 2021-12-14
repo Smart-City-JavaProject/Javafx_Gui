@@ -4,6 +4,7 @@ WHERE schemaname = 'public'
 SELECT *
 FROM banks
 SELECT tablename
+DELETE FROM feedback;
 FROM PG_CATALOG.pg_tables
 WHERE schemaname = 'public'
         AND EXISTS(

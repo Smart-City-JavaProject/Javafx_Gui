@@ -1,0 +1,93 @@
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+
+public class ShowFeedBack implements Initializable {
+    @FXML
+    private HBox my_hbox;
+    @FXML
+    private VBox my_vbox;
+    static Stage stage = AccomodotionDisplay.getStage();
+
+    // This Is An Amazing Place To Visit
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // TODO Auto-generated method stub
+        // ImageView img_view = new ImageView();
+        // Image image = new
+        // Image("https://avatars.dicebear.com/api/avataaars/0.6709606409289153.png");
+        // img_view.setImage(image);
+        // Label label = new Label("Welcome To The Navi Mumbai ");
+
+        // stage.setTitle("Smart City");
+        // VBox vbox = new VBox();
+        // HBox hbox = new HBox();
+
+        // hbox.getChildren().add(label);
+        // hbox.getChildren().add(img_view);
+        // hbox.setSpacing(20);
+        // vbox.getChildren().add(hbox);
+
+        // Scene scene = new Scene(vbox, 600, 400);
+        // stage.setScene(scene);
+        // stage.show();
+
+    }
+
+    public static void initialize() {
+        JavaPostgreSql.get_feedback(Integer.parseInt(AccomodationInfo.get_acco_id().trim()));
+        String names[] = JavaPostgreSql.get_feed_name().split("\n");
+        String feedbacks[] = JavaPostgreSql.get_feed_feedback().split("\n");
+        String images[] = JavaPostgreSql.get_feed_imgstr().split("\n");
+        VBox vbox = new VBox();
+        if (JavaPostgreSql.get_feed_name().trim().length() == 0) {
+            Label label = new Label("No FeedBack Yet");
+            label.setTextAlignment(TextAlignment.CENTER);
+            vbox.getChildren().add(label);
+        } else {
+
+            for (int i = 0; i < names.length; i++) {
+
+                ImageView img_view = new ImageView();
+                Image image = new Image("https://avatars.dicebear.com/api/avataaars/" + images[i] + ".png?size=90");
+                img_view.setImage(image);
+                Label label = new Label(feedbacks[i]);
+                Label name_label = new Label(names[i]);
+                label.setStyle(
+                        "-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000000; -fx-font-family: \"Segoe UI\";");
+                label.setWrapText(true);
+                label.setTextAlignment(TextAlignment.JUSTIFY);
+                name_label.setStyle(
+                        "-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000000; -fx-font-family: \"Segoe UI\";");
+                name_label.setTextAlignment(TextAlignment.CENTER);
+                stage.setTitle("Smart City");
+                HBox hbox = new HBox();
+                VBox vbox1 = new VBox();
+                vbox1.getChildren().add(img_view);
+                vbox1.getChildren().add(name_label);
+                hbox.getChildren().add(vbox1);
+                hbox.getChildren().add(label);
+                // hbox.setMaxWidth(200);
+                hbox.setSpacing(100);
+                vbox.getChildren().add(hbox);
+                vbox.setSpacing(40);
+            }
+
+        }
+        Scene scene = new Scene(vbox, 600, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+}

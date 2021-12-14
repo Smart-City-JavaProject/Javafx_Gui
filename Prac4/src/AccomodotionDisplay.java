@@ -1,6 +1,14 @@
+import java.io.IOException;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class AccomodotionDisplay {
 
@@ -30,9 +38,24 @@ public class AccomodotionDisplay {
 
     @FXML
     private Label my_rate;
+    @FXML
+    private Button give_feed;
+
+    @FXML
+    private Button show_btn;
+    static Stage my_st;
+
+    public void setStage(Stage stage) {
+        my_st = stage;
+    }
+
+    public static Stage getStage() {
+        return my_st;
+    }
 
     @FXML
     public void initialize() {
+        setStage(new Stage());
         String sector = AccomodationInfo.get_String();
         String location = AccomodationInfo.get_loc();
         String name12 = AccomodationInfo.get_name();
@@ -62,6 +85,21 @@ public class AccomodotionDisplay {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    @FXML
+    void give_feed_click(ActionEvent event) throws IOException {
+        Stage arg0 = getStage();
+        Parent root = FXMLLoader.load(getClass().getResource("Feedback.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show();
+    }
+
+    @FXML
+    void show_feed_click(ActionEvent event) throws IOException {
+        ShowFeedBack.initialize();
     }
 
 }

@@ -15,6 +15,15 @@ public class JavaPostgreSql {
     static String ratings = "";
     static String roomtype = "";
     static String cost = "";
+    static String accomendation_id = "";
+
+    public static void set_acco_id(String s) {
+        accomendation_id = s;
+    }
+
+    public static String get_acco_id() {
+        return accomendation_id;
+    }
 
     public static void set_string(String s) {
         sector = s;
@@ -330,6 +339,7 @@ public class JavaPostgreSql {
         String count4 = "";
         String count5 = "";
         String count6 = "";
+        String count7 = " ";
         try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
             pstmt.setString(1, city_name);
             pstmt.setString(2, type);
@@ -342,6 +352,7 @@ public class JavaPostgreSql {
                 count4 += rs.getString("rating") + "\n";
                 count5 += rs.getString("roomtype") + "\n";
                 count6 += rs.getString("cost") + "\n";
+                count7 += rs.getString("id") + "\n";
             }
             System.out.println("--->>> " + count);
             set_string(count1);
@@ -350,6 +361,7 @@ public class JavaPostgreSql {
             set_ratings(count4);
             set_cost(count6);
             set_roomtype(count5);
+            set_acco_id(count7);
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -549,6 +561,68 @@ public class JavaPostgreSql {
         } else {
             return false;
         }
+    }
+
+    public static void feedback(String name, String feedbacktext, int accomo_id, String imgstr) {
+        String SQL = "INSERT INTO feedback (name,feedbacktext,accomo_id,imgstr) VALUES (?, ?, ?, ?)";
+        try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, name);
+            pstmt.setString(2, feedbacktext);
+            pstmt.setInt(3, accomo_id);
+            pstmt.setString(4, imgstr);
+            pstmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static String feed_name = "";
+    public static String feed_imgstr = "";
+    public static String feed_feedback = "";
+
+    public static void set_feed_name(String name) {
+        feed_name = name;
+    }
+
+    public static String get_feed_name() {
+        return feed_name;
+    }
+
+    public static void set_feed_imgstr(String imgstr) {
+        feed_imgstr = imgstr;
+    }
+
+    public static String get_feed_imgstr() {
+        return feed_imgstr;
+    }
+
+    public static void set_feed_feedback(String feedback) {
+        feed_feedback = feedback;
+    }
+
+    public static String get_feed_feedback() {
+        return feed_feedback;
+    }
+
+    public static void get_feedback(int id) {
+        String SQL = "SELECT * FROM feedback WHERE accomo_id = " + id;
+        String count = "";
+        String count1 = "";
+        String count2 = "";
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count += rs.getString("name") + "\n";
+                count1 += rs.getString("imgstr") + "\n";
+                count2 += rs.getString("feedbacktext") + "\n";
+            }
+            set_feed_name(count);
+            set_feed_imgstr(count1);
+            set_feed_feedback(count2);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        System.out.println(count);
     }
 
 }

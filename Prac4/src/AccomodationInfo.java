@@ -88,6 +88,16 @@ public class AccomodationInfo {
         return rating;
     }
 
+    static String acco_id = "";
+
+    public static void set_acco_id(String s) {
+        acco_id = s;
+    }
+
+    public static String get_acco_id() {
+        return acco_id;
+    }
+
     static Stage stage = second.get_stage();
 
     static void onSubmitbtnClick() throws IOException {
@@ -117,6 +127,8 @@ public class AccomodationInfo {
         String roomtype1[] = roomtype.split("\n");
         String rating = JavaPostgreSql.get_ratings();
         String rating1[] = rating.split("\n");
+        String Id = JavaPostgreSql.get_acco_id();
+        String Id1[] = Id.split("\n");
         TableView<Accomo_Infos> table = new TableView<Accomo_Infos>();
         final ObservableList<Accomo_Infos> data = FXCollections.observableArrayList();
         final Label label = new Label("Search Results");
@@ -158,6 +170,7 @@ public class AccomodationInfo {
                     set_rent(rent1[t1]);
                     set_roomtype(roomtype1[t1]);
                     set_rating(rating1[t1]);
+                    set_acco_id(Id1[t1]);
                     System.out.println("--->> " + get_name());
                     System.out.println("--->> " + get_loc());
                     System.out.println("--->> " + get_String());
