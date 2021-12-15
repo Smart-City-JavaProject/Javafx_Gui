@@ -10,10 +10,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class Admin {
@@ -277,34 +279,195 @@ public class Admin {
 
     @FXML
     void submitbtn(ActionEvent event) {
-        if (choice.getValue().equals("banks")) {
-            JavaSQLInsert.insert_Banks(name_input.getText(), address_input.getText(), sector_input.getText(),
-                    cno_input.getText(),
-                    locality_input.getText());
-        } else if (choice.getValue().equals("education")) {
-            JavaSQLInsert.insert_education(name_input.getText(), locality_input.getText(), address_input.getText(),
-                    cno_input.getText(),
-                    sector_input.getText(), type_input.getText(), rating_input.getText(), roomtype_input.getText());
-        } else if (choice.getValue().equals("accomodation")) {
-            JavaSQLInsert.insert_accomodation(name_input.getText(), locality_input.getText(), address_input.getText(),
-                    cno_input.getText(), sector_input.getText(), type_input.getText(), cost_input.getText(),
-                    roomtype_input.getText(), rating_input.getText());
-        } else if (choice.getValue().equals("cinema")) {
-            JavaSQLInsert.insert_cinema(name_input.getText(), address_input.getText(), cno_input.getText(),
-                    rating_input.getText(),
-                    locality_input.getText(), sector_input.getText());
-        } else if (choice.getValue().equals("hospital")) {
-            JavaSQLInsert.insert_hospital(name_input.getText(), address_input.getText(), cno_input.getText(),
-                    locality_input.getText(), sector_input.getText());
-        } else if (choice.getValue().equals("mall")) {
-            JavaSQLInsert.insert_mall(name_input.getText(), address_input.getText(), cno_input.getText(),
-                    locality_input.getText(), sector_input.getText());
-        } else if (choice.getValue().equals("police_station")) {
-            JavaSQLInsert.insert_police_station(name_input.getText(), address_input.getText(), cno_input.getText(),
-                    locality_input.getText(), sector_input.getText());
-        } else if (choice.getValue().equals("restaurant")) {
-            JavaSQLInsert.insert_restaurant(name_input.getText(), address_input.getText(), cno_input.getText(),
-                    locality_input.getText(), sector_input.getText(), rating_input.getText(), type_input.getText());
+        try {
+
+            if (choice.getValue().equals("banks")) {
+                System.out.println("name " + name_input.getText());
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())) {
+                    JavaSQLInsert.insert_Banks(name_input.getText(), address_input.getText(), sector_input.getText(),
+                            cno_input.getText(),
+                            locality_input.getText());
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+            } else if (choice.getValue().equals("education")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())
+                        && Validate.validate_info(rating_input.getText())
+                        && Validate.validate_info(roomtype_input.getText())
+                        && Validate.validate_info(type_input.getText())) {
+                    JavaSQLInsert.insert_education(name_input.getText(), locality_input.getText(),
+                            address_input.getText(),
+                            cno_input.getText(),
+                            sector_input.getText(), type_input.getText(), rating_input.getText(),
+                            roomtype_input.getText());
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+            } else if (choice.getValue().equals("accomodation")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())
+                        && Validate.validate_rating(rating_input.getText())
+                        && Validate.validate_info(roomtype_input.getText())
+                        && Validate.validate_info(type_input.getText())) {
+                    JavaSQLInsert.insert_accomodation(name_input.getText(), locality_input.getText(),
+                            address_input.getText(),
+                            cno_input.getText(), sector_input.getText(), type_input.getText(), cost_input.getText(),
+                            roomtype_input.getText(), rating_input.getText());
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+
+            } else if (choice.getValue().equals("cinema")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())
+                        && Validate.validate_url(rating_input.getText())) {
+                    JavaSQLInsert.insert_cinema(name_input.getText(), address_input.getText(), cno_input.getText(),
+                            rating_input.getText(),
+                            locality_input.getText(), sector_input.getText());
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+
+            } else if (choice.getValue().equals("hospital")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())) {
+                    JavaSQLInsert.insert_hospital(name_input.getText(), address_input.getText(), cno_input.getText(),
+                            locality_input.getText(), sector_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+
+            } else if (choice.getValue().equals("mall")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_time(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())) {
+
+                    JavaSQLInsert.insert_mall(name_input.getText(), address_input.getText(), cno_input.getText(),
+                            locality_input.getText(), sector_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+            } else if (choice.getValue().equals("police_station")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())) {
+                    JavaSQLInsert.insert_police_station(name_input.getText(), address_input.getText(),
+                            cno_input.getText(),
+                            locality_input.getText(), sector_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+            } else if (choice.getValue().equals("restaurant")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_address(address_input.getText())
+                        && Validate.validate_contact(cno_input.getText())
+                        && Validate.validate_location(locality_input.getText())
+                        && Validate.validate_sector(sector_input.getText())
+                        && Validate.validate_rating(rating_input.getText())
+                        && Validate.validate_info(type_input.getText())) {
+                    JavaSQLInsert.insert_restaurant(name_input.getText(), address_input.getText(), cno_input.getText(),
+                            locality_input.getText(), sector_input.getText(), rating_input.getText(),
+                            type_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+
+            }
+        } catch (Exception e) {
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Not Able TO Insert");
+            alert.showAndWait();
         }
     }
 

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
@@ -24,8 +25,9 @@ public class Signup {
 
     @FXML
     private TextField username;
+
     @FXML
-    private TextField password;
+    private PasswordField password;
 
     @FXML
     void signinclick(ActionEvent event) throws IOException {

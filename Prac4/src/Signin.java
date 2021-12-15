@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
@@ -21,7 +22,7 @@ public class Signin {
     private TextField email;
 
     @FXML
-    private TextField password;
+    private PasswordField password;
 
     @FXML
     private Button siginbtn;
