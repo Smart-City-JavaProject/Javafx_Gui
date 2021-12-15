@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -30,7 +34,33 @@
       <Label layoutX="239.0" layoutY="303.0" text="Near Place" />
       <Label fx:id="Nearplaces_label" layoutX="310.0" layoutY="303.0" text="Label" />
       <Label fx:id="name_label" layoutX="310.0" layoutY="29.0" text="Label" />
-      <Button fx:id="give_feed" layoutX="57.0" layoutY="308.0" mnemonicParsing="false" onAction="#give_feed_click" prefHeight="25.0" prefWidth="103.0" text="Give FeedBack" />
-      <Button fx:id="show_btn" layoutX="57.0" layoutY="257.0" mnemonicParsing="false" onAction="#show_feed_click" text="Show FeedBacks" />
+      <Button fx:id="give_feed" layoutX="55.0" layoutY="304.0" mnemonicParsing="false" onAction="#give_feed_click" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #1fff00; -fx-background-radius: 50cm;" text="Give FeedBack">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="show_btn" layoutX="57.0" layoutY="250.0" mnemonicParsing="false" onAction="#show_feed_click" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #eaff00; -fx-background-radius: 50cm;" text="Show FeedBacks">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
    </children>
 </Pane>

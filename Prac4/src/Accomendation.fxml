@@ -19,11 +19,21 @@
             <Image url="@../Images/anyrgb.com.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="my_choice_box" layoutX="339.0" layoutY="138.0" prefWidth="150.0">
+      <ChoiceBox fx:id="my_choice_box" layoutX="333.0" layoutY="142.0" prefHeight="29.0" prefWidth="158.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
-         </cursor></ChoiceBox>
-      <Button fx:id="my_btn" layoutX="293.0" layoutY="228.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #00ddff;" text="Enter">
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></ChoiceBox>
+      <Button fx:id="my_btn" layoutX="264.0" layoutY="227.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="36.0" prefWidth="76.0" style="-fx-background-color: #00ddff; -fx-background-radius: 50em;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>
@@ -42,9 +52,9 @@
             <Image url="@../Images/anyrgb.com.png" />
          </image>
       </ImageView>
-      <TextField fx:id="my_input" layoutX="144.0" layoutY="138.0" promptText="Enter the City name">
+      <TextField fx:id="my_input" layoutX="120.0" layoutY="138.0" prefHeight="36.0" prefWidth="158.0" promptText="Enter the City name" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="TEXT" />
          </cursor></TextField>
       <Label fx:id="my_label" layoutX="302.0" layoutY="183.0" />
    </children>
