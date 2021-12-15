@@ -37,7 +37,7 @@
             </Lighting>
          </effect>
       </Ellipse>
-      <Button fx:id="submit_btn" layoutX="278.0" layoutY="241.0" mnemonicParsing="false" onAction="#GetMallsBtn" style="-fx-background-color: #00ff15;" text="Enter">
+      <Button fx:id="submit_btn" layoutX="269.0" layoutY="241.0" mnemonicParsing="false" onAction="#GetMallsBtn" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #00ff15; -fx-background-radius: 50cm;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>
@@ -57,7 +57,7 @@
             <Image url="@../Images/teacher-png-46696.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="input_text" alignment="CENTER" layoutX="226.0" layoutY="113.0" promptText="Location">
+      <TextField fx:id="input_text" alignment="CENTER" layoutX="223.0" layoutY="107.0" promptText="Location" style="-fx-border-color: #000000; -fx-border-width: 0.7mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
