@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -61,6 +62,11 @@ public class Feedback implements Initializable {
         try {
 
             JavaPostgreSql.feedback(name, feedback, id, num);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Feedback Submitted");
+            alert.setContentText("Thank You For Your Feedback");
+            alert.showAndWait();
         } catch (Exception e) {
             System.out.println("--->> " + e.getMessage());
         }

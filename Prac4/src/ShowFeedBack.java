@@ -6,10 +6,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
@@ -48,7 +51,7 @@ public class ShowFeedBack implements Initializable {
     public static void initialize() {
         JavaPostgreSql.get_feedback(Integer.parseInt(AccomodationInfo.get_acco_id().trim()));
         String names[] = JavaPostgreSql.get_feed_name().split("\n");
-        String feedbacks[] = JavaPostgreSql.get_feed_feedback().split("\n");
+        String feedbacks[] = JavaPostgreSql.get_feed_feedback().split("&&&");
         String images[] = JavaPostgreSql.get_feed_imgstr().split("\n");
         VBox vbox = new VBox();
         if (JavaPostgreSql.get_feed_name().trim().length() == 0) {
@@ -64,17 +67,23 @@ public class ShowFeedBack implements Initializable {
                 img_view.setImage(image);
                 Label label = new Label(feedbacks[i]);
                 Label name_label = new Label(names[i]);
-                label.setStyle(
-                        "-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000000; -fx-font-family: \"Segoe UI\";");
+                System.out.println("---->>> " + feedbacks[i]);
                 label.setWrapText(true);
+                label.setPrefWidth(1500);
+                label.setStyle(
+                        "-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000000;-fx-font-family: \"Segoe UI\";");
                 label.setTextAlignment(TextAlignment.JUSTIFY);
+
                 name_label.setStyle(
                         "-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #000000; -fx-font-family: \"Segoe UI\";");
                 name_label.setTextAlignment(TextAlignment.CENTER);
                 stage.setTitle("Smart City");
                 HBox hbox = new HBox();
                 VBox vbox1 = new VBox();
-                vbox1.getChildren().add(img_view);
+                Circle cc = new Circle(40);
+                cc.setFill(new ImagePattern(image));
+                cc.setStroke(javafx.scene.paint.Color.BLACK);
+                vbox1.getChildren().add(cc);
                 vbox1.getChildren().add(name_label);
                 hbox.getChildren().add(vbox1);
                 hbox.getChildren().add(label);
@@ -85,7 +94,9 @@ public class ShowFeedBack implements Initializable {
             }
 
         }
-        Scene scene = new Scene(vbox, 600, 400);
+        ScrollPane sp = new ScrollPane();
+        sp.setContent(vbox);
+        Scene scene = new Scene(sp, 600, 400);
         stage.setScene(scene);
         stage.show();
     }

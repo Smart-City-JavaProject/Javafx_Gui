@@ -614,7 +614,7 @@ public class JavaPostgreSql {
             while (rs.next()) {
                 count += rs.getString("name") + "\n";
                 count1 += rs.getString("imgstr") + "\n";
-                count2 += rs.getString("feedbacktext") + "\n";
+                count2 += rs.getString("feedbacktext") + "&&&";
             }
             set_feed_name(count);
             set_feed_imgstr(count1);
