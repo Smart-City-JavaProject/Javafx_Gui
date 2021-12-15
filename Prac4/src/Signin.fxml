@@ -40,7 +40,7 @@
          </cursor>
       </TextField>
       <Label layoutX="24.0" layoutY="219.0" text="Admin Credentials " />
-      <Button fx:id="siginbtn" layoutX="120.0" layoutY="295.0" mnemonicParsing="false" onAction="#siginclick" style="-fx-background-color: #beff00;" text="Sign In">
+      <Button fx:id="siginbtn" layoutX="113.0" layoutY="291.0" mnemonicParsing="false" onAction="#siginclick" prefHeight="34.0" prefWidth="67.0" style="-fx-background-color: #beff00; -fx-background-radius: 50cm;" text="Sign In">
          <effect>
             <Lighting>
                <bumpInput>
@@ -55,7 +55,7 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </Button>
-      <Button fx:id="signupbtn" layoutX="225.0" layoutY="295.0" mnemonicParsing="false" onAction="#signupclick" style="-fx-background-color: #00ff00;" text="Sign Up">
+      <Button fx:id="signupbtn" layoutX="214.0" layoutY="291.0" mnemonicParsing="false" onAction="#signupclick" prefHeight="34.0" prefWidth="67.0" style="-fx-background-color: #00ff00; -fx-background-radius: 50cm;" text="Sign Up">
          <effect>
             <Lighting>
                <bumpInput>
@@ -70,7 +70,7 @@
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
       </Button>
-      <Button fx:id="backbtn" layoutX="28.0" layoutY="295.0" mnemonicParsing="false" onAction="#backbtnclick" style="-fx-background-color: #ff0000;" text="Back" textFill="WHITE">
+      <Button fx:id="backbtn" layoutX="17.0" layoutY="291.0" mnemonicParsing="false" onAction="#backbtnclick" prefHeight="34.0" prefWidth="67.0" style="-fx-background-color: #ff0000; -fx-background-radius: 50cm;" text="Back" textFill="WHITE">
          <effect>
             <Lighting>
                <bumpInput>
