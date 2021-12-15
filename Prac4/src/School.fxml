@@ -29,7 +29,7 @@
             <Image url="@../Images/35379-9-teacher-transparent-background.png" />
          </image>
       </ImageView>
-      <Button fx:id="submitbtn" layoutX="351.0" layoutY="187.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #ffe500;" text="Submit">
+      <Button fx:id="submitbtn" layoutX="350.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #ffe500; -fx-background-radius: 50cm;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
@@ -46,13 +46,23 @@
       </Button>
       <TextField fx:id="inputbox" layoutX="180.0" layoutY="95.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter the Name of Place">
          <cursor>
-            <Cursor fx:constant="CLOSED_HAND" />
+            <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
       <ChoiceBox fx:id="choiceboc" layoutX="180.0" layoutY="153.0" prefWidth="150.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
       </ChoiceBox>
       <Label fx:id="my_label" layoutX="350.0" layoutY="99.0" />
    </children>
