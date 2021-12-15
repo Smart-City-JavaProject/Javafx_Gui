@@ -26,18 +26,28 @@
             <Image url="@../Images/anyrgb.com%20(4).png" />
          </image>
       </ImageView>
-      <TextField fx:id="inputbox" layoutX="135.0" layoutY="104.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter The Name Of Place">
+      <TextField fx:id="inputbox" layoutX="129.0" layoutY="104.0" prefHeight="39.0" prefWidth="156.0" promptText="Enter The Name Of Place" style="-fx-border-width: 1mm; -fx-border-color: #000000;">
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="TEXT" />
          </cursor>
          <font>
             <Font size="11.0" />
          </font>
       </TextField>
-      <ChoiceBox fx:id="choiceboc" layoutX="309.0" layoutY="104.0" prefWidth="150.0">
+      <ChoiceBox fx:id="choiceboc" layoutX="307.0" layoutY="108.0" prefHeight="31.0" prefWidth="156.0">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
       </ChoiceBox>
       <Button fx:id="submitbtn" layoutX="273.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
@@ -78,7 +88,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="submitbtn3" layoutX="273.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
+      <Button fx:id="submitbtn3" layoutX="261.0" layoutY="191.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: #00ff04; -fx-background-radius: 50cm;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
             <Lighting>
                <bumpInput>
