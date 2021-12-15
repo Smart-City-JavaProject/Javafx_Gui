@@ -11,6 +11,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class Feedback implements Initializable {
@@ -19,7 +21,7 @@ public class Feedback implements Initializable {
     private TextArea feedback_input;
 
     @FXML
-    private ImageView img_view;
+    private Circle my_circle;
 
     @FXML
     private TextField name_input;
@@ -36,7 +38,10 @@ public class Feedback implements Initializable {
         System.out.println("name");
         File file = new File("src/t1.jpg");
         Image image = new Image("https://avatars.dicebear.com/api/avataaars/" + num + ".png");
-        img_view.setImage(image);
+        // img_view.setImage(image);
+        // Circle cc = new Circle(40);
+        my_circle.setFill(new ImagePattern(image));
+        my_circle.setStroke(javafx.scene.paint.Color.BLACK);
         // set_stage(new Stage());
         // testlabel.setText("Welcome To The Navi Mumbai " + name);
     }
@@ -50,7 +55,9 @@ public class Feedback implements Initializable {
     void refreshbtnclick(ActionEvent event) {
         num = Math.random() + " ";
         Image image = new Image("https://avatars.dicebear.com/api/avataaars/" + num + ".png");
-        img_view.setImage(image);
+        my_circle.setFill(new ImagePattern(image));
+        my_circle.setStroke(javafx.scene.paint.Color.BLACK);
+        // img_view.setImage(image);
     }
 
     @FXML
