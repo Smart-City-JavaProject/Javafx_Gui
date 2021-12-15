@@ -35,7 +35,7 @@
             </Glow>
          </effect>
       </Label>
-      <TextField fx:id="inputbox" layoutX="226.0" layoutY="135.0" promptText="Enter The Name">
+      <TextField fx:id="inputbox" alignment="CENTER" layoutX="175.0" layoutY="123.0" promptText="Enter The Name" style="-fx-background-color: transparent; -fx-text-inner-color: #00c3ff;">
          <effect>
             <Blend>
                <topInput>
@@ -47,9 +47,12 @@
                </topInput>
             </Blend>
          </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
       </TextField>
-      <Button fx:id="Submitbtn" layoutX="273.0" layoutY="205.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" text="Submit">
-         <effect>
+      <Button fx:id="Submitbtn" layoutX="253.0" layoutY="196.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="39.0" prefWidth="93.0" style="-fx-background-radius: 50em; -fx-background-color: #00c3ff;" text="Submit">
+         <!-- <effect>
             <Lighting>
                <bumpInput>
                   <Shadow />
@@ -62,8 +65,9 @@
                   </Light.Distant>
                </light>
             </Lighting>
-         </effect>
+         </effect> -->
       </Button>
-      <Button fx:id="admin" layoutX="250.0" layoutY="267.0" mnemonicParsing="false" onAction="#adminbtn" text="Login As Admin" />
+      <Button fx:id="admin" layoutX="241.0" layoutY="267.0" mnemonicParsing="false" onAction="#adminbtn" prefHeight="39.0" prefWidth="121.0" style="-fx-background-radius: 50em; -fx-background-color: #00c3ff;" text="Login As Admin" />
+      <Pane layoutX="151.0" layoutY="163.0" prefHeight="5.0" prefWidth="279.0" style="-fx-background-color: black;" />
    </children>
 </Pane>
