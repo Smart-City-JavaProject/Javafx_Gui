@@ -16,6 +16,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class Admin {
@@ -65,6 +68,11 @@ public class Admin {
 
     @FXML
     private Label roomtype_label;
+    @FXML
+    private Circle mycircle;
+
+    @FXML
+    private Label mylabel;
 
     @FXML
     private TextField sector_input;
@@ -248,6 +256,11 @@ public class Admin {
     @FXML
     public void initialize() {
         make_accomodotion();
+        Image image = new Image("https://avatars.dicebear.com/api/avataaars/" + JavaPostgreSql.get_String() + ".png");
+        mycircle.setFill(new ImagePattern(image));
+        mycircle.setStroke(javafx.scene.paint.Color.BLACK);
+        mylabel.setText(SignupForm.get_str());
+        mylabel.setPrefWidth(100);
         JavaPostgreSql.getTablename();
         ObservableList<String> my_lists = FXCollections.observableArrayList(JavaPostgreSql.get_table_name());
         choice.setValue("accomodation");

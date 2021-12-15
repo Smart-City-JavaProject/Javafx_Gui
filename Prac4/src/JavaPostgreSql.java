@@ -530,13 +530,13 @@ public class JavaPostgreSql {
         }
     }
 
-    public static void create_user(String username, String password, String email, String admin_cred) {
-        String SQL = "INSERT INTO users (username, password, email, admin_cred) VALUES (?, ?, ?, ?)";
+    public static void create_user(String name, String password, String email, String imgstr) {
+        String SQL = "INSERT INTO users (name, password, email, imgstr) VALUES (?, ?, ?, ?)";
         try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-            pstmt.setString(1, username);
+            pstmt.setString(1, name);
             pstmt.setString(2, password);
             pstmt.setString(3, email);
-            pstmt.setString(4, admin_cred);
+            pstmt.setString(4, imgstr);
             pstmt.executeUpdate();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -544,7 +544,7 @@ public class JavaPostgreSql {
     }
 
     public static Boolean user_check(String username, String password) {
-        String SQL = "SELECT * FROM users WHERE username = ? AND password = ?";
+        String SQL = "SELECT * FROM users WHERE name = ? AND password = ?";
         String count = "";
         System.out.println("username: " + username + " password: " + password);
         try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {
@@ -553,6 +553,8 @@ public class JavaPostgreSql {
             ResultSet rs = pstmt.executeQuery();
             System.out.println(pstmt);
             if (rs.next()) {
+                count += rs.getString("imgstr");
+                set_string(count);
                 return true;
             } else {
                 return false;
