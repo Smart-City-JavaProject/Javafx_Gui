@@ -7,10 +7,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #007946;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Education">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #007946;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Education">
    <children>
-      <ImageView fx:id="ed_gr2" fitHeight="472.0" fitWidth="600.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ed_gr2" fitHeight="500.0" fitWidth="880.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/book-aesthetic-books-old-books-open-books-1387022.jpg" />
          </image>
@@ -20,8 +21,8 @@
             <Image url="@../Images/anyrgb.com%20(8).png" />
          </image>
       </ImageView>
-      <Rectangle fx:id="ed_gr4" arcHeight="5.0" arcWidth="5.0" fill="#c2ffe4" height="243.0" layoutX="109.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="383.0" />
-      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="151.0" layoutY="153.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="School">
+      <Rectangle fx:id="ed_gr4" arcHeight="5.0" arcWidth="5.0" fill="#c2ffe4" height="338.0" layoutX="185.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="511.0" />
+      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="284.0" layoutY="215.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="School">
          <graphic>
             <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -33,7 +34,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="352.0" layoutY="153.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="College">
+      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="485.0" layoutY="215.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="College">
          <graphic>
             <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -45,10 +46,23 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="105.0" text="Select what you want to Search" textFill="#001485" />
-      <ImageView fx:id="ed_gr3" fitHeight="69.0" fitWidth="75.0" layoutX="265.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="296.0" layoutY="138.0" text="Select what you want to Search" textFill="#001485">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <ImageView fx:id="ed_gr3" fitHeight="69.0" fitWidth="75.0" layoutX="402.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/open-book%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ed_gr11" fitHeight="467.0" fitWidth="408.0" layoutX="676.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/anyrgb.com%20(8).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ed_gr12" fitHeight="408.0" fitWidth="416.0" layoutX="713.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/anyrgb.com%20(8).png" />
          </image>
       </ImageView>   </children>
 </Pane>

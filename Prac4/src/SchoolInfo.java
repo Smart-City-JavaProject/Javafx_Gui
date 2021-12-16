@@ -128,6 +128,8 @@ public class SchoolInfo {
             ((Group) scene.getRoot()).getChildren().addAll(vbox1);
 
             stage.setScene(scene);
+            stage.setMinWidth(890);
+            stage.setMinHeight(550);
             stage.show();
         }
 

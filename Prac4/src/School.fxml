@@ -12,24 +12,24 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="School">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="School">
    <children>
-      <ImageView fx:id="sc_gr1" fitHeight="400.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sc_gr1" fitHeight="500.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com%20(5).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sc_gr2" fitHeight="400.0" fitWidth="600.0" layoutX="327.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+      <ImageView fx:id="sc_gr2" fitHeight="500.0" fitWidth="800.0" layoutX="539.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
          <image>
             <Image url="@../Images/anyrgb.com%20(5).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sc_gr3" fitHeight="359.0" fitWidth="549.0" layoutX="42.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sc_gr3" fitHeight="430.0" fitWidth="700.0" layoutX="42.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/35379-9-teacher-transparent-background.png" />
          </image>
       </ImageView>
-      <Button fx:id="submitbtn" layoutX="350.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #ffe500; -fx-background-radius: 50cm;" text="Submit">
+      <Button fx:id="submitbtn" layoutX="350.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: #ffe500; -fx-background-radius: 50cm;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
@@ -44,12 +44,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="inputbox" layoutX="180.0" layoutY="95.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter the Name of Place">
+      <TextField fx:id="inputbox" layoutX="180.0" layoutY="95.0" prefHeight="33.0" prefWidth="159.0" promptText="Enter the Name of Place">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <ChoiceBox fx:id="choiceboc" layoutX="180.0" layoutY="153.0" prefWidth="150.0">
+      <ChoiceBox fx:id="choiceboc" layoutX="180.0" layoutY="153.0" prefHeight="33.0" prefWidth="159.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>

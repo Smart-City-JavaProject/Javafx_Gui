@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class JavaPostgreSql {
     public static Connection connect_db() throws SQLException {
-        String url = "jdbc:postgresql://localhost:5433/JavaFx_2";
+        String url = "jdbc:postgresql://localhost:5433/JavaFx_Modify";
         String user = "postgres";
         String password = "test123";
         return DriverManager.getConnection(url, user, password);
@@ -312,7 +312,7 @@ public class JavaPostgreSql {
     }
 
     public static String getBus(String No) throws SQLException {
-        String SQL = "SELECT * FROM bus WHERE b_no = ?";
+        String SQL = "SELECT DISTINCT  * FROM bus WHERE  b_no = ?";
         String count = "";
         String count1 = "";
         try (Connection conn = connect_db(); PreparedStatement pstmt = conn.prepareStatement(SQL)) {

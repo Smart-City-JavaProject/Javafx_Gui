@@ -5,16 +5,20 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00313e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transportation">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #00313e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transportation">
    <children>
-      <ImageView fx:id="mpgr4" fitHeight="433.0" fitWidth="546.0" layoutX="89.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mpgr4" fitHeight="508.0" fitWidth="648.0" layoutX="89.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com%20(2).png" />
          </image>
       </ImageView>
-      <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="47.0" prefHeight="31.0" prefWidth="614.0" text="Select what you wanted to Search" textAlignment="CENTER" textFill="WHITE" />
-      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="144.0" layoutY="109.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Bus">
+      <Label fx:id="labeltext" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="58.0" prefHeight="31.0" prefWidth="614.0" text="Select what you wanted to Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="198.0" layoutY="132.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Bus" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,8 +26,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
       </Button>
-      <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="352.0" layoutY="109.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Train">
+      <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="406.0" layoutY="132.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Train" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im2" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -31,8 +38,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
       </Button>
-      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="248.0" layoutY="256.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="Flight">
+      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="302.0" layoutY="279.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="Flight" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -40,6 +50,9 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
       </Button>
       </children>
 </Pane>

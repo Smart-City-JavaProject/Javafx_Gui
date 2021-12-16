@@ -63,7 +63,7 @@ public class Bus {
         String from = Busnos.getValue();
         System.out.println(from);
         String name = JavaPostgreSql.getBus(from);
-        System.out.println(name);
+        System.out.println("--->> Name: " + name);
         set_bus_dep(name);
         set_bus_no(from);
         BusInfo.initialize();

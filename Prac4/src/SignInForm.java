@@ -80,8 +80,8 @@ public class SignInForm implements Initializable {
         String username_str = username.getText();
         System.out.println(img_str + " " + email_str + " " + password_str + " " + username_str);
         try {
-            if (Validate.validate_email(email_str) && Validate.validate_info(username_str)
-                    && Validate.validate_info(password_str)) {
+            if (Validate.validate_email(email_str) && Validate.isEmpty(username_str)
+                    && Validate.isEmpty(password_str)) {
 
                 JavaPostgreSql.create_user(username_str, password_str, email_str, img_str);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

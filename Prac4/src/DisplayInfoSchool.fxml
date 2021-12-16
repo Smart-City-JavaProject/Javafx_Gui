@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4b0666;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoSchool">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoSchool">
    <children>
-      <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/school-icon-png-14043.png" />
-         </image></ImageView>
-      <Rectangle fx:id="d_s_img" arcHeight="5.0" arcWidth="5.0" fill="#9e75ae" height="364.0" layoutX="209.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="384.0" />
-      <Label layoutX="231.0" layoutY="45.0" text="Name" />
-      <Label layoutX="230.0" layoutY="108.0" text="Sector" />
-      <Label layoutX="229.0" layoutY="165.0" prefHeight="17.0" prefWidth="50.0" text="Location" />
-      <Label layoutX="227.0" layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Near Place" />
-      <Label fx:id="location_label" layoutX="304.0" layoutY="165.0" text="Label" />
-      <Label fx:id="Nearplaces_label" layoutX="304.0" layoutY="231.0" text="Label" />
-      <Label fx:id="sector_label" layoutX="304.0" layoutY="108.0" text="Label" />
-      <Label fx:id="name_label" layoutX="304.0" layoutY="45.0" text="Label" />
+      <Label layoutX="389.0" layoutY="67.0" text="Name">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font></Label>
+      <Label layoutX="388.0" layoutY="130.0" text="Sector">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="387.0" layoutY="187.0" prefHeight="27.0" prefWidth="75.0" text="Location">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="385.0" layoutY="306.0" prefHeight="27.0" prefWidth="90.0" text="Near Place">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="location_label" layoutX="540.0" layoutY="187.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="Nearplaces_label" layoutX="540.0" layoutY="306.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="sector_label" layoutX="540.0" layoutY="130.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="name_label" layoutX="540.0" layoutY="67.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <VBox prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #34568B;">
+         <children>
+            <ImageView fitHeight="274.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/school%20(1).png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="10.0" top="100.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </Pane>

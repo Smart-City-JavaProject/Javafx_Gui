@@ -105,6 +105,14 @@ public class Validate {
         }
     }
 
+    public static Boolean isEmpty(String text) {
+        if (text.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public static void main(String[] args) throws MalformedURLException {
         System.out.println(validate_url("https://www.googles7.com"));
     }

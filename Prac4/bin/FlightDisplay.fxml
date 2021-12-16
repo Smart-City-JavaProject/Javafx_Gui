@@ -1,29 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4b0666;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FlightDisplay">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FlightDisplay">
    <children>
-      <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/school-icon-png-14043.png" />
-         </image></ImageView>
-      <Rectangle fx:id="d_s_img" arcHeight="5.0" arcWidth="5.0" fill="#9e75ae" height="331.0" layoutX="208.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="384.0" />
-      <Label layoutX="227.0" layoutY="72.0" text="Name" />
-      <Label layoutX="229.0" layoutY="108.0" text="No." />
-      <Label layoutX="229.0" layoutY="148.0" prefHeight="17.0" prefWidth="50.0" text="From" />
-      <Label fx:id="To" layoutX="227.0" layoutY="185.0" prefHeight="17.0" prefWidth="63.0" text="To" />
-      <Label fx:id="from_label" layoutX="304.0" layoutY="148.0" text="Label" />
-      <Label fx:id="to_label" layoutX="304.0" layoutY="185.0" text="Label" />
-      <Label fx:id="fl_no" layoutX="303.0" layoutY="108.0" text="Label" />
-      <Label fx:id="name_label" layoutX="300.0" layoutY="72.0" text="Label" />
-      <Label fx:id="Arrive" layoutX="227.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="Arrive time" />
-      <Label fx:id="arrive_label" layoutX="304.0" layoutY="216.0" text="Label" />
-      <Label fx:id="To2" layoutX="227.0" layoutY="250.0" prefHeight="17.0" prefWidth="63.0" text="Dep time" />
-      <Label fx:id="dep_label" layoutX="304.0" layoutY="250.0" text="Label" />
+      <Label layoutX="393.0" layoutY="90.0" text="Name" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="395.0" layoutY="144.0" prefHeight="28.0" prefWidth="50.0" text="No." textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="395.0" layoutY="199.0" prefHeight="28.0" prefWidth="57.0" text="From" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="To" layoutX="393.0" layoutY="249.0" prefHeight="17.0" prefWidth="63.0" text="To" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="from_label" layoutX="561.0" layoutY="200.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="to_label" layoutX="561.0" layoutY="250.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="fl_no" layoutX="561.0" layoutY="145.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="name_label" layoutX="561.0" layoutY="91.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="Arrive" layoutX="393.0" layoutY="296.0" prefHeight="28.0" prefWidth="125.0" text="Arrive time" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="arrive_label" layoutX="561.0" layoutY="297.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="To2" layoutX="395.0" layoutY="349.0" prefHeight="28.0" prefWidth="110.0" text="Dep time" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="dep_label" layoutX="561.0" layoutY="350.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <VBox layoutY="-4.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #34568B;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../Images/commercial-plane.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </Pane>

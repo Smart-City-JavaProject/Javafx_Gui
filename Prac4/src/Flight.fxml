@@ -11,13 +11,20 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4d0224;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #4d0224;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Flight">
    <children>
-      <Rectangle fx:id="shape_rect_fl" arcHeight="5.0" arcWidth="5.0" fill="#c17d9d" height="244.0" layoutX="85.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="431.0" />
-      <Label layoutX="185.0" layoutY="99.0" text="From" />
-      <Label layoutX="396.0" layoutY="99.0" text="To" />
-      <ChoiceBox fx:id="frombox" layoutX="125.0" layoutY="164.0" prefWidth="150.0">
+      <Rectangle fx:id="shape_rect_fl" arcHeight="5.0" arcWidth="5.0" fill="#c17d9d" height="393.0" layoutX="85.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="716.0" />
+      <Label layoutX="315.0" layoutY="109.0" text="From" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="531.0" layoutY="109.0" text="To" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <ChoiceBox fx:id="frombox" layoutX="266.0" layoutY="174.0" prefHeight="32.0" prefWidth="156.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
@@ -32,7 +39,7 @@
             </Lighting>
          </effect>
       </ChoiceBox>
-      <ChoiceBox fx:id="tobox" layoutX="328.0" layoutY="164.0" prefWidth="150.0">
+      <ChoiceBox fx:id="tobox" layoutX="469.0" layoutY="174.0" prefHeight="32.0" prefWidth="156.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
@@ -47,22 +54,22 @@
             </Lighting>
          </effect>
       </ChoiceBox>
-      <ImageView fx:id="line3" fitHeight="166.0" fitWidth="165.0" layoutX="218.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+      <ImageView fx:id="line3" fitHeight="166.0" fitWidth="165.0" layoutX="359.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
          <image>
             <Image url="@../Images/line.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fl_loc1" fitHeight="49.0" fitWidth="54.0" layoutX="175.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fl_loc1" fitHeight="49.0" fitWidth="54.0" layoutX="316.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/placeholder.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fl_loc" fitHeight="49.0" fitWidth="54.0" layoutX="378.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fl_loc" fitHeight="49.0" fitWidth="54.0" layoutX="519.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/location%20(1).png" />
          </image>
       </ImageView>
-      <Button fx:id="submitbtn" layoutX="260.0" layoutY="250.0" mnemonicParsing="false" onAction="#FlightSubmit" prefHeight="32.0" prefWidth="81.0" style="-fx-background-color: #fbff00; -fx-background-radius: 50cm;" text="Submit">
+      <Button fx:id="submitbtn" layoutX="401.0" layoutY="260.0" mnemonicParsing="false" onAction="#FlightSubmit" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: #fbff00; -fx-background-radius: 50cm;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
