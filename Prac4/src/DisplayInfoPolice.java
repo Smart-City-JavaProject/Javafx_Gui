@@ -26,6 +26,9 @@ public class DisplayInfoPolice {
     private Label timinig_label;
 
     @FXML
+    private Label contact_id;
+
+    @FXML
     public void initialize() {
         try {
 
@@ -34,6 +37,7 @@ public class DisplayInfoPolice {
             String name12 = PoliceInfo.get_name();
             // String Timing = BanksInfo.get_timing();
             // timinig_label.setText(Timing);
+            contact_id.setText(PoliceInfo.get_contact());
             name_label.setText(name12);
             sector_label.setText(sector);
             location_label.setText(location);

@@ -13,20 +13,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #073000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Banks">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #073000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Banks">
    <children>
       <Label fx:id="my_label" layoutX="247.0" layoutY="269.0" />
-      <ImageView fx:id="mpgr1" fitHeight="400.0" fitWidth="634.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mpgr1" fitHeight="500.0" fitWidth="908.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/PIXNIO-1952962-3810x2540.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="mpgr" fitHeight="400.0" fitWidth="475.0" layoutX="200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mpgr" fitHeight="500.0" fitWidth="558.0" layoutX="385.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com%20(4).png" />
          </image>
       </ImageView>
-      <TextField fx:id="inputbox" layoutX="129.0" layoutY="104.0" prefHeight="39.0" prefWidth="156.0" promptText="Enter The Name Of Place" style="-fx-border-width: 1mm; -fx-border-color: #000000;">
+      <TextField fx:id="inputbox" layoutX="218.0" layoutY="157.0" prefHeight="39.0" prefWidth="166.0" promptText="Enter The Name Of Place" style="-fx-border-width: 1mm; -fx-border-color: #000000;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -34,7 +34,7 @@
             <Font size="11.0" />
          </font>
       </TextField>
-      <ChoiceBox fx:id="choiceboc" layoutX="307.0" layoutY="108.0" prefHeight="31.0" prefWidth="156.0">
+      <ChoiceBox fx:id="choiceboc" layoutX="403.0" layoutY="155.0" prefHeight="39.0" prefWidth="178.0">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
@@ -49,7 +49,7 @@
             </Lighting>
          </effect>
       </ChoiceBox>
-      <Button fx:id="submitbtn" layoutX="273.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
+      <Button fx:id="submitbtn" layoutX="362.0" layoutY="253.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
             <Lighting>
                <bumpInput>
@@ -64,7 +64,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="submitbtn1" layoutX="274.0" layoutY="198.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
+      <Button fx:id="submitbtn1" layoutX="363.0" layoutY="251.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
             <Lighting>
                <bumpInput>
@@ -76,7 +76,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="submitbtn2" layoutX="274.0" layoutY="198.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
+      <Button fx:id="submitbtn2" layoutX="363.0" layoutY="251.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff04;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
             <Lighting>
                <bumpInput>
@@ -88,7 +88,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button fx:id="submitbtn3" layoutX="261.0" layoutY="191.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: #00ff04; -fx-background-radius: 50cm;" text="Submit" textAlignment="CENTER" textFill="#101010">
+      <Button fx:id="submitbtn3" layoutX="350.0" layoutY="244.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="49.0" prefWidth="90.0" style="-fx-background-color: #00ff04; -fx-background-radius: 50cm;" text="Submit" textAlignment="CENTER" textFill="#101010">
          <effect>
             <Lighting>
                <bumpInput>

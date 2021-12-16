@@ -1,28 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1d5505;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoHospital">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoHospital">
    <children>
-      <Rectangle fx:id="dH_img" arcHeight="5.0" arcWidth="5.0" fill="#a8d999" height="360.0" layoutX="205.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="388.0" />
-      <Label layoutX="225.0" layoutY="37.0" text="Name" />
-      <Label layoutX="224.0" layoutY="74.0" text="Sector" />
-      <Label layoutX="222.0" layoutY="109.0" prefHeight="17.0" prefWidth="56.0" text="Location" />
-      <Label layoutX="219.0" layoutY="222.0" prefHeight="17.0" prefWidth="62.0" text="Near Place" />
-      <Label fx:id="location_label" layoutX="305.0" layoutY="109.0" text="Label" />
-      <Label fx:id="Nearplaces_label" layoutX="305.0" layoutY="222.0" text="Label" />
-      <Label fx:id="sector_label" layoutX="305.0" layoutY="74.0" text="Label" />
-      <Label fx:id="name_label" layoutX="305.0" layoutY="37.0" text="Label" />
-      <ImageView fx:id="imag_v" fitHeight="323.0" fitWidth="179.0" layoutX="15.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/hospital-buildings.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="221.0" layoutY="185.0" prefHeight="17.0" prefWidth="56.0" text="Contact" />
-      <Label fx:id="contact_id" layoutX="305.0" layoutY="185.0" text="Label" />
+      <Label layoutX="377.0" layoutY="40.0" text="Name" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="376.0" layoutY="88.0" text="Sector" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="374.0" layoutY="140.0" prefHeight="28.0" prefWidth="89.0" text="Location" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="370.0" layoutY="295.0" prefHeight="28.0" prefWidth="108.0" text="Near Place" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="location_label" layoutX="502.0" layoutY="139.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="Nearplaces_label" layoutX="501.0" layoutY="294.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="sector_label" layoutX="502.0" layoutY="87.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="name_label" layoutX="502.0" layoutY="39.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="371.0" layoutY="239.0" prefHeight="28.0" prefWidth="89.0" text="Contact" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="contact_id" layoutX="501.0" layoutY="238.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <VBox layoutY="-1.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #34568b;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/hospital.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </Pane>

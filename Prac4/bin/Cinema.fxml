@@ -13,14 +13,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cinema">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cinema">
    <children>
-      <ImageView fx:id="seats" fitHeight="607.0" fitWidth="634.0" layoutX="-4.0" layoutY="-154.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="seats" fitHeight="870.0" fitWidth="1138.0" layoutX="14.0" layoutY="-258.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/theater-transparent-20.png" />
          </image>
       </ImageView>
-      <Rectangle fx:id="screen" arcHeight="5.0" arcWidth="5.0" fill="#b2cde7" height="202.0" layoutX="83.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="434.0">
+      <Rectangle fx:id="screen" arcHeight="5.0" arcWidth="5.0" fill="#b2cde7" height="267.0" layoutX="190.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="484.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -32,12 +32,12 @@
             </Lighting>
          </effect>
       </Rectangle>
-      <TextField fx:id="Location_text" layoutX="96.0" layoutY="25.0" promptText="Location" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
+      <TextField fx:id="Location_text" layoutX="214.0" layoutY="62.0" prefHeight="40.0" prefWidth="159.0" promptText="Location" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Button fx:id="submit_btn" layoutX="266.0" layoutY="116.0" mnemonicParsing="false" onAction="#cinemasub" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #33ff00; -fx-background-radius: 50cm;" text="Submit">
+      <Button fx:id="submit_btn" layoutX="374.0" layoutY="141.0" mnemonicParsing="false" onAction="#cinemasub" prefHeight="40.0" prefWidth="76.0" style="-fx-background-color: #33ff00; -fx-background-radius: 50cm;" text="Submit">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -52,7 +52,7 @@
             </Lighting>
          </effect>
       </Button>
-      <ImageView fx:id="hitman" fitHeight="150.0" fitWidth="200.0" layoutX="317.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="hitman" fitHeight="200.0" fitWidth="232.0" layoutX="462.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/hitman-clipart-hitman-clipart-985.png" />
          </image>

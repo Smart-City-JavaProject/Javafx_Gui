@@ -17,6 +17,9 @@ public class DisplayInfoBanks {
     private Label location_label;
 
     @FXML
+    private Label contact_id;
+
+    @FXML
     private Label name_label;
 
     @FXML
@@ -34,11 +37,13 @@ public class DisplayInfoBanks {
             String name12 = BanksInfo.get_name();
             // String Timing = BanksInfo.get_timing();
             // timinig_label.setText(Timing);
+
             name_label.setText(name12);
             sector_label.setText(sector);
             location_label.setText(location);
             location_label.setWrapText(true);
             location_label.setPrefWidth(300);
+            contact_id.setText(BanksInfo.get_contact());
             try {
                 String near = JavaPostgreSql.get_near_place("banks", sector.trim(), Banks.getlocation().trim());
                 if (near.length() > 0) {

@@ -12,20 +12,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Ellipse?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mall">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mall">
    <children>
-      <ImageView fx:id="mall_img2" fitHeight="434.0" fitWidth="569.0" layoutX="76.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mall_img2" fitHeight="512.0" fitWidth="657.0" layoutX="223.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com%20(2).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="mall_img1" fitHeight="434.0" fitWidth="553.0" layoutX="-33.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mall_img1" fitHeight="512.0" fitWidth="653.0" layoutX="-33.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/flipped.png" />
          </image>
       </ImageView>
-      <Ellipse fx:id="mall_img5" fill="#feff00" layoutX="300.0" layoutY="180.0" radiusX="144.0" radiusY="116.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fx:id="mall_img4" fill="#feff00" layoutX="300.0" layoutY="180.0" radiusX="136.0" radiusY="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+      <Ellipse fx:id="mall_img5" fill="#feff00" layoutX="449.0" layoutY="200.0" radiusX="164.0" radiusY="140.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="mall_img4" fill="#feff00" layoutX="448.0" layoutY="198.0" radiusX="155.0" radiusY="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -37,7 +37,7 @@
             </Lighting>
          </effect>
       </Ellipse>
-      <Button fx:id="submit_btn" layoutX="269.0" layoutY="241.0" mnemonicParsing="false" onAction="#GetMallsBtn" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #00ff15; -fx-background-radius: 50cm;" text="Enter">
+      <Button fx:id="submit_btn" layoutX="409.0" layoutY="234.0" mnemonicParsing="false" onAction="#GetMallsBtn" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #00ff15; -fx-background-radius: 50cm;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>
@@ -52,16 +52,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fx:id="mall_img3" fitHeight="321.0" fitWidth="149.0" layoutX="139.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mall_img3" fitHeight="310.0" fitWidth="213.0" layoutX="195.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/teacher-png-46696.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="input_text" alignment="CENTER" layoutX="223.0" layoutY="107.0" promptText="Location" style="-fx-border-color: #000000; -fx-border-width: 0.7mm;">
+      <TextField fx:id="input_text" alignment="CENTER" layoutX="352.0" layoutY="103.0" prefHeight="38.0" prefWidth="173.0" promptText="Location" style="-fx-border-color: #000000; -fx-border-width: 0.7mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label fx:id="my_label" layoutX="286.0" layoutY="172.0" />
+      <Label fx:id="my_label" layoutX="415.0" layoutY="168.0" />
    </children>
 </Pane>

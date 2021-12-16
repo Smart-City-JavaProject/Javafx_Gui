@@ -12,14 +12,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #860000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accomendation">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #860000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accomendation">
    <children>
-      <ImageView fx:id="mpg1" fitHeight="400.0" fitWidth="400.0" layoutX="316.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mpg1" fitHeight="500.0" fitWidth="577.0" layoutX="380.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="my_choice_box" layoutX="333.0" layoutY="142.0" prefHeight="29.0" prefWidth="158.0">
+      <ChoiceBox fx:id="my_choice_box" layoutX="460.0" layoutY="162.0" prefHeight="35.0" prefWidth="158.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
@@ -33,7 +33,7 @@
                </light>
             </Lighting>
          </effect></ChoiceBox>
-      <Button fx:id="my_btn" layoutX="264.0" layoutY="227.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="36.0" prefWidth="76.0" style="-fx-background-color: #00ddff; -fx-background-radius: 50em;" text="Enter">
+      <Button fx:id="my_btn" layoutX="391.0" layoutY="247.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="43.0" prefWidth="80.0" style="-fx-background-color: #00ddff; -fx-background-radius: 50em;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>
@@ -47,12 +47,12 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <ImageView fx:id="mpg2" fitHeight="400.0" fitWidth="400.0" layoutX="-141.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+      <ImageView fx:id="mpg2" fitHeight="454.0" fitWidth="467.0" layoutX="-107.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
          <image>
             <Image url="@../Images/anyrgb.com.png" />
          </image>
       </ImageView>
-      <TextField fx:id="my_input" layoutX="120.0" layoutY="138.0" prefHeight="36.0" prefWidth="158.0" promptText="Enter the City name" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
+      <TextField fx:id="my_input" layoutX="247.0" layoutY="158.0" prefHeight="43.0" prefWidth="158.0" promptText="Enter the City name" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>

@@ -43,9 +43,9 @@ public class RestaurentDisplay {
         my_rtype.setText(roomtype);
         my_rate.setText(rating);
         location_label.setWrapText(true);
-        location_label.setPrefWidth(300);
+        location_label.setPrefWidth(400);
         my_rtype.setWrapText(true);
-        my_rtype.setPrefWidth(300);
+        my_rtype.setPrefWidth(400);
         try {
             String near = JavaPostgreSql.get_near_place("restaurant", sector.trim(), Restaurent.get_location().trim());
             if (near.length() > 0) {

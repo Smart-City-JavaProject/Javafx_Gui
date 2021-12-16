@@ -1,29 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4b0666;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoCinema">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoCinema">
    <children>
-      <ImageView fx:id="imag_v" fitHeight="162.0" fitWidth="165.0" layoutX="22.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/cinema%20(1).png" />
-         </image></ImageView>
-      <Rectangle fx:id="d_s_img" arcHeight="5.0" arcWidth="5.0" fill="#9e75ae" height="356.0" layoutX="209.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="384.0" />
-      <Label layoutX="226.0" layoutY="51.0" text="Name" />
-      <Label layoutX="223.0" layoutY="96.0" text="Sector" />
-      <Label layoutX="222.0" layoutY="139.0" prefHeight="17.0" prefWidth="50.0" text="Location" />
-      <Label layoutX="220.0" layoutY="190.0" prefHeight="17.0" prefWidth="63.0" text="Website" />
-      <Label fx:id="location_label" layoutX="297.0" layoutY="139.0" text="Label" />
-      <Label fx:id="timinig_label" layoutX="297.0" layoutY="190.0" text="Label" />
-      <Label fx:id="sector_label" layoutX="297.0" layoutY="96.0" text="Label" />
-      <Label fx:id="name_label" layoutX="299.0" layoutY="51.0" text="Label" />
-      <Label layoutX="220.0" layoutY="230.0" prefHeight="17.0" prefWidth="63.0" text="Contact" />
-      <Label fx:id="Contact" layoutX="297.0" layoutY="230.0" text="Label" />
-      <Label layoutX="222.0" layoutY="266.0" text="Near Place" />
-      <Label fx:id="Nearplaces_label" layoutX="295.0" layoutY="266.0" text="Label" />
+      <Label layoutX="350.0" layoutY="32.0" text="Name" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="350.0" layoutY="86.0" text="Sector" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="350.0" layoutY="136.0" prefHeight="28.0" prefWidth="91.0" text="Location" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="351.0" layoutY="233.0" prefHeight="28.0" prefWidth="85.0" text="Website" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="location_label" layoutX="468.0" layoutY="136.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="timinig_label" layoutX="469.0" layoutY="233.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="sector_label" layoutX="468.0" layoutY="86.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="name_label" layoutX="468.0" layoutY="32.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="351.0" layoutY="288.0" prefHeight="28.0" prefWidth="91.0" text="Contact" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="Contact" layoutX="469.0" layoutY="288.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="351.0" layoutY="338.0" text="Near Place" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="Nearplaces_label" layoutX="467.0" layoutY="338.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <VBox prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #34568b;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/cinema%20(1).png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </Pane>

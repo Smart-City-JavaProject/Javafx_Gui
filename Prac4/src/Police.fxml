@@ -12,20 +12,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #050051;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Police">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #050051;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Police">
    <children>
-      <ImageView fx:id="pol_gr3" fitHeight="411.0" fitWidth="820.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pol_gr3" fitHeight="518.0" fitWidth="901.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/flipped.png" />
          </image>
       </ImageView>
-      <Circle fx:id="pol_gr2" fill="#2087e7" layoutX="300.0" layoutY="192.0" radius="133.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="city_name" layoutX="226.0" layoutY="137.0" promptText="Enter the City Name" style="-fx-border-color: #000000; -fx-border-width: 0.7mm;">
+      <Circle fx:id="pol_gr2" fill="#2087e7" layoutX="416.0" layoutY="212.0" radius="163.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="city_name" layoutX="339.0" layoutY="110.0" prefHeight="40.0" prefWidth="156.0" promptText="Enter the City Name" style="-fx-border-color: #000000; -fx-border-width: 0.7mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Button fx:id="my_btn" layoutX="270.0" layoutY="253.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="33.0" prefWidth="61.0" style="-fx-background-color: #00ff00; -fx-background-radius: 50cm;" text="Enter" textFill="#050051">
+      <Button fx:id="my_btn" layoutX="377.0" layoutY="221.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="47.0" prefWidth="79.0" style="-fx-background-color: #00ff00; -fx-background-radius: 50cm;" text="Enter" textFill="#050051">
          <effect>
             <Lighting>
                <bumpInput>
@@ -40,11 +40,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fx:id="pol_gr1" fitHeight="276.0" fitWidth="149.0" layoutX="345.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pol_gr1" fitHeight="376.0" fitWidth="224.0" layoutX="487.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/clipart-boy-police-officer-5-transparent.png" />
          </image>
       </ImageView>
-      <Label fx:id="my_label" layoutX="286.0" layoutY="197.0" />
+      <Label fx:id="my_label" layoutX="402.0" layoutY="212.0" />
+      <ImageView fx:id="pol_gr31" fitHeight="518.0" fitWidth="901.0" layoutX="-32.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/flipped.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="680.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>

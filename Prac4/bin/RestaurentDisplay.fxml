@@ -1,32 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1d3557;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurentDisplay">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurentDisplay">
    <children>
-      <Rectangle fx:id="rd_img" arcHeight="5.0" arcWidth="5.0" fill="#8db7df" height="373.0" layoutX="193.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="403.0" />
-      <Label layoutX="211.0" layoutY="63.0" text="Name" />
-      <Label layoutX="210.0" layoutY="100.0" text="Sector" />
-      <Label layoutX="204.0" layoutY="135.0" text="Location" />
-      <Label layoutX="198.0" layoutY="304.0" text="Near Place" />
-      <Label fx:id="location_label" layoutX="286.0" layoutY="135.0" text="Label" />
-      <Label fx:id="Nearplaces_label" layoutX="286.0" layoutY="304.0" text="Label" />
-      <Label fx:id="sector_label" layoutX="286.0" layoutY="100.0" text="Label" />
-      <Label fx:id="name_label" layoutX="286.0" layoutY="63.0" text="Label" />
-      <ImageView fx:id="imag_v" fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/restaurant.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="206.0" layoutY="202.0" text="Contact" />
-      <Label fx:id="contact_id" layoutX="286.0" layoutY="202.0" text="Label" />
-      <Label layoutX="204.0" layoutY="237.0" text="Room Type" />
-      <Label fx:id="my_rtype" layoutX="286.0" layoutY="237.0" text="Label" />
-      <Label layoutX="209.0" layoutY="272.0" text="Rating" />
-      <Label fx:id="my_rate" layoutX="286.0" layoutY="272.0" text="Label" />
+      <Label layoutX="344.0" layoutY="32.0" text="Name" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="344.0" layoutY="79.0" text="Sector" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="344.0" layoutY="124.0" text="Location" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="341.0" layoutY="347.0" text="Near Place" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="location_label" layoutX="481.0" layoutY="124.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="Nearplaces_label" layoutX="478.0" layoutY="347.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="sector_label" layoutX="481.0" layoutY="79.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="name_label" layoutX="481.0" layoutY="32.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="341.0" layoutY="213.0" text="Contact" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="contact_id" layoutX="478.0" layoutY="213.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="341.0" layoutY="258.0" text="Room Type" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="my_rtype" layoutX="478.0" layoutY="258.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="341.0" layoutY="303.0" text="Rating" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label fx:id="my_rate" layoutX="478.0" layoutY="303.0" text="Label" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <VBox layoutY="-7.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #34568b;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/restaurant.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </Pane>

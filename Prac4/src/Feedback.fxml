@@ -13,14 +13,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1d3357;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Feedback">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #1d3357;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Feedback">
    <children>
-      <ImageView fx:id="img_view" fitHeight="431.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_view" fitHeight="500.0" fitWidth="343.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com%20(5).png" />
          </image></ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="14.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="262.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="215.0" layoutX="14.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="316.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -32,7 +33,7 @@
             </Lighting>
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="343.0" layoutX="308.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="282.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="440.0" layoutX="354.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="373.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -44,7 +45,7 @@
             </Lighting>
          </effect>
       </Rectangle>
-      <Button fx:id="ref_btn" layoutX="56.0" layoutY="273.0" mnemonicParsing="false" onAction="#refreshbtnclick" prefHeight="36.0" prefWidth="75.0" style="-fx-background-color: #eaff00; -fx-background-radius: 50em;" text="Refresh">
+      <Button fx:id="ref_btn" layoutX="53.0" layoutY="293.0" mnemonicParsing="false" onAction="#refreshbtnclick" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #eaff00; -fx-background-radius: 50em;" text="Refresh">
          <effect>
             <Lighting>
                <bumpInput>
@@ -59,14 +60,20 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="name_input" layoutX="22.0" layoutY="214.0" prefHeight="25.0" prefWidth="246.0">
+      <TextField fx:id="name_input" layoutX="26.0" layoutY="224.0" prefHeight="45.0" prefWidth="290.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label layoutX="25.0" layoutY="189.0" prefWidth="93.0" text="Enter Your Name" textFill="WHITE" />
-      <Label layoutX="325.0" layoutY="39.0" prefHeight="25.0" prefWidth="126.0" text="Enter The FeedBack" textFill="WHITE" />
-      <Button fx:id="submit_btn" layoutX="163.0" layoutY="273.0" mnemonicParsing="false" onAction="#submit_click" prefHeight="36.0" prefWidth="75.0" style="-fx-background-color: #5eff00; -fx-background-radius: 50em;" text="Submit">
+      <Label layoutX="25.0" layoutY="189.0" prefHeight="17.0" prefWidth="254.0" text="Enter Your Name" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="410.0" layoutY="41.0" prefHeight="25.0" prefWidth="219.0" text="Enter The FeedBack" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="submit_btn" layoutX="168.0" layoutY="293.0" mnemonicParsing="false" onAction="#submit_click" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #5eff00; -fx-background-radius: 50em;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
@@ -81,16 +88,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fx:id="feed_img" fitHeight="357.0" fitWidth="343.0" layoutX="280.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="feed_img" fitHeight="447.0" fitWidth="450.0" layoutX="354.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/3794180.png" />
          </image>
       </ImageView>
-      <TextArea fx:id="feedback_input" layoutX="340.0" layoutY="77.0" prefHeight="287.0" prefWidth="144.0">
+      <TextArea fx:id="feedback_input" layoutX="420.0" layoutY="77.0" prefHeight="369.0" prefWidth="200.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextArea>
-      <Circle fx:id="my_circle" fill="DODGERBLUE" layoutX="131.0" layoutY="89.0" radius="72.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="my_circle" fill="DODGERBLUE" layoutX="136.0" layoutY="94.0" radius="77.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </Pane>

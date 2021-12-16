@@ -11,26 +11,27 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #013601;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hospital">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #013601;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hospital">
    <children>
-      <ImageView fx:id="hosp_gr4" fitHeight="610.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="hosp_gr4" fitHeight="512.0" fitWidth="343.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/anyrgb.com%20(5).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="hosp_gr3" fitHeight="610.0" fitWidth="272.0" layoutX="328.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+      <ImageView fx:id="hosp_gr3" fitHeight="500.0" fitWidth="309.0" layoutX="571.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
          <image>
             <Image url="@../Images/anyrgb.com%20(5).png" />
          </image>
       </ImageView>
-      <Circle fx:id="hosp_gr1" fill="#8cd18c" layoutX="300.0" layoutY="208.0" radius="136.0" stroke="BLACK" strokeType="INSIDE" />
-      <ImageView fx:id="hosp_gr2" fitHeight="272.0" fitWidth="169.0" layoutX="328.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+      <Circle fx:id="hosp_gr1" fill="#8cd18c" layoutX="366.0" layoutY="228.0" radius="167.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="hosp_gr2" fitHeight="384.0" fitWidth="256.0" layoutX="428.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/doctor_p.png" />
          </image>
       </ImageView>
-      <Button fx:id="submit_btn" layoutX="278.0" layoutY="258.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #fffb00;" text="Enter">
+      <Button fx:id="submit_btn" layoutX="329.0" layoutY="244.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="41.0" prefWidth="82.0" style="-fx-background-color: #fffb00; -fx-background-radius: 50em;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>
@@ -45,10 +46,13 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="my_input" layoutX="226.0" layoutY="139.0" promptText="Enter the City Name">
+      <TextField fx:id="my_input" layoutX="277.0" layoutY="132.0" prefHeight="41.0" prefWidth="198.0" promptText="Enter the City Name">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
-         </cursor></TextField>
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
       <Label fx:id="my_label" layoutX="286.0" layoutY="191.0" />
    </children>
 </Pane>
