@@ -30,6 +30,9 @@ public class second implements Initializable {
     @FXML
     private Label testlabel;
 
+    @FXML
+    private Button backbtn;
+
     private void init() {
         String name = nextcon.get_name();
         set_stage(new Stage());
@@ -136,6 +139,16 @@ public class second implements Initializable {
         System.out.println("--->>>");
         Stage arg0 = get_stage();
         Parent root = FXMLLoader.load(getClass().getResource("cinema_mall.fxml"));
+        Scene sc = new Scene(root);
+        arg0.setScene(sc);
+        arg0.setTitle("Smart City");
+        arg0.show();
+    }
+
+    @FXML
+    void backclick(ActionEvent event) throws IOException {
+        Stage arg0 = App.get_stage();
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Scene sc = new Scene(root);
         arg0.setScene(sc);
         arg0.setTitle("Smart City");

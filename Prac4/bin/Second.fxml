@@ -124,5 +124,10 @@
             </ImageView>
          </children>
       </VBox>
+      <Button fx:id="backbtn" layoutX="334.0" layoutY="426.0" mnemonicParsing="false" onAction="#backclick" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #34568b; -fx-background-radius: 50em;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Serif Regular" size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

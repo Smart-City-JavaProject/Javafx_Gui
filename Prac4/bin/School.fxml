@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="School">
    <children>
@@ -29,7 +30,7 @@
             <Image url="@../Images/35379-9-teacher-transparent-background.png" />
          </image>
       </ImageView>
-      <Button fx:id="submitbtn" layoutX="350.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: #ffe500; -fx-background-radius: 50cm;" text="Submit">
+      <Button fx:id="submitbtn" layoutX="384.0" layoutY="206.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: #ffe500; -fx-background-radius: 50cm;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
@@ -44,12 +45,15 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="inputbox" layoutX="180.0" layoutY="95.0" prefHeight="33.0" prefWidth="159.0" promptText="Enter the Name of Place">
+      <TextField fx:id="inputbox" layoutX="180.0" layoutY="95.0" prefHeight="40.0" prefWidth="223.0" promptText="Enter the Name of Place">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <ChoiceBox fx:id="choiceboc" layoutX="180.0" layoutY="153.0" prefHeight="33.0" prefWidth="159.0">
+      <ChoiceBox fx:id="choiceboc" layoutX="180.0" layoutY="153.0" prefHeight="33.0" prefWidth="223.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
