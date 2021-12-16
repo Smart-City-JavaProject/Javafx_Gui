@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -32,6 +33,9 @@ public class Admin {
     private ChoiceBox<String> choice;
 
     @FXML
+    private Pane address_pane;
+
+    @FXML
     private TextField cno_input;
 
     @FXML
@@ -44,12 +48,27 @@ public class Admin {
     private Label cost_label;
 
     @FXML
-    private TextField locality_input;
+    private Pane cost_pane;
     @FXML
-    private Button backbtn;
+    private Pane cno_pane;
+
+    @FXML
+    private TextField locality_input;
 
     @FXML
     private Label locality_label;
+
+    @FXML
+    private Pane locality_pane;
+
+    @FXML
+    private Button my_submit;
+
+    @FXML
+    private Circle mycircle;
+
+    @FXML
+    private Label mylabel;
 
     @FXML
     private TextField name_input;
@@ -58,35 +77,43 @@ public class Admin {
     private Label name_label;
 
     @FXML
+    private Pane name_pane;
+
+    @FXML
     private TextField rating_input;
 
     @FXML
     private Label rating_label;
 
     @FXML
+    private Pane rating_pane;
+
+    @FXML
     private TextField roomtype_input;
 
     @FXML
     private Label roomtype_label;
-    @FXML
-    private Circle mycircle;
 
     @FXML
-    private Label mylabel;
+    private Pane roomtype_pane;
 
     @FXML
     private TextField sector_input;
-    @FXML
-    private Button my_submit;
 
     @FXML
     private Label sector_label;
+
+    @FXML
+    private Pane sector_pane;
 
     @FXML
     private TextField type_input;
 
     @FXML
     private Label type_label;
+
+    @FXML
+    private Pane type_pane;
 
     public void remove_all() {
         this.name_input.visibleProperty().set(false);
@@ -98,6 +125,16 @@ public class Admin {
         this.roomtype_input.visibleProperty().set(false);
         this.sector_input.visibleProperty().set(false);
         this.type_input.visibleProperty().set(false);
+
+        this.cost_pane.visibleProperty().set(false);
+        this.address_pane.visibleProperty().set(false);
+        this.cno_pane.visibleProperty().set(false);
+        this.locality_pane.visibleProperty().set(false);
+        this.name_pane.visibleProperty().set(false);
+        this.rating_pane.visibleProperty().set(false);
+        this.roomtype_pane.visibleProperty().set(false);
+        this.sector_pane.visibleProperty().set(false);
+        this.type_pane.visibleProperty().set(false);
 
         this.cno_label.setText("");
         this.cost_label.setText("");
@@ -115,7 +152,7 @@ public class Admin {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
         rating_label.setText("Board");
         roomtype_label.setText("Stream");
         type_label.setText("Type");
@@ -129,17 +166,27 @@ public class Admin {
         type_input.visibleProperty().set(true);
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
+
+        sector_pane.visibleProperty().set(true);
+        roomtype_pane.visibleProperty().set(true);
+        rating_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        name_pane.visibleProperty().set(true);
+        type_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
     }
 
     public void make_restaurent() {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
         rating_label.setText("Rating");
         type_label.setText("Type");
         locality_label.setText("Locality");
         sector_label.setText("Sector");
+
         name_input.visibleProperty().set(true);
         address_input.visibleProperty().set(true);
         cno_input.visibleProperty().set(true);
@@ -147,13 +194,21 @@ public class Admin {
         type_input.visibleProperty().set(true);
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        rating_pane.visibleProperty().set(true);
+        type_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
     }
 
     public void make_banks() {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
 
         locality_label.setText("Locality");
         sector_label.setText("Sector");
@@ -165,19 +220,25 @@ public class Admin {
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
 
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
     }
 
     public void make_accomodotion() {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
         rating_label.setText("Rating");
         roomtype_label.setText("Room Type");
         type_label.setText("Type");
         locality_label.setText("Locality");
         sector_label.setText("Sector");
         cost_label.setText("Cost");
+        this.cost_pane.visibleProperty().set(true);
 
         name_input.visibleProperty().set(true);
         address_input.visibleProperty().set(true);
@@ -189,13 +250,22 @@ public class Admin {
         sector_input.visibleProperty().set(true);
         cost_input.visibleProperty().set(true);
 
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        rating_pane.visibleProperty().set(true);
+        roomtype_pane.visibleProperty().set(true);
+        type_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
+
     }
 
     public void make_cinema() {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
         rating_label.setText("Web");
         locality_label.setText("Locality");
         sector_label.setText("Sector");
@@ -206,13 +276,20 @@ public class Admin {
         rating_input.visibleProperty().set(true);
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        rating_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
     }
 
     public void make_hospital() {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
         locality_label.setText("Locality");
         sector_label.setText("Sector");
 
@@ -221,13 +298,19 @@ public class Admin {
         cno_input.visibleProperty().set(true);
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
     }
 
     public void make_police_station() {
         remove_all();
         name_label.setText("Name");
         address_label.setText("Address");
-        cno_label.setText("Contact Number");
+        cno_label.setText("Contact");
         locality_label.setText("Locality");
         sector_label.setText("Sector");
 
@@ -236,6 +319,12 @@ public class Admin {
         cno_input.visibleProperty().set(true);
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
     }
 
     public void make_mall() {
@@ -251,6 +340,12 @@ public class Admin {
         cno_input.visibleProperty().set(true);
         locality_input.visibleProperty().set(true);
         sector_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
     }
 
     @FXML

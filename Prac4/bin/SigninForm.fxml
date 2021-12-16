@@ -13,8 +13,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignInForm">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignInForm">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #34568B;">
          <children>
@@ -23,7 +22,7 @@
                   <Image url="@../Images/4957136-removebg-preview.png" />
                </image>
                <VBox.margin>
-                  <Insets top="80.0" />
+                  <Insets top="100.0" />
                </VBox.margin>
             </ImageView>
          </children>
@@ -39,18 +38,18 @@
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="204.0" prefWidth="477.0">
                <children>
-                  <VBox prefHeight="118.0" prefWidth="508.0">
+                  <VBox prefHeight="210.0" prefWidth="478.0">
                      <children>
                         <Circle fx:id="my_circle" fill="DODGERBLUE" radius="59.0" stroke="BLACK" strokeType="INSIDE">
                            <VBox.margin>
                               <Insets left="180.0" />
                            </VBox.margin>
                         </Circle>
-                        <Button fx:id="refbtn" mnemonicParsing="false" onAction="#refclick" prefHeight="42.0" prefWidth="48.0" style="-fx-background-radius: 50em; -fx-background-color: #34568B;" textFill="#34568b">
+                        <Button fx:id="refbtn" mnemonicParsing="false" onAction="#refclick" prefHeight="43.0" prefWidth="78.0" style="-fx-background-radius: 50em; -fx-background-color: #34568B;" textFill="#34568b">
                            <VBox.margin>
-                              <Insets bottom="10.0" left="210.0" top="30.0" />
+                              <Insets bottom="10.0" left="200.0" top="30.0" />
                            </VBox.margin>
                            <graphic>
                               <ImageView fitHeight="49.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
@@ -64,9 +63,9 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="82.0" prefWidth="476.0">
+            <HBox prefHeight="98.0" prefWidth="477.0">
                <children>
-                  <VBox prefHeight="97.0" prefWidth="524.0">
+                  <VBox prefHeight="95.0" prefWidth="478.0">
                      <children>
                         <Label style="-fx-font-weight: bold;" text="Username" textFill="#34568b">
                            <VBox.margin>
@@ -93,7 +92,7 @@
                   </VBox>
                </children>
             </HBox>
-            <VBox prefHeight="97.0" prefWidth="524.0">
+            <VBox prefHeight="95.0" prefWidth="477.0">
                <children>
                   <Label style="-fx-font-weight: bold;" text="Password" textFill="#34568b">
                      <VBox.margin>
@@ -115,7 +114,7 @@
                   </Pane>
                </children>
             </VBox>
-            <VBox prefHeight="125.0" prefWidth="524.0">
+            <VBox prefHeight="152.0" prefWidth="477.0">
                <children>
                   <Label style="-fx-font-weight: bold;" text="Email" textFill="#34568b">
                      <VBox.margin>
@@ -138,17 +137,17 @@
                         <Insets left="150.0" right="150.0" />
                      </VBox.margin>
                   </Pane>
-                  <HBox prefHeight="53.0" prefWidth="477.0">
+                  <HBox prefHeight="71.0" prefWidth="477.0">
                      <children>
-                        <Button fx:id="backbtn" mnemonicParsing="false" onAction="#backclick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Back" textFill="WHITE">
+                        <Button fx:id="backbtn" mnemonicParsing="false" onAction="#backclick" prefHeight="41.0" prefWidth="78.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Back" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="66.0" right="25.0" top="20.0" />
+                              <Insets left="66.0" right="2.0" top="20.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="siginbtn" mnemonicParsing="false" onAction="#siginclick" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign In" textFill="WHITE">
+                        <Button fx:id="siginbtn" mnemonicParsing="false" onAction="#siginclick" prefHeight="41.0" prefWidth="78.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign In" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -156,7 +155,7 @@
                               <Insets left="50.0" right="25.0" top="20.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="signup" mnemonicParsing="false" onAction="#signupclick" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign Up" textFill="WHITE">
+                        <Button fx:id="signup" mnemonicParsing="false" onAction="#signupclick" prefHeight="41.0" prefWidth="78.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign Up" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

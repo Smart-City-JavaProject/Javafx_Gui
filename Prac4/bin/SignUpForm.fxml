@@ -91,17 +91,17 @@
             </VBox>
             <VBox prefHeight="125.0" prefWidth="524.0">
                <children>
-                  <HBox prefHeight="53.0" prefWidth="477.0">
+                  <HBox prefHeight="89.0" prefWidth="477.0">
                      <children>
-                        <Button fx:id="backbtn" mnemonicParsing="false" onAction="#backclick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Back" textFill="WHITE">
+                        <Button fx:id="backbtn" mnemonicParsing="false" onAction="#backclick" prefHeight="41.0" prefWidth="78.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Back" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="66.0" right="25.0" top="20.0" />
+                              <Insets left="66.0" right="2.0" top="20.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="siginbtn" mnemonicParsing="false" onAction="#siginclick" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign up" textFill="WHITE">
+                        <Button fx:id="siginbtn" mnemonicParsing="false" onAction="#siginclick" prefHeight="41.0" prefWidth="79.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign up" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -109,7 +109,7 @@
                               <Insets left="50.0" right="25.0" top="20.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="signup" mnemonicParsing="false" onAction="#signupclick" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign in" textFill="WHITE">
+                        <Button fx:id="signup" mnemonicParsing="false" onAction="#signupclick" prefHeight="41.0" prefWidth="76.0" style="-fx-background-color: #34568B; -fx-background-radius: 50em;" text="Sign in" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

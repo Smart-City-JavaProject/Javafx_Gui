@@ -20,12 +20,12 @@
          </image>
       </ImageView>
       <Circle fx:id="pol_gr2" fill="#2087e7" layoutX="300.0" layoutY="192.0" radius="133.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="city_name" layoutX="226.0" layoutY="137.0" promptText="Enter the City Name">
+      <TextField fx:id="city_name" layoutX="226.0" layoutY="137.0" promptText="Enter the City Name" style="-fx-border-color: #000000; -fx-border-width: 0.7mm;">
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Button fx:id="my_btn" layoutX="278.0" layoutY="263.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #00ff00;" text="Enter" textFill="#050051">
+      <Button fx:id="my_btn" layoutX="270.0" layoutY="253.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="33.0" prefWidth="61.0" style="-fx-background-color: #00ff00; -fx-background-radius: 50cm;" text="Enter" textFill="#050051">
          <effect>
             <Lighting>
                <bumpInput>

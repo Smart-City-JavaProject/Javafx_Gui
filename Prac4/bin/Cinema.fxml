@@ -32,12 +32,12 @@
             </Lighting>
          </effect>
       </Rectangle>
-      <TextField fx:id="Location_text" layoutX="96.0" layoutY="25.0" promptText="Location">
+      <TextField fx:id="Location_text" layoutX="96.0" layoutY="25.0" promptText="Location" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Button fx:id="submit_btn" layoutX="273.0" layoutY="116.0" mnemonicParsing="false" onAction="#cinemasub" style="-fx-background-color: #33ff00;" text="Submit">
+      <Button fx:id="submit_btn" layoutX="266.0" layoutY="116.0" mnemonicParsing="false" onAction="#cinemasub" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #33ff00; -fx-background-radius: 50cm;" text="Submit">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

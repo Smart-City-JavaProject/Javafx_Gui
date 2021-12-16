@@ -31,15 +31,15 @@
             <Image url="@../Images/waiter_PNG43.png" />
          </image>
       </ImageView>
-      <TextField fx:id="input_btn" layoutX="238.0" layoutY="188.0" prefHeight="25.0" prefWidth="137.0" promptText="Enter the Location">
+      <TextField fx:id="input_btn" layoutX="238.0" layoutY="188.0" prefHeight="25.0" prefWidth="137.0" promptText="Enter the Location" style="-fx-border-width: 1mm; -fx-border-color: #000000;">
          <effect>
             <Glow />
          </effect>
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Button fx:id="sub_btn" layoutX="422.0" layoutY="275.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" style="-fx-background-color: #1aff00;" text="Enter">
+      <Button fx:id="sub_btn" layoutX="409.0" layoutY="271.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: #1aff00; -fx-background-radius: 50cm;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>

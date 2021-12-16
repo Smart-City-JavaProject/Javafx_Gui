@@ -6,7 +6,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
@@ -16,33 +15,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1d3357;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin">
    <children>
-      <ImageView fx:id="admin_img" fitHeight="424.0" fitWidth="650.0" layoutX="-20.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/img_ad.jpg" />
-         </image>
-      </ImageView>
-      <Ellipse fx:id="ad_shape" fill="#6a94ea" layoutX="300.0" layoutY="200.0" radiusX="320.0" radiusY="185.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-         <effect>
-            <Blend>
-               <topInput>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant />
-                     </light>
-                  </Lighting>
-               </topInput>
-            </Blend>
-         </effect>
-      </Ellipse>
-      <ChoiceBox fx:id="choice" layoutX="225.0" layoutY="53.0" prefWidth="150.0">
+      <ChoiceBox fx:id="choice" layoutX="737.0" layoutY="111.0" prefWidth="150.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -57,61 +34,115 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <Label fx:id="address_label" layoutX="319.0" layoutY="120.0" text="Address" />
-      <TextField fx:id="address_input" layoutX="413.0" layoutY="116.0">
+      <Label fx:id="address_label" layoutX="831.0" layoutY="214.0" text="Address" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="address_input" alignment="CENTER" layoutX="973.0" layoutY="202.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="type_label" layoutX="319.0" layoutY="202.0" text="Type" />
-      <TextField fx:id="type_input" layoutX="413.0" layoutY="198.0">
+      <Label fx:id="type_label" layoutX="845.0" layoutY="356.0" text="Type" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="type_input" alignment="CENTER" layoutX="973.0" layoutY="344.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="roomtype_label" layoutX="319.0" layoutY="244.0" text="Room Type" />
-      <TextField fx:id="roomtype_input" layoutX="413.0" layoutY="240.0">
+      <Label fx:id="roomtype_label" layoutX="843.0" layoutY="428.0" text="Room Type" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="roomtype_input" alignment="CENTER" layoutX="973.0" layoutY="415.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="sector_label" layoutX="319.0" layoutY="160.0" text="Sector" />
-      <TextField fx:id="sector_input" layoutX="413.0" layoutY="156.0">
+      <Label fx:id="sector_label" layoutX="839.0" layoutY="281.0" text="Sector" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="sector_input" alignment="CENTER" layoutX="973.0" layoutY="273.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="name_label" layoutX="34.0" layoutY="120.0" text="Name" />
-      <TextField fx:id="name_input" layoutX="130.0" layoutY="116.0">
+      <Label fx:id="name_label" layoutX="438.0" layoutY="214.0" text="Name" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="name_input" alignment="CENTER" layoutX="537.0" layoutY="202.0" style="-fx-text-inner-color: #000000; -fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="cno_label" layoutX="34.0" layoutY="202.0" text="Cno" />
-      <TextField fx:id="cno_input" layoutX="130.0" layoutY="198.0">
+      <Label fx:id="cno_label" layoutX="437.0" layoutY="356.0" text="Cno" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="cno_input" alignment="CENTER" layoutX="537.0" layoutY="344.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="rating_label" layoutX="34.0" layoutY="244.0" text="Rating" />
-      <TextField fx:id="rating_input" layoutX="130.0" layoutY="240.0">
+      <Label fx:id="rating_label" layoutX="434.0" layoutY="428.0" text="Rating" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="rating_input" alignment="CENTER" layoutX="537.0" layoutY="415.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="locality_label" layoutX="34.0" layoutY="160.0" text="Locality" />
-      <TextField fx:id="locality_input" layoutX="130.0" layoutY="156.0">
+      <Label fx:id="locality_label" layoutX="435.0" layoutY="281.0" text="Locality" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="locality_input" alignment="CENTER" layoutX="537.0" layoutY="273.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Label fx:id="cost_label" layoutX="34.0" layoutY="280.0" text="Cost" />
-      <TextField fx:id="cost_input" layoutX="130.0" layoutY="285.0">
+      <Label fx:id="cost_label" layoutX="435.0" layoutY="506.0" text="Cost" textFill="#34568b">
+         <font>
+            <Font name="Serif Regular" size="26.0" />
+         </font></Label>
+      <TextField fx:id="cost_input" alignment="CENTER" layoutX="537.0" layoutY="486.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </TextField>
-      <Button fx:id="my_submit" layoutX="322.0" layoutY="328.0" mnemonicParsing="false" onAction="#submitbtn" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #44ff00; -fx-background-radius: 50cm;" text="Submit">
+      <Button fx:id="my_submit" layoutX="859.0" layoutY="585.0" mnemonicParsing="false" onAction="#submitbtn" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #34568B; -fx-background-radius: 50cm;" text="Submit" textFill="WHITE">
          <effect>
             <Lighting>
                <bumpInput>
@@ -125,8 +156,11 @@
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
       </Button>
-      <Button fx:id="backbtn" layoutX="219.0" layoutY="328.0" mnemonicParsing="false" onAction="#backbtnclick" prefHeight="35.0" prefWidth="73.0" style="-fx-background-color: #ff0000; -fx-background-radius: 50cm;" text="Back" textFill="WHITE">
+      <Button fx:id="backbtn" layoutX="733.0" layoutY="585.0" mnemonicParsing="false" onAction="#backbtnclick" prefHeight="35.0" prefWidth="73.0" style="-fx-background-color: #34568B; -fx-background-radius: 50cm;" text="Back" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
@@ -140,28 +174,54 @@
                </light>
             </Lighting>
          </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
       </Button>
-      <ImageView fx:id="admin_img2" fitHeight="204.0" fitWidth="209.0" layoutX="403.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/admin_img.png" />
-         </image>
-      </ImageView>
-      <HBox layoutY="3.0" prefHeight="100.0" prefWidth="200.0">
+      <VBox prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #34568B;">
          <children>
-            <VBox prefHeight="100.0" prefWidth="112.0">
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Circle fx:id="mycircle" fill="DODGERBLUE" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
+                  <VBox prefHeight="100.0" prefWidth="112.0">
+                     <children>
+                        <Circle fx:id="mycircle" fill="DODGERBLUE" radius="40.0" stroke="BLACK" strokeType="INSIDE">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Circle>
+                     </children>
+                  </VBox>
+                  <Label fx:id="mylabel" text="YourDad07">
+                     <font>
+                        <Font name="Serif Regular" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
                </children>
-            </VBox>
-            <Label fx:id="mylabel" text="Label">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <HBox.margin>
+               <VBox.margin>
                   <Insets top="30.0" />
-               </HBox.margin>
-            </Label>
+               </VBox.margin>
+            </HBox>
+            <ImageView fitHeight="703.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/3556960-removebg-preview.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </ImageView>
          </children>
-      </HBox>
+      </VBox>
+      <Pane fx:id="name_pane" layoutX="537.0" layoutY="239.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="locality_pane" layoutX="537.0" layoutY="310.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="cno_pane" layoutX="537.0" layoutY="381.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="rating_pane" layoutX="537.0" layoutY="452.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="cost_pane" layoutX="537.0" layoutY="523.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="address_pane" layoutX="973.0" layoutY="239.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="sector_pane" layoutX="973.0" layoutY="310.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="type_pane" layoutX="973.0" layoutY="381.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
+      <Pane fx:id="roomtype_pane" layoutX="973.0" layoutY="452.0" prefHeight="5.0" prefWidth="223.0" style="-fx-background-color: black;" />
    </children>
 </Pane>
