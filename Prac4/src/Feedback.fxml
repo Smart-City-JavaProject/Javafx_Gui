@@ -21,7 +21,7 @@
          <image>
             <Image url="@../Images/anyrgb.com%20(5).png" />
          </image></ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="215.0" layoutX="14.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="316.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="192.0" layoutX="73.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" width="314.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -33,7 +33,7 @@
             </Lighting>
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="440.0" layoutX="354.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="373.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="440.0" layoutX="419.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="373.0">
          <effect>
             <Lighting>
                <bumpInput>
@@ -45,7 +45,7 @@
             </Lighting>
          </effect>
       </Rectangle>
-      <Button fx:id="ref_btn" layoutX="53.0" layoutY="293.0" mnemonicParsing="false" onAction="#refreshbtnclick" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #eaff00; -fx-background-radius: 50em;" text="Refresh">
+      <Button fx:id="ref_btn" layoutX="329.0" layoutY="73.0" mnemonicParsing="false" onAction="#refreshbtnclick" prefHeight="45.0" prefWidth="38.0" style="-fx-background-color: #eaff00; -fx-background-radius: 50em;">
          <effect>
             <Lighting>
                <bumpInput>
@@ -59,21 +59,31 @@
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/refresh-icon-10853.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <TextField fx:id="name_input" layoutX="26.0" layoutY="224.0" prefHeight="45.0" prefWidth="290.0">
+      <TextField fx:id="name_input" layoutX="85.0" layoutY="249.0" prefHeight="45.0" prefWidth="290.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font name="Serif Regular" size="20.0" />
+         </font>
       </TextField>
-      <Label layoutX="25.0" layoutY="189.0" prefHeight="17.0" prefWidth="254.0" text="Enter Your Name" textFill="WHITE">
+      <Label layoutX="84.0" layoutY="214.0" prefHeight="17.0" prefWidth="254.0" text="Enter Your Name" textFill="WHITE">
          <font>
             <Font name="Serif Regular" size="24.0" />
          </font></Label>
-      <Label layoutX="410.0" layoutY="41.0" prefHeight="25.0" prefWidth="219.0" text="Enter The FeedBack" textFill="WHITE">
+      <Label layoutX="475.0" layoutY="43.0" prefHeight="25.0" prefWidth="219.0" text="Enter The FeedBack" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font></Label>
-      <Button fx:id="submit_btn" layoutX="168.0" layoutY="293.0" mnemonicParsing="false" onAction="#submit_click" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #5eff00; -fx-background-radius: 50em;" text="Submit">
+      <Button fx:id="submit_btn" layoutX="188.0" layoutY="320.0" mnemonicParsing="false" onAction="#submit_click" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #5eff00; -fx-background-radius: 50em;" text="Submit">
          <effect>
             <Lighting>
                <bumpInput>
@@ -88,16 +98,19 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fx:id="feed_img" fitHeight="447.0" fitWidth="450.0" layoutX="354.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="feed_img" fitHeight="447.0" fitWidth="450.0" layoutX="419.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/3794180.png" />
          </image>
       </ImageView>
-      <TextArea fx:id="feedback_input" layoutX="420.0" layoutY="77.0" prefHeight="369.0" prefWidth="200.0">
+      <TextArea fx:id="feedback_input" layoutX="485.0" layoutY="79.0" prefHeight="369.0" prefWidth="200.0" style="-fx-wrap-text: true;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
       </TextArea>
-      <Circle fx:id="my_circle" fill="DODGERBLUE" layoutX="136.0" layoutY="94.0" radius="77.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="my_circle" fill="DODGERBLUE" layoutX="230.0" layoutY="98.0" radius="77.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </Pane>

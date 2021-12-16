@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #860000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accomendation">
    <children>
@@ -19,7 +20,7 @@
             <Image url="@../Images/anyrgb.com.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="my_choice_box" layoutX="460.0" layoutY="162.0" prefHeight="35.0" prefWidth="158.0">
+      <ChoiceBox fx:id="my_choice_box" layoutX="460.0" layoutY="158.0" prefHeight="43.0" prefWidth="161.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
@@ -33,7 +34,7 @@
                </light>
             </Lighting>
          </effect></ChoiceBox>
-      <Button fx:id="my_btn" layoutX="391.0" layoutY="247.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="43.0" prefWidth="80.0" style="-fx-background-color: #00ddff; -fx-background-radius: 50em;" text="Enter">
+      <Button fx:id="my_btn" layoutX="400.0" layoutY="244.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="43.0" prefWidth="80.0" style="-fx-background-color: #00ddff; -fx-background-radius: 50em;" text="Enter">
          <effect>
             <Lighting>
                <bumpInput>
@@ -52,10 +53,13 @@
             <Image url="@../Images/anyrgb.com.png" />
          </image>
       </ImageView>
-      <TextField fx:id="my_input" layoutX="247.0" layoutY="158.0" prefHeight="43.0" prefWidth="158.0" promptText="Enter the City name" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
+      <TextField fx:id="my_input" layoutX="247.0" layoutY="158.0" prefHeight="46.0" prefWidth="187.0" promptText="Enter the City name" style="-fx-border-color: #000000; -fx-border-width: 1mm;">
          <cursor>
             <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
       <Label fx:id="my_label" layoutX="302.0" layoutY="183.0" />
    </children>
 </Pane>
