@@ -355,7 +355,7 @@ public class Admin {
         mycircle.setFill(new ImagePattern(image));
         mycircle.setStroke(javafx.scene.paint.Color.BLACK);
         mylabel.setText(SignupForm.get_str());
-        mylabel.setPrefWidth(100);
+        mylabel.setPrefWidth(200);
         JavaPostgreSql.getTablename();
         ObservableList<String> my_lists = FXCollections.observableArrayList(JavaPostgreSql.get_table_name());
         choice.setValue("accomodation");

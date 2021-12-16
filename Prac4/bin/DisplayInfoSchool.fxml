@@ -10,37 +10,37 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayInfoSchool">
    <children>
-      <Label layoutX="389.0" layoutY="67.0" text="Name">
+      <Label layoutX="389.0" layoutY="67.0" text="Name" textFill="#34568b">
          <font>
-            <Font name="Serif Regular" size="18.0" />
+            <Font name="Serif Regular" size="24.0" />
          </font></Label>
-      <Label layoutX="388.0" layoutY="130.0" text="Sector">
+      <Label layoutX="389.0" layoutY="130.0" text="Sector" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font name="Serif Regular" size="24.0" />
          </font></Label>
-      <Label layoutX="387.0" layoutY="187.0" prefHeight="27.0" prefWidth="75.0" text="Location">
+      <Label layoutX="389.0" layoutY="187.0" prefHeight="35.0" prefWidth="107.0" text="Location" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Label>
-      <Label layoutX="385.0" layoutY="306.0" prefHeight="27.0" prefWidth="90.0" text="Near Place">
+      <Label layoutX="389.0" layoutY="324.0" prefHeight="35.0" prefWidth="122.0" text="Near Place" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Label>
-      <Label fx:id="location_label" layoutX="540.0" layoutY="187.0" text="Label">
+      <Label fx:id="location_label" layoutX="540.0" layoutY="187.0" text="Label" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Label>
-      <Label fx:id="Nearplaces_label" layoutX="540.0" layoutY="306.0" text="Label">
+      <Label fx:id="Nearplaces_label" layoutX="540.0" layoutY="324.0" text="Label" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Label>
-      <Label fx:id="sector_label" layoutX="540.0" layoutY="130.0" text="Label">
+      <Label fx:id="sector_label" layoutX="540.0" layoutY="130.0" text="Label" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font name="Serif Regular" size="24.0" />
          </font></Label>
-      <Label fx:id="name_label" layoutX="540.0" layoutY="67.0" text="Label">
+      <Label fx:id="name_label" layoutX="540.0" layoutY="67.0" text="Label" textFill="#34568b">
          <font>
-            <Font size="18.0" />
+            <Font name="Serif Regular" size="24.0" />
          </font></Label>
       <VBox prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #34568B;">
          <children>

@@ -191,12 +191,12 @@
                         </Circle>
                      </children>
                   </VBox>
-                  <Label fx:id="mylabel" text="YourDad07">
+                  <Label fx:id="mylabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="297.0" text="YourDad07">
                      <font>
                         <Font name="Serif Regular" size="25.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="45.0" top="25.0" />
+                        <Insets top="25.0" />
                      </HBox.margin>
                   </Label>
                </children>

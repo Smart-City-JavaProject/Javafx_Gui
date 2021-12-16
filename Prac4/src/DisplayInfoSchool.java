@@ -25,11 +25,11 @@ public class DisplayInfoSchool {
         String location = SchoolInfo.get_loc();
         String name12 = SchoolInfo.get_name();
         name_label.setText(name12);
-        name_label.setPrefWidth(250);
+        name_label.setPrefWidth(400);
         name_label.setWrapText(true);
         sector_label.setText(sector);
         location_label.setText(location);
-        location_label.setPrefWidth(250);
+        location_label.setPrefWidth(400);
         location_label.setWrapText(true);
         try {
             String near = JavaPostgreSql.get_near_place("education", sector.trim(), School.getlocation());

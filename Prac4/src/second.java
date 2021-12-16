@@ -46,6 +46,8 @@ public class second implements Initializable {
     public void set_stage(Stage arg1) {
         arg0 = arg1;
         arg0.getIcons().add(new Image("file:Images/t1.jpg"));
+        arg0.setMinWidth(880);
+        arg0.setMinHeight(500);
         // arg0.setHeight(440);
         // arg0.setWidth(610);
 
