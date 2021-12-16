@@ -96,22 +96,22 @@ public class FlightInfo {
         table.setEditable(true);
 
         TableColumn firstNameCol = new TableColumn("Name");
-        firstNameCol.setMinWidth(300);
+        firstNameCol.setMinWidth(350);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Flight_Infos, Label>("firstName"));
 
         TableColumn lastNameCol = new TableColumn("Sector");
-        lastNameCol.setMinWidth(100);
+        lastNameCol.setMinWidth(140);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Flight_Infos, Label>("lastName"));
 
         TableColumn timecols = new TableColumn("ArrivalTime");
-        timecols.setMinWidth(100);
+        timecols.setMinWidth(140);
         timecols.setCellValueFactory(
                 new PropertyValueFactory<Flight_Infos, Label>("times"));
 
         TableColumn emailCol = new TableColumn("More Info");
-        emailCol.setMinWidth(200);
+        emailCol.setMinWidth(250);
         emailCol.setCellValueFactory(
                 new PropertyValueFactory<Flight_Infos, Button>("email"));
 
@@ -146,6 +146,7 @@ public class FlightInfo {
             }
             Scene scene = new Scene(new Group());
             table.setItems(data);
+            table.setMinHeight(500);
             table.getColumns().addAll(firstNameCol, lastNameCol, timecols, emailCol);
 
             final VBox vbox1 = new VBox();
@@ -158,6 +159,8 @@ public class FlightInfo {
                 System.out.println("-->> " + e.getMessage());
             }
             stage.setScene(scene);
+            stage.setMinWidth(880);
+            stage.setMinHeight(500);
             stage.show();
         }
 

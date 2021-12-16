@@ -123,17 +123,17 @@ public class RestaurentInfo {
         table.setEditable(true);
 
         TableColumn firstNameCol = new TableColumn("Name");
-        firstNameCol.setMinWidth(300);
+        firstNameCol.setMinWidth(400);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Restaurent_Infos, Label>("firstName"));
 
         TableColumn lastNameCol = new TableColumn("Sector");
-        lastNameCol.setMinWidth(100);
+        lastNameCol.setMinWidth(180);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Restaurent_Infos, Label>("lastName"));
 
         TableColumn emailCol = new TableColumn("More Info");
-        emailCol.setMinWidth(200);
+        emailCol.setMinWidth(300);
         emailCol.setCellValueFactory(
                 new PropertyValueFactory<Restaurent_Infos, Button>("email"));
         try {
@@ -169,6 +169,7 @@ public class RestaurentInfo {
             }
             Scene scene = new Scene(new Group());
             table.setItems(data);
+            table.setMinHeight(500);
             table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
 
             final VBox vbox1 = new VBox();
@@ -181,6 +182,8 @@ public class RestaurentInfo {
                 System.out.println("-->> " + e.getMessage());
             }
             stage.setScene(scene);
+            stage.setMinWidth(880);
+            stage.setMinHeight(500);
             stage.show();
         }
 
