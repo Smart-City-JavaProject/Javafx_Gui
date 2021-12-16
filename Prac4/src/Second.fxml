@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1d3557;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="second">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="second">
    <children>
-      <ImageView fx:id="bg_graphic1" fitHeight="648.0" fitWidth="519.0" layoutX="51.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" rotate="135.0">
-         <image>
-            <Image url="@../Images/PngItem_78672.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="testlabel" alignment="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="600.0" text="Label" textAlignment="CENTER" textFill="#2fff00">
+      <Label fx:id="testlabel" alignment="CENTER" layoutX="288.0" layoutY="14.0" prefHeight="35.0" prefWidth="592.0" text="Label" textAlignment="CENTER" textFill="#34568b">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="41.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="104.0" text="Education">
+      <Button fx:id="obut1" contentDisplay="BOTTOM" layoutX="334.0" layoutY="121.0" mnemonicParsing="false" onAction="#onSubmitbtnClick" prefHeight="98.0" prefWidth="110.0" text="Education" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -27,8 +24,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="182.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="104.0" text="Transportation">
+      <Button fx:id="obut11" contentDisplay="BOTTOM" layoutX="466.0" layoutY="121.0" mnemonicParsing="false" onAction="#onSubmitbtnClick1" prefHeight="98.0" prefWidth="110.0" text="Transportation" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im1" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,8 +36,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut111" contentDisplay="BOTTOM" layoutX="311.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="104.0" text="Hospitals">
+      <Button fx:id="obut111" contentDisplay="BOTTOM" layoutX="598.0" layoutY="121.0" mnemonicParsing="false" onAction="#onSubmitbtnClick3" prefHeight="98.0" prefWidth="110.0" text="Hospitals" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im11" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -45,8 +48,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut112" contentDisplay="BOTTOM" layoutX="448.0" layoutY="102.0" mnemonicParsing="false" onAction="#onSubmitbtnClick2" prefHeight="98.0" prefWidth="104.0" text="Public Places">
+      <Button fx:id="obut112" contentDisplay="BOTTOM" layoutX="730.0" layoutY="121.0" mnemonicParsing="false" onAction="#onSubmitbtnClick2" prefHeight="98.0" prefWidth="110.0" text="Public Places" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im12" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -54,8 +60,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut13" contentDisplay="BOTTOM" layoutX="448.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick7" prefHeight="98.0" prefWidth="104.0" text="restaurants">
+      <Button fx:id="obut13" contentDisplay="BOTTOM" layoutX="730.0" layoutY="266.0" mnemonicParsing="false" onAction="#onSubmitbtnClick7" prefHeight="98.0" prefWidth="110.0" text="restaurants" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im3" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -63,8 +72,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut114" contentDisplay="BOTTOM" layoutX="311.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick5" prefHeight="98.0" prefWidth="104.0" text="Accomodation">
+      <Button fx:id="obut114" contentDisplay="BOTTOM" layoutX="598.0" layoutY="266.0" mnemonicParsing="false" onAction="#onSubmitbtnClick5" prefHeight="98.0" prefWidth="110.0" text="Accomodation" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im14" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -72,8 +84,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="182.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick4" prefHeight="98.0" prefWidth="104.0" text="Police Station">
+      <Button fx:id="obut113" contentDisplay="BOTTOM" layoutX="463.0" layoutY="266.0" mnemonicParsing="false" onAction="#onSubmitbtnClick4" prefHeight="98.0" prefWidth="110.0" text="Police Station" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im13" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -81,8 +96,11 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
-      <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="41.0" layoutY="259.0" mnemonicParsing="false" onAction="#onSubmitbtnClick6" prefHeight="98.0" prefWidth="104.0" text="Banks">
+      <Button fx:id="obut12" contentDisplay="BOTTOM" layoutX="334.0" layoutY="266.0" mnemonicParsing="false" onAction="#onSubmitbtnClick6" prefHeight="98.0" prefWidth="110.0" text="Banks" textFill="#34568b">
          <graphic>
             <ImageView fx:id="but1im2" fitHeight="85.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -90,6 +108,21 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="Serif Regular" size="15.0" />
+         </font>
       </Button>
+      <VBox prefHeight="500.0" prefWidth="290.0" style="-fx-background-color: #34568B;">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/creative-team-brainstorming-sharing-thought-idea_189557-338-removebg-preview.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </Pane>
