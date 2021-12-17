@@ -460,7 +460,7 @@ public class Admin {
                     JavaSQLInsert.insert_Banks(name_input.getText(), address_input.getText(), sector_input.getText(),
                             cno_input.getText(),
                             locality_input.getText());
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -485,7 +485,7 @@ public class Admin {
                             cno_input.getText(),
                             sector_input.getText(), type_input.getText(), rating_input.getText(),
                             roomtype_input.getText());
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -509,7 +509,7 @@ public class Admin {
                             address_input.getText(),
                             cno_input.getText(), sector_input.getText(), type_input.getText(), cost_input.getText(),
                             roomtype_input.getText(), rating_input.getText());
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -531,7 +531,7 @@ public class Admin {
                     JavaSQLInsert.insert_cinema(name_input.getText(), address_input.getText(), cno_input.getText(),
                             rating_input.getText(),
                             locality_input.getText(), sector_input.getText());
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -552,7 +552,7 @@ public class Admin {
                     JavaSQLInsert.insert_hospital(name_input.getText(), address_input.getText(), cno_input.getText(),
                             locality_input.getText(), sector_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -574,7 +574,7 @@ public class Admin {
                     JavaSQLInsert.insert_mall(name_input.getText(), address_input.getText(), cno_input.getText(),
                             locality_input.getText(), sector_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -595,7 +595,7 @@ public class Admin {
                             cno_input.getText(),
                             locality_input.getText(), sector_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -619,7 +619,7 @@ public class Admin {
                             locality_input.getText(), sector_input.getText(), rating_input.getText(),
                             type_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -637,7 +637,7 @@ public class Admin {
                         && Validate.priceRegex(locality_input.getText())) {
                     JavaSQLInsert.insert_bus(name_input.getText(), address_input.getText(), locality_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -656,7 +656,7 @@ public class Admin {
                     JavaSQLInsert.insert_train(locality_input.getText(), sector_input.getText(), name_input.getText(),
                             address_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
@@ -678,7 +678,7 @@ public class Admin {
                             rating_input.getText(), locality_input.getText(),
                             sector_input.getText());
 
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText("success");
                     alert.setContentText("Data inserted successfully");
