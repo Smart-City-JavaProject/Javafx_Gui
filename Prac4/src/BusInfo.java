@@ -90,12 +90,12 @@ public class BusInfo {
         label.setFont(new Font("Arial", 20));
         table.setEditable(true);
 
-        TableColumn firstNameCol = new TableColumn("Name");
+        TableColumn firstNameCol = new TableColumn("From");
         firstNameCol.setMinWidth(400);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Bus_Infos, Label>("firstName"));
 
-        TableColumn lastNameCol = new TableColumn("Sector");
+        TableColumn lastNameCol = new TableColumn("To");
         lastNameCol.setMinWidth(180);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Bus_Infos, Label>("lastName"));

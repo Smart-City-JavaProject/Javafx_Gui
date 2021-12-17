@@ -117,4 +117,45 @@ public class JavaSQLInsert {
             e.printStackTrace();
         }
     }
+
+    public static void insert_bus(String b_dep, String b_arr, String b_no) {
+        try {
+            Connection con = JavaPostgreSql.connect_db();
+            Statement stmt = con.createStatement();
+            String sql = "INSERT INTO bus (b_dep,b_arr,b_no) VALUES ('" + b_dep + "','" + b_arr + "','" + b_no + "')";
+            stmt.executeUpdate(sql);
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insert_train(String tr_tno, String tr_deptime, String tr_dep, String tr_arr) {
+        try {
+            Connection con = JavaPostgreSql.connect_db();
+            Statement stmt = con.createStatement();
+            String sql = "INSERT INTO train (tr_tno,tr_deptime,tr_dep,tr_arr) VALUES ('" + tr_tno + "','" + tr_deptime
+                    + "','" + tr_dep + "','" + tr_arr + "')";
+            stmt.executeUpdate(sql);
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insert_flight(String fl_airline, String fl_no, String fl_dep, String fl_arr, String fl_deptime,
+            String fl_arrtime) {
+        try {
+            Connection con = JavaPostgreSql.connect_db();
+            Statement stmt = con.createStatement();
+            String sql = "INSERT INTO flight (fl_airline,fl_no,fl_dep,fl_arr,fl_deptime,fl_arrtime) VALUES ('"
+                    + fl_airline + "','" + fl_no + "','" + fl_dep + "','" + fl_arr + "','" + fl_deptime + "','"
+                    + fl_arrtime + "')";
+            stmt.executeUpdate(sql);
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error in insert_flight " + e.getMessage());
+        }
+    }
 }

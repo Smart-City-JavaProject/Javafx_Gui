@@ -9,7 +9,7 @@ import javafx.scene.control.ChoiceBox;
 
 public class Train {
     ObservableList<String> my_list = FXCollections.observableArrayList(JavaPostgreSql.getnametrain().split("\n"));
-    ObservableList<String> my_list1 = FXCollections.observableArrayList("Panvel");
+    ObservableList<String> my_list1 = FXCollections.observableArrayList(JavaPostgreSql.getnamefromtrain().split("\n"));
     @FXML
     private ChoiceBox<String> choiceboc;
 

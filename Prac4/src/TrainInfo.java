@@ -90,12 +90,12 @@ public class TrainInfo {
         label.setFont(new Font("Arial", 20));
         table.setEditable(true);
 
-        TableColumn firstNameCol = new TableColumn("Name");
+        TableColumn firstNameCol = new TableColumn("Train No");
         firstNameCol.setMinWidth(400);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Train_Infos, Label>("firstName"));
 
-        TableColumn lastNameCol = new TableColumn("Sector");
+        TableColumn lastNameCol = new TableColumn("Departure Time");
         lastNameCol.setMinWidth(180);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Train_Infos, Label>("lastName"));

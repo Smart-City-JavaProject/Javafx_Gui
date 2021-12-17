@@ -6,8 +6,10 @@ public class Validate {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z"
                 + "A-Z]{2,7}$";
         if (email.matches(emailRegex)) {
+            System.out.println("valid email");
             return true;
         } else {
+            System.out.println("invalid email");
             return false;
         }
     }
@@ -36,9 +38,12 @@ public class Validate {
 
     public static Boolean validate_time(String time) {
         String timeRegex = "^[0-9]{2}:[0-9]{2}$";
+        System.out.println("time: " + time);
         if (time.matches(timeRegex)) {
+            System.out.println("valid time");
             return true;
         } else {
+            System.out.println("invalid time");
             return false;
         }
     }
@@ -46,8 +51,10 @@ public class Validate {
     public static Boolean validate_sector(String sector) {
         String sectorRegex = "^[0-9]{1,2}[a-zA-Z]?$";
         if (sector.matches(sectorRegex)) {
+            System.out.println("valid sector");
             return true;
         } else {
+            System.out.println("invalid sector");
             return false;
         }
     }
@@ -55,8 +62,10 @@ public class Validate {
     public static Boolean priceRegex(String price) {
         String priceRegex = "\\d+";
         if (price.matches(priceRegex)) {
+            System.out.println("Price is valid");
             return true;
         } else {
+            System.out.println("Price is invalid");
             return false;
         }
     }
@@ -107,8 +116,10 @@ public class Validate {
 
     public static Boolean isEmpty(String text) {
         if (text.isEmpty()) {
+            System.out.println("Empty");
             return false;
         } else {
+            System.out.println("Not Empty");
             return true;
         }
     }

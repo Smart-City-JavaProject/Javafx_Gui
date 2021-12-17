@@ -428,12 +428,26 @@ public class JavaPostgreSql {
     }
 
     public static String getnametrain() {
-        String SQL = "SELECT DISTINCT tr_arr  FROM train";
+        String SQL = "SELECT tr_arr  FROM train";
         String count = "";
         try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
             ResultSet rs = pstmt.executeQuery(SQL);
             while (rs.next()) {
                 count += rs.getString("tr_arr") + "\n";
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return count;
+    }
+
+    public static String getnamefromtrain() {
+        String SQL = "SELECT DISTINCT tr_dep  FROM train";
+        String count = "";
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count += rs.getString("tr_dep") + "\n";
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -463,6 +477,21 @@ public class JavaPostgreSql {
             ResultSet rs = pstmt.executeQuery(SQL);
             while (rs.next()) {
                 count.add(rs.getString("table_name"));
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        set_table_name(count);
+    }
+
+    public static void getAllTablename() {
+        String SQL = "SELECT * FROM PG_CATALOG.pg_tables WHERE schemaname = 'public' AND tablename != 'users' AND tablename != 'feedback'";
+
+        ArrayList<String> count = new ArrayList<String>();
+        try (Connection conn = connect_db(); Statement pstmt = conn.createStatement()) {
+            ResultSet rs = pstmt.executeQuery(SQL);
+            while (rs.next()) {
+                count.add(rs.getString("tablename"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());

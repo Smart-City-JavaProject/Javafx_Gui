@@ -45,10 +45,10 @@ public class FlightDisplay {
         String name12 = FlightInfo.get_name();
         String time = FlightInfo.get_arrtime();
         arrive_label.setText(time);
-        dep_label.setText(sector);
-        fl_no.setText(location);
-        from_label.setText(sector);
-        to_label.setText(sector);
+        dep_label.setText(location);
+        fl_no.setText(sector);
+        from_label.setText(Flight.getfrom());
+        to_label.setText(Flight.getto());
         name_label.setText(name12);
 
         // File file = new File("Images/school-icon-png-14043.png");

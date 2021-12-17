@@ -100,7 +100,7 @@ public class FlightInfo {
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Flight_Infos, Label>("firstName"));
 
-        TableColumn lastNameCol = new TableColumn("Sector");
+        TableColumn lastNameCol = new TableColumn("Departure Time");
         lastNameCol.setMinWidth(140);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Flight_Infos, Label>("lastName"));

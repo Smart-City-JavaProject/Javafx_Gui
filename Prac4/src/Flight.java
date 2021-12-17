@@ -38,12 +38,34 @@ public class Flight {
         return name;
     }
 
+    static String from = "";
+
+    public static void set_from(String name_val) {
+        from = name_val;
+    }
+
+    public static String getfrom() {
+        return from;
+    }
+
+    static String to = "";
+
+    public static void set_to(String name_val) {
+        to = name_val;
+    }
+
+    public static String getto() {
+        return to;
+    }
+
     @FXML
     void FlightSubmit(ActionEvent event) throws SQLException {
         String from = frombox.getValue();
         String to = tobox.getValue();
+        set_from(from);
+        set_to(to);
         String name = JavaPostgreSql.getFlight(from, to);
-        System.out.println(name);
+        System.out.println("name is " + name);
         set_name(name);
         FlightInfo.initialize();
     }

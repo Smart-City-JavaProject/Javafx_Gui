@@ -285,6 +285,30 @@ public class Admin {
         sector_pane.visibleProperty().set(true);
     }
 
+    public void make_flight() {
+        remove_all();
+        name_label.setText("Airline");
+        address_label.setText("Flight No");
+        cno_label.setText("Departure");
+        rating_label.setText("Arrival");
+        locality_label.setText("Departure Time");
+        sector_label.setText("Arrival Time");
+
+        name_input.visibleProperty().set(true);
+        address_input.visibleProperty().set(true);
+        cno_input.visibleProperty().set(true);
+        rating_input.visibleProperty().set(true);
+        locality_input.visibleProperty().set(true);
+        sector_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        cno_pane.visibleProperty().set(true);
+        rating_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
+    }
+
     public void make_hospital() {
         remove_all();
         name_label.setText("Name");
@@ -348,6 +372,38 @@ public class Admin {
         sector_pane.visibleProperty().set(true);
     }
 
+    public void make_bus() {
+        remove_all();
+        name_label.setText("Departure");
+        address_label.setText("Arrival");
+        locality_label.setText("Bus No");
+
+        name_input.visibleProperty().set(true);
+        address_input.visibleProperty().set(true);
+        locality_input.visibleProperty().set(true);
+
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+    }
+
+    public void make_train() {
+        remove_all();
+        name_label.setText("Departure");
+        address_label.setText("Arrival");
+        locality_label.setText("Train No");
+        sector_label.setText("Dep Time");
+
+        name_input.visibleProperty().set(true);
+        address_input.visibleProperty().set(true);
+        locality_input.visibleProperty().set(true);
+        sector_input.visibleProperty().set(true);
+        name_pane.visibleProperty().set(true);
+        address_pane.visibleProperty().set(true);
+        locality_pane.visibleProperty().set(true);
+        sector_pane.visibleProperty().set(true);
+    }
+
     @FXML
     public void initialize() {
         make_accomodotion();
@@ -356,7 +412,7 @@ public class Admin {
         mycircle.setStroke(javafx.scene.paint.Color.BLACK);
         mylabel.setText(SignupForm.get_str());
         mylabel.setPrefWidth(200);
-        JavaPostgreSql.getTablename();
+        JavaPostgreSql.getAllTablename();
         ObservableList<String> my_lists = FXCollections.observableArrayList(JavaPostgreSql.get_table_name());
         choice.setValue("accomodation");
 
@@ -381,6 +437,12 @@ public class Admin {
                         make_police_station();
                     } else if (name.equals("restaurant")) {
                         make_restaurent();
+                    } else if (name.equals("bus")) {
+                        make_bus();
+                    } else if (name.equals("train")) {
+                        make_train();
+                    } else if (name.equals("flight")) {
+                        make_flight();
                     }
                 });
     }
@@ -570,6 +632,64 @@ public class Admin {
                     alert.showAndWait();
                 }
 
+            } else if (choice.getValue().equals("bus")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_info(address_input.getText())
+                        && Validate.priceRegex(locality_input.getText())) {
+                    JavaSQLInsert.insert_bus(name_input.getText(), address_input.getText(), locality_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+            } else if (choice.getValue().equals("train")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.validate_info(address_input.getText())
+                        && Validate.priceRegex(locality_input.getText())
+                        && Validate.validate_time(sector_input.getText())) {
+                    JavaSQLInsert.insert_train(locality_input.getText(), sector_input.getText(), name_input.getText(),
+                            address_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
+            } else if (choice.getValue().equals("flight")) {
+                if (Validate.validate_info(name_input.getText()) && Validate.isEmpty(address_input.getText())
+                        && Validate.validate_time(locality_input.getText())
+                        && Validate.validate_time(sector_input.getText())
+                        && Validate.validate_info(cno_input.getText())
+                        && Validate.validate_info(rating_input.getText())) {
+                    JavaSQLInsert.insert_flight(name_input.getText(), address_input.getText(), cno_input.getText(),
+                            rating_input.getText(), locality_input.getText(),
+                            sector_input.getText());
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("success");
+                    alert.setContentText("Data inserted successfully");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please enter valid information");
+                    alert.showAndWait();
+                }
             }
         } catch (Exception e) {
             Alert alert = new Alert(AlertType.ERROR);
